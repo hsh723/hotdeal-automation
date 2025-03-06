@@ -23,6 +23,12 @@ jobs:
       - name: Run crawler
         run: python crawler.py
         
+      - name: Send to Telegram
+        run: python telegram_sender.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        
       - name: Commit and push if data changed
         run: |
           git config --global user.name 'GitHub Actions'
