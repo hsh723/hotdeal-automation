@@ -46,9 +46,18 @@ def setup_driver(headless=True):
     # User-Agent 설정
     chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
     
-    # 자동으로 최신 ChromeDriver 설치 및 사용
-    driver_path = ChromeDriverManager().install()
-    logger.info(f"ChromeDriver 경로: {driver_path}")
+    # 환경 변수로 시스템 ChromeDriver 사용 여부 확인
+    use_system_driver = os.environ.get('USE_SYSTEM_CHROMEDRIVER', '').lower() == 'true'
+    
+    if use_system_driver:
+        # 시스템에 설치된 ChromeDriver 사용
+        driver_path = "/usr/bin/chromedriver"
+        logger.info(f"시스템 ChromeDriver 사용: {driver_path}")
+    else:
+        # 자동으로 최신 ChromeDriver 설치 및 사용
+        driver_path = ChromeDriverManager().install()
+        logger.info(f"WebDriverManager ChromeDriver 사용: {driver_path}")
+    
     service = Service(executable_path=driver_path)
     driver = webdriver.Chrome(service=service, options=chrome_options)
     
