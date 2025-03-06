@@ -1,14 +1,20 @@
-# 쿠팡 핫딜 크롤러
-import requests
-from bs4 import BeautifulSoup
+# 쿠팡 핫딜 크롤러 (Selenium 버전)
+import os
 import pandas as pd
 import datetime
 import time
 import random
-import os
-import json
 import logging
+import json
 from dotenv import load_dotenv
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, WebDriverException
+from webdriver_manager.chrome import ChromeDriverManager
 
 # 로깅 설정
 logging.basicConfig(
@@ -28,394 +34,383 @@ load_dotenv()
 MAX_PAGES = int(os.getenv("MAX_PAGES", "3"))
 DELAY_MIN = float(os.getenv("DELAY_MIN", "3"))
 DELAY_MAX = float(os.getenv("DELAY_MAX", "5"))
+HEADLESS = os.getenv("HEADLESS", "True").lower() == "true"
 
-# 다양한 User-Agent 목록
-USER_AGENTS = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
-]
-
-def get_random_user_agent():
-    """랜덤 User-Agent 반환"""
-    return random.choice(USER_AGENTS)
-
-def get_coupang_deals(page=1, retries=3):
-    """쿠팡 로켓 와우 핫딜 페이지에서 상품 정보 수집"""
-    
-    # 쿠팡 와우 핫딜 페이지 주소 (여러 URL 시도)
-    urls = [
-        f"https://www.coupang.com/np/campaigns/82/components/194176?page={page}",  # 원래 URL
-        f"https://www.coupang.com/np/campaigns/82?page={page}",  # 대체 URL 1
-        f"https://www.coupang.com/np/campaigns/82?componentId=194176&page={page}"  # 대체 URL 2
-    ]
-    
-    for url in urls:
-        logger.info(f"URL 요청: {url}")
+class SeleniumCoupangCrawler:
+    def __init__(self, headless=HEADLESS):
+        self.setup_driver(headless)
         
-        headers = {
-            "User-Agent": get_random_user_agent(),
-            "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-            "Connection": "keep-alive",
-            "Cache-Control": "max-age=0",
-            "Referer": "https://www.coupang.com/"
-        }
-        
-        for attempt in range(retries):
+    def setup_driver(self, headless=True):
+        """Selenium WebDriver 설정"""
+        try:
+            chrome_options = Options()
+            if headless:
+                chrome_options.add_argument("--headless=new")
+            
+            # 기본 옵션 추가
+            chrome_options.add_argument("--no-sandbox")
+            chrome_options.add_argument("--disable-dev-shm-usage")
+            chrome_options.add_argument("--disable-gpu")
+            chrome_options.add_argument("--window-size=1920,1080")
+            
+            # 봇 탐지 방지 옵션
+            chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            chrome_options.add_experimental_option("useAutomationExtension", False)
+            
+            # 랜덤 User-Agent 설정
+            user_agents = [
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0",
+                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36"
+            ]
+            chrome_options.add_argument(f"--user-agent={random.choice(user_agents)}")
+            
+            # 자동 설치되는 WebDriver 사용
+            service = Service(ChromeDriverManager().install())
+            self.driver = webdriver.Chrome(service=service, options=chrome_options)
+            
+            # 쿠키 및 캐시 초기화
+            self.driver.delete_all_cookies()
+            
+            # JavaScript 실행 우회 코드
+            self.driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+                "source": """
+                Object.defineProperty(navigator, 'webdriver', {
+                    get: () => undefined
+                });
+                """
+            })
+            
+            logger.info("Selenium WebDriver 초기화 완료")
+            
+        except Exception as e:
+            logger.error(f"Driver 초기화 중 오류: {e}", exc_info=True)
+            raise
+    
+    def close(self):
+        """드라이버 종료"""
+        if hasattr(self, 'driver'):
             try:
-                # 페이지 가져오기
-                response = requests.get(url, headers=headers, timeout=10)
+                self.driver.quit()
+                logger.info("WebDriver 종료됨")
+            except Exception as e:
+                logger.error(f"WebDriver 종료 중 오류: {e}")
+    
+    def get_page(self, url, max_retries=3):
+        """페이지 로드 및 렌더링 대기"""
+        for attempt in range(max_retries):
+            try:
+                logger.info(f"URL 요청: {url} (시도 {attempt+1}/{max_retries})")
+                self.driver.get(url)
                 
-                # 응답 확인
-                logger.info(f"응답 상태 코드: {response.status_code}")
+                # 페이지 로딩 대기
+                time.sleep(random.uniform(2, 4))
                 
-                if response.status_code == 200:
-                    # HTML 파싱
-                    soup = BeautifulSoup(response.text, "html.parser")
+                # 스크롤 다운 (동적 로딩 콘텐츠를 위해)
+                self.scroll_down()
+                
+                # 페이지 소스 일부 확인 (디버깅)
+                page_source = self.driver.page_source[:1000]
+                logger.info(f"페이지 소스 일부: {page_source[:200]}...")
+                
+                # 디버깅용 HTML 저장
+                debug_dir = "debug"
+                os.makedirs(debug_dir, exist_ok=True)
+                with open(f"{debug_dir}/page_{int(time.time())}.html", "w", encoding="utf-8") as f:
+                    f.write(self.driver.page_source)
+                
+                # 스크린샷 저장 (디버깅)
+                self.driver.save_screenshot(f"{debug_dir}/screenshot_{int(time.time())}.png")
+                
+                return True
+                
+            except WebDriverException as e:
+                logger.error(f"페이지 로드 중 오류 (시도 {attempt+1}/{max_retries}): {e}")
+                if attempt < max_retries - 1:
+                    wait_time = 2 ** attempt  # 지수 백오프
+                    logger.info(f"{wait_time}초 후 재시도...")
+                    time.sleep(wait_time)
+                else:
+                    logger.error(f"최대 재시도 횟수 초과: {url}")
+                    return False
+    
+    def scroll_down(self, scroll_pause_time=1):
+        """페이지를 아래로 스크롤하여 동적 콘텐츠 로드"""
+        try:
+            # 페이지 높이 가져오기
+            last_height = self.driver.execute_script("return document.body.scrollHeight")
+            
+            # 스크롤 다운
+            for _ in range(3):  # 3번 스크롤
+                # 페이지의 1/3씩 스크롤
+                self.driver.execute_script(f"window.scrollTo(0, {last_height/3});")
+                time.sleep(scroll_pause_time/2)
+                self.driver.execute_script(f"window.scrollTo(0, {2*last_height/3});")
+                time.sleep(scroll_pause_time/2)
+                self.driver.execute_script(f"window.scrollTo(0, {last_height});")
+                time.sleep(scroll_pause_time)
+                
+                # 새 높이 계산
+                new_height = self.driver.execute_script("return document.body.scrollHeight")
+                if new_height == last_height:
+                    break
+                last_height = new_height
+                
+            logger.info("페이지 스크롤 완료")
+            
+        except Exception as e:
+            logger.error(f"스크롤 중 오류: {e}")
+    
+    def extract_product_info(self, selectors):
+        """다양한 셀렉터를 시도하여 제품 정보 추출"""
+        products = []
+        
+        for item_selector in selectors["item_selectors"]:
+            try:
+                items = self.driver.find_elements(By.CSS_SELECTOR, item_selector)
+                if items:
+                    logger.info(f"셀렉터 '{item_selector}'로 {len(items)}개 상품 찾음")
                     
-                    # HTML 저장 (디버깅용)
-                    os.makedirs("debug", exist_ok=True)
-                    with open(f"debug/coupang_page_{page}.html", "w", encoding="utf-8") as f:
-                        f.write(response.text)
-                    
-                    # 상품 목록 찾기 (다양한 셀렉터 시도)
-                    selectors = [
-                        "ul.productList li.baby-product",
-                        "div.baby-product",
-                        "ul.products li.product-item",
-                        ".search-product"
-                    ]
-                    
-                    items = []
-                    for selector in selectors:
-                        items = soup.select(selector)
-                        if items:
-                            logger.info(f"셀렉터 '{selector}'로 {len(items)}개 상품 찾음")
-                            break
-                    
-                    # 첫 번째 상품 HTML 구조 확인 (디버깅)
-                    if items:
-                        logger.info("첫 번째 상품 HTML 구조 샘플:")
-                        logger.info(str(items[0])[:300] + "...")  # 앞부분만 출력
-                    else:
-                        logger.warning("상품 목록을 찾을 수 없음")
-                        # 페이지에 "와우 플러스 특가" 같은 텍스트가 있는지 확인
-                        page_text = soup.get_text()
-                        if "와우 특가" in page_text or "핫딜" in page_text:
-                            logger.info("페이지는 핫딜 페이지로 보이지만 상품 목록 구조를 찾을 수 없음")
-                        continue  # 다음 URL 시도
-                    
-                    deals = []
                     for item in items:
-                        # 상품 정보 추출
                         try:
-                            # 다양한 제목 셀렉터 시도
-                            title_selectors = ["div.name", "div.product-name", "a.product-link", "div.title"]
-                            title_elem = None
-                            for selector in title_selectors:
-                                title_elem = item.select_one(selector)
-                                if title_elem:
-                                    break
-                                    
-                            if not title_elem:
-                                logger.warning("제목 요소를 찾을 수 없음")
+                            # 상품명 추출
+                            title = None
+                            for title_selector in selectors["title_selectors"]:
+                                try:
+                                    title_elem = item.find_element(By.CSS_SELECTOR, title_selector)
+                                    title = title_elem.text.strip()
+                                    if title:
+                                        break
+                                except NoSuchElementException:
+                                    continue
+                            
+                            if not title:
+                                logger.warning("상품명을 찾을 수 없음")
                                 continue
-                                
-                            title = title_elem.text.strip()
                             
-                            # 다양한 가격 셀렉터 시도
-                            price_selectors = ["strong.price-value", "strong.price", "em.sale", "div.price-area"]
-                            price_elem = None
-                            for selector in price_selectors:
-                                price_elem = item.select_one(selector)
-                                if price_elem:
-                                    break
-                                    
-                            if not price_elem:
-                                logger.warning(f"가격 요소를 찾을 수 없음: {title}")
+                            # 현재 가격 추출
+                            price = None
+                            for price_selector in selectors["price_selectors"]:
+                                try:
+                                    price_elem = item.find_element(By.CSS_SELECTOR, price_selector)
+                                    price_text = price_elem.text.strip()
+                                    price_text = ''.join(filter(str.isdigit, price_text))
+                                    if price_text:
+                                        price = int(price_text)
+                                        break
+                                except (NoSuchElementException, ValueError):
+                                    continue
+                            
+                            if not price:
+                                logger.warning(f"가격을 찾을 수 없음: {title}")
                                 continue
-                                
-                            price_text = price_elem.text.strip()
-                            price_text = ''.join(filter(str.isdigit, price_text))  # 숫자만 추출
-                            price = int(price_text) if price_text else 0
                             
-                            # 다양한 원래 가격 셀렉터 시도
-                            original_price_selectors = ["del.base-price", "del.original-price", "span.original-price"]
-                            original_price_elem = None
-                            for selector in original_price_selectors:
-                                original_price_elem = item.select_one(selector)
-                                if original_price_elem:
-                                    break
-                                    
-                            original_price_text = original_price_elem.text.strip() if original_price_elem else ""
-                            original_price_text = ''.join(filter(str.isdigit, original_price_text))  # 숫자만 추출
-                            original_price = int(original_price_text) if original_price_text else price
+                            # 원래 가격 추출
+                            original_price = price  # 기본값
+                            for original_price_selector in selectors["original_price_selectors"]:
+                                try:
+                                    original_price_elem = item.find_element(By.CSS_SELECTOR, original_price_selector)
+                                    original_price_text = original_price_elem.text.strip()
+                                    original_price_text = ''.join(filter(str.isdigit, original_price_text))
+                                    if original_price_text:
+                                        original_price = int(original_price_text)
+                                        break
+                                except (NoSuchElementException, ValueError):
+                                    continue
                             
-                            # 할인율 계산 또는 추출
-                            discount_selectors = ["span.discount-rate", "span.discount-percentage"]
-                            discount_elem = None
-                            for selector in discount_selectors:
-                                discount_elem = item.select_one(selector)
-                                if discount_elem:
-                                    break
-                                    
-                            if discount_elem:
-                                discount_text = discount_elem.text.strip()
-                                discount_text = ''.join(filter(str.isdigit, discount_text))  # 숫자만 추출
-                                discount = int(discount_text) if discount_text else 0
-                            else:
-                                # 할인율 계산
-                                discount = round((original_price - price) / original_price * 100) if original_price > price else 0
+                            # 할인율 추출 또는 계산
+                            discount = 0
+                            for discount_selector in selectors["discount_selectors"]:
+                                try:
+                                    discount_elem = item.find_element(By.CSS_SELECTOR, discount_selector)
+                                    discount_text = discount_elem.text.strip()
+                                    discount_text = ''.join(filter(str.isdigit, discount_text))
+                                    if discount_text:
+                                        discount = int(discount_text)
+                                        break
+                                except (NoSuchElementException, ValueError):
+                                    continue
+                            
+                            # 할인율이 없으면 계산
+                            if discount == 0 and original_price > price:
+                                discount = round((original_price - price) / original_price * 100)
                             
                             # 링크 추출
-                            link_selectors = ["a.baby-product-link", "a.product-link", "a"]
-                            link_elem = None
-                            for selector in link_selectors:
-                                link_elems = item.select(selector)
-                                for elem in link_elems:
-                                    if elem.has_attr("href") and "/vp/" in elem["href"]:
-                                        link_elem = elem
+                            link = ""
+                            for link_selector in selectors["link_selectors"]:
+                                try:
+                                    link_elem = item.find_element(By.CSS_SELECTOR, link_selector)
+                                    link = link_elem.get_attribute("href")
+                                    if link:
                                         break
-                                if link_elem:
-                                    break
-                                    
-                            link = "https://www.coupang.com" + link_elem["href"] if link_elem and "href" in link_elem.attrs else ""
+                                except NoSuchElementException:
+                                    continue
                             
-                            # 이미지 URL
-                            img_selectors = ["img.product-image", "img.search-product-wrap-img", "img"]
-                            img_elem = None
-                            for selector in img_selectors:
-                                img_elems = item.select(selector)
-                                for elem in img_elems:
-                                    if elem.has_attr("src") and ("jpg" in elem["src"] or "jpeg" in elem["src"] or "png" in elem["src"]):
-                                        img_elem = elem
+                            # 이미지 URL 추출
+                            image_url = ""
+                            for image_selector in selectors["image_selectors"]:
+                                try:
+                                    img_elem = item.find_element(By.CSS_SELECTOR, image_selector)
+                                    image_url = img_elem.get_attribute("src")
+                                    if image_url:
                                         break
-                                if img_elem:
-                                    break
-                                    
-                            image_url = img_elem["src"] if img_elem and "src" in img_elem.attrs else ""
-                            if image_url and not image_url.startswith("http"):
-                                image_url = "https:" + image_url
+                                except NoSuchElementException:
+                                    continue
                             
-                            # 카테고리 (있는 경우)
-                            category_selectors = ["div.category", "span.category"]
-                            category_elem = None
-                            for selector in category_selectors:
-                                category_elem = item.select_one(selector)
-                                if category_elem:
-                                    break
-                                    
-                            category = category_elem.text.strip() if category_elem else "일반"
-                            
-                            # 데이터 추가
-                            deals.append({
+                            # 제품 정보 저장
+                            product = {
                                 "title": title,
                                 "price": price,
                                 "original_price": original_price,
                                 "discount": discount,
                                 "link": link,
                                 "image_url": image_url,
-                                "category": category,
+                                "category": "핫딜",
                                 "crawled_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                            })
+                            }
                             
-                            # 첫 번째 상품 정보 출력 (디버깅)
-                            if len(deals) == 1:
-                                logger.info(f"첫 번째 상품 정보: {deals[0]}")
-                                
+                            products.append(product)
+                            logger.info(f"상품 정보 추출: {title[:30]}...")
+                            
                         except Exception as e:
-                            logger.error(f"상품 정보 추출 중 오류: {e}", exc_info=True)
+                            logger.error(f"상품 정보 추출 중 오류: {e}")
                     
-                    if deals:
-                        return deals
-                    
-                else:
-                    logger.warning(f"페이지 가져오기 실패: 상태 코드 {response.status_code}")
-                    # 응답 내용의 일부를 출력하여 확인
-                    logger.info(f"응답 내용(앞부분): {response.text[:200]}")
-            
-            except requests.exceptions.RequestException as e:
-                logger.error(f"요청 오류 (재시도 {attempt+1}/{retries}): {e}")
-                time.sleep(random.uniform(2, 5))  # 재시도 전 대기
-    
-    # 모든 URL과 재시도 실패 시
-    logger.error("모든 URL에서 상품 정보를 가져오는 데 실패")
-    return []
-
-def get_goldbox_deals(retries=3):
-    """쿠팡 골드박스 핫딜 페이지에서 상품 정보 수집"""
-    
-    url = "https://www.coupang.com/np/goldbox"
-    logger.info(f"URL 요청: {url}")
-    
-    headers = {
-        "User-Agent": get_random_user_agent(),
-        "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-        "Connection": "keep-alive",
-        "Cache-Control": "max-age=0",
-        "Referer": "https://www.coupang.com/"
-    }
-    
-    for attempt in range(retries):
-        try:
-            # 페이지 가져오기
-            response = requests.get(url, headers=headers, timeout=10)
-            
-            # 응답 확인
-            logger.info(f"응답 상태 코드: {response.status_code}")
-            
-            if response.status_code == 200:
-                # HTML 파싱
-                soup = BeautifulSoup(response.text, "html.parser")
-                
-                # HTML 저장 (디버깅용)
-                os.makedirs("debug", exist_ok=True)
-                with open("debug/coupang_goldbox.html", "w", encoding="utf-8") as f:
-                    f.write(response.text)
-                
-                # 상품 목록 찾기 (다양한 셀렉터 시도)
-                selectors = [
-                    "ul.goldbox-list li.product-item",
-                    "div.product-item",
-                    "ul.productList li.product-item"
-                ]
-                
-                items = []
-                for selector in selectors:
-                    items = soup.select(selector)
-                    if items:
-                        logger.info(f"셀렉터 '{selector}'로 {len(items)}개 상품 찾음")
+                    # 상품을 찾았으면 반복 중단
+                    if products:
                         break
-                
-                if not items:
-                    logger.warning("상품 목록을 찾을 수 없음")
-                    continue  # 다음 시도
-                
-                deals = []
-                for item in items:
-                    # 상품 정보 추출
-                    try:
-                        # 다양한 제목 셀렉터 시도
-                        title_selectors = ["div.name", "div.product-name", "div.title"]
-                        title_elem = None
-                        for selector in title_selectors:
-                            title_elem = item.select_one(selector)
-                            if title_elem:
-                                break
-                                
-                        if not title_elem:
-                            logger.warning("제목 요소를 찾을 수 없음")
-                            continue
-                            
-                        title = title_elem.text.strip()
-                        
-                        # 다양한 가격 셀렉터 시도
-                        price_selectors = ["strong.price-value", "strong.price", "div.price"]
-                        price_elem = None
-                        for selector in price_selectors:
-                            price_elem = item.select_one(selector)
-                            if price_elem:
-                                break
-                                
-                        if not price_elem:
-                            logger.warning(f"가격 요소를 찾을 수 없음: {title}")
-                            continue
-                            
-                        price_text = price_elem.text.strip()
-                        price_text = ''.join(filter(str.isdigit, price_text))  # 숫자만 추출
-                        price = int(price_text) if price_text else 0
-                        
-                        # 다양한 원래 가격 셀렉터 시도
-                        original_price_selectors = ["span.base-price", "del.base-price", "del.original-price"]
-                        original_price_elem = None
-                        for selector in original_price_selectors:
-                            original_price_elem = item.select_one(selector)
-                            if original_price_elem:
-                                break
-                                
-                        original_price_text = original_price_elem.text.strip() if original_price_elem else ""
-                        original_price_text = ''.join(filter(str.isdigit, original_price_text))  # 숫자만 추출
-                        original_price = int(original_price_text) if original_price_text else price
-                        
-                        # 할인율 계산 또는 추출
-                        discount_selectors = ["span.discount-percentage", "span.discount-rate"]
-                        discount_elem = None
-                        for selector in discount_selectors:
-                            discount_elem = item.select_one(selector)
-                            if discount_elem:
-                                break
-                                
-                        if discount_elem:
-                            discount_text = discount_elem.text.strip()
-                            discount_text = ''.join(filter(str.isdigit, discount_text))  # 숫자만 추출
-                            discount = int(discount_text) if discount_text else 0
-                        else:
-                            # 할인율 계산
-                            discount = round((original_price - price) / original_price * 100) if original_price > price else 0
-                        
-                        # 링크 추출
-                        link_selectors = ["a.product-link", "a"]
-                        link_elem = None
-                        for selector in link_selectors:
-                            link_elems = item.select(selector)
-                            for elem in link_elems:
-                                if elem.has_attr("href") and ("/vp/" in elem["href"] or "/np/goldbox" in elem["href"]):
-                                    link_elem = elem
-                                    break
-                            if link_elem:
-                                break
-                                
-                        link = "https://www.coupang.com" + link_elem["href"] if link_elem and "href" in link_elem.attrs else ""
-                        
-                        # 이미지 URL
-                        img_selectors = ["img.product-image", "img"]
-                        img_elem = None
-                        for selector in img_selectors:
-                            img_elems = item.select(selector)
-                            for elem in img_elems:
-                                if elem.has_attr("src") and ("jpg" in elem["src"] or "jpeg" in elem["src"] or "png" in elem["src"]):
-                                    img_elem = elem
-                                    break
-                            if img_elem:
-                                break
-                                
-                        image_url = img_elem["src"] if img_elem and "src" in img_elem.attrs else ""
-                        if image_url and not image_url.startswith("http"):
-                            image_url = "https:" + image_url
-                        
-                        # 카테고리 (골드박스에는 없을 수 있음)
-                        category = "골드박스"
-                        
-                        # 데이터 추가
-                        deals.append({
-                            "title": title,
-                            "price": price,
-                            "original_price": original_price,
-                            "discount": discount,
-                            "link": link,
-                            "image_url": image_url,
-                            "category": category,
-                            "crawled_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                        })
-                        
-                    except Exception as e:
-                        logger.error(f"상품 정보 추출 중 오류: {e}", exc_info=True)
-                
-                if deals:
-                    return deals
-                
-        except requests.exceptions.RequestException as e:
-            logger.error(f"요청 오류 (재시도 {attempt+1}/{retries}): {e}")
-            time.sleep(random.uniform(2, 5))  # 재시도 전 대기
+            except Exception as e:
+                logger.error(f"상품 목록 검색 중 오류: {e}")
+        
+        return products
     
-    logger.error("골드박스 페이지에서 상품 정보를 가져오는 데 실패")
-    return []
+    def get_dealsite_selectors(self):
+        """쿠팡 핫딜 페이지 셀렉터"""
+        return {
+            "item_selectors": [
+                "ul.baby-product-list > li.baby-product",
+                "ul.productList > li.product-item",
+                "li.search-product",
+                "div.baby-product",
+                "div.product-item"
+            ],
+            "title_selectors": [
+                "div.name",
+                "div.title",
+                "div.product-name",
+                "a.product-link > div.title"
+            ],
+            "price_selectors": [
+                "strong.price-value", 
+                "div.price > em.sale",
+                "div.price-area > div.price-wrap > div.price > em",
+                "div.price-area > strong"
+            ],
+            "original_price_selectors": [
+                "del.base-price",
+                "span.price-info > span.origin-price",
+                "span.original-price"
+            ],
+            "discount_selectors": [
+                "span.discount-percentage",
+                "div.discount-rate",
+                "span.discount-rate",
+                "div.discount-percent"
+            ],
+            "link_selectors": [
+                "a.baby-product-link",
+                "a.product-link",
+                "a.search-product-link"
+            ],
+            "image_selectors": [
+                "img.product-image",
+                "img.search-product-wrap-img",
+                "img.product-img"
+            ]
+        }
+    
+    def get_goldbox_selectors(self):
+        """쿠팡 골드박스 페이지 셀렉터"""
+        return {
+            "item_selectors": [
+                "ul.goldbox-list > li.product-item",
+                "div.product-item",
+                "li.product-item"
+            ],
+            "title_selectors": [
+                "div.name",
+                "div.title"
+            ],
+            "price_selectors": [
+                "strong.price-value",
+                "div.price"
+            ],
+            "original_price_selectors": [
+                "span.base-price",
+                "del.base-price"
+            ],
+            "discount_selectors": [
+                "span.discount-percentage",
+                "span.discount-rate"
+            ],
+            "link_selectors": [
+                "a.product-link",
+                "a"
+            ],
+            "image_selectors": [
+                "img.product-image",
+                "img"
+            ]
+        }
+    
+    def crawl_goldbox(self):
+        """쿠팡 골드박스 페이지 크롤링"""
+        url = "https://www.coupang.com/np/goldbox"
+        logger.info("골드박스 핫딜 크롤링 시작")
+        
+        if self.get_page(url):
+            selectors = self.get_goldbox_selectors()
+            products = self.extract_product_info(selectors)
+            
+            if products:
+                logger.info(f"골드박스 핫딜 {len(products)}개 찾음")
+                # 골드박스 카테고리 표시
+                for product in products:
+                    product["category"] = "골드박스"
+                return products
+            else:
+                logger.warning("골드박스 핫딜 상품을 찾을 수 없음")
+        
+        return []
+    
+    def crawl_deal_page(self, page=1):
+        """쿠팡 핫딜 페이지 크롤링"""
+        urls = [
+            f"https://www.coupang.com/np/campaigns/82?page={page}",
+            f"https://www.coupang.com/np/campaigns/82/components/194176?page={page}",
+            f"https://www.coupang.com/np/campaigns/82?componentId=194176&page={page}"
+        ]
+        
+        logger.info(f"핫딜 페이지 {page} 크롤링 시작")
+        
+        for url in urls:
+            if self.get_page(url):
+                selectors = self.get_dealsite_selectors()
+                products = self.extract_product_info(selectors)
+                
+                if products:
+                    logger.info(f"핫딜 페이지 {page}에서 {len(products)}개 상품 찾음")
+                    return products
+            
+            # 다음 URL 시도 전 대기
+            time.sleep(random.uniform(1, 2))
+        
+        logger.warning(f"페이지 {page}에서 상품을 찾을 수 없음")
+        return []
 
 def create_sample_deals():
-    """크롤링 실패 시 테스트용 샘플 데이터 생성"""
+    """크롤링 실패 시 샘플 데이터 생성"""
     logger.info("테스트용 샘플 데이터 생성")
     
     # 현실적인 샘플 데이터
@@ -500,43 +495,58 @@ def save_deals_to_csv(deals, test_mode=False):
     return file_path
 
 def main():
-    """메인 함수: 여러 페이지의 핫딜 정보 수집"""
+    """메인 크롤링 함수"""
+    logger.info("=== 쿠팡 핫딜 크롤링 시작 (Selenium) ===")
     
-    logger.info("=== 쿠팡 핫딜 크롤링 시작 ===")
-    
+    # 모든 수집 결과를 저장할 리스트
     all_deals = []
     
-    # 골드박스 핫딜 수집
-    logger.info("골드박스 핫딜 수집 중...")
-    goldbox_deals = get_goldbox_deals()
-    if goldbox_deals:
-        all_deals.extend(goldbox_deals)
-        logger.info(f"골드박스 핫딜 {len(goldbox_deals)}개 수집 완료")
-    else:
-        logger.warning("골드박스 핫딜 수집 실패")
+    try:
+        # 크롤러 인스턴스 생성
+        crawler = SeleniumCoupangCrawler(headless=HEADLESS)
+        
+        # 골드박스 크롤링
+        goldbox_deals = crawler.crawl_goldbox()
+        if goldbox_deals:
+            all_deals.extend(goldbox_deals)
+            logger.info(f"골드박스 핫딜 {len(goldbox_deals)}개 수집 완료")
+        
+        # 일반 핫딜 페이지 크롤링
+        for page in range(1, MAX_PAGES + 1):
+            page_deals = crawler.crawl_deal_page(page)
+            if page_deals:
+                all_deals.extend(page_deals)
+                logger.info(f"페이지 {page}에서 {len(page_deals)}개 상품 수집 완료")
+            
+            # 다음 페이지 요청 전 대기
+            if page < MAX_PAGES:
+                delay = random.uniform(DELAY_MIN, DELAY_MAX)
+                logger.info(f"다음 페이지 요청 전 {delay:.2f}초 대기 중...")
+                time.sleep(delay)
     
-    # 일반 핫딜 페이지 수집
-    for page in range(1, MAX_PAGES + 1):
-        logger.info(f"핫딜 페이지 {page} 수집 중...")
-        
-        # 핫딜 정보 가져오기
-        deals = get_coupang_deals(page=page)
-        
-        if deals:
-            all_deals.extend(deals)
-            logger.info(f"페이지 {page}에서 {len(deals)}개 상품 수집 완료")
-        else:
-            logger.warning(f"페이지 {page}에서 상품을 찾을 수 없습니다.")
-        
-        # IP 차단 방지를 위한 대기
-        delay = random.uniform(DELAY_MIN, DELAY_MAX)
-        logger.info(f"다음 페이지 요청 전 {delay:.2f}초 대기 중...")
-        time.sleep(delay)
+    except Exception as e:
+        logger.error(f"크롤링 중 예외 발생: {e}", exc_info=True)
     
-    # 모든 수집 결과 처리
+    finally:
+        # 드라이버 종료
+        if 'crawler' in locals():
+            crawler.close()
+    
+    # 수집 결과 처리
     if all_deals:
-        # 수집된 상품 정보 저장
-        save_deals_to_csv(all_deals)
+        # 중복 제거 (URL 기준)
+        unique_deals = []
+        seen_links = set()
+        
+        for deal in all_deals:
+            if deal["link"] not in seen_links:
+                seen_links.add(deal["link"])
+                unique_deals.append(deal)
+        
+        logger.info(f"중복 제거 후 총 {len(unique_deals)}개 상품 (원래: {len(all_deals)}개)")
+        
+        # CSV 파일로 저장
+        save_deals_to_csv(unique_deals)
     else:
         logger.error("수집된 상품이 없습니다. 샘플 데이터 생성을 시작합니다.")
         
