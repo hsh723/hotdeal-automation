@@ -10,29 +10,80 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 전체 히스토리 가져오기
         
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+          cache: 'pip'  # 의존성 캐싱으로 설치 속도 향상
           
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Install Chrome
+        run: |
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+      
+      - name: Check Chrome version
+        run: google-chrome --version
         
       - name: Run crawler
         run: python crawler.py
+        env:
+          HEADLESS: "true"
+          MAX_PAGES: "3"
         
       - name: Send to Telegram
         run: python telegram_sender.py
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MIN_DISCOUNT: "20"
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status -s | grep "data/") ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
         
-      - name: Commit and push if data changed
+      - name: Commit and push data changes
+        if: steps.check_changes.outputs.changes == 'true'
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add data || true
-          git commit -m "자동 업데이트: 쿠팡 핫딜 데이터 ($(date +'%Y-%m-%d'))" || true
-          git push || true
+          git add data/coupang_deals_*.csv
+          git commit -m "자동 업데이트: 쿠팡 핫딜 데이터 ($(date +'%Y-%m-%d'))"
+          git push
+      
+      - name: Commit and push sent_products.json
+        run: |
+          # sent_products.json이 존재하는지 확인
+          if [ -f "data/sent_products.json" ]; then
+            git config --global user.name 'GitHub Actions'
+            git config --global user.email 'actions@github.com'
+            git add data/sent_products.json
+            git commit -m "자동 업데이트: 전송된 상품 목록 ($(date +'%Y-%m-%d'))" || echo "No changes to sent_products.json"
+            git push || echo "No changes to push"
+            echo "✅ sent_products.json 파일이 성공적으로 커밋되었습니다."
+          else
+            echo "⚠️ sent_products.json 파일이 존재하지 않습니다."
+          fi
+      
+      - name: Notify success
+        if: success()
+        run: echo "✅ GitHub Actions에서 크롤링 및 텔레그램 전송 성공!"
+      
+      - name: Notify failure
+        if: failure()
+        run: echo "❌ GitHub Actions에서 작업 실패. 로그를 확인하세요."
