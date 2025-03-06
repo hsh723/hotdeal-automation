@@ -8,6 +8,7 @@ import time
 import random
 import logging
 import glob
+import json
 from dotenv import load_dotenv
 
 # 로깅 설정
@@ -30,6 +31,30 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 # 최소 할인율 설정 (이 이상 할인된 상품만 알림)
 MIN_DISCOUNT = int(os.getenv("MIN_DISCOUNT", "20"))  # 기본값 20% 이상 할인된 상품만
+
+# 이전에 전송한 상품 기록 관리
+SENT_RECORD_FILE = "data/sent_products.json"
+
+def load_sent_products():
+    """이전에 전송한 상품 목록 불러오기"""
+    if os.path.exists(SENT_RECORD_FILE):
+        try:
+            with open(SENT_RECORD_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            logger.error(f"전송 기록 파일 읽기 오류: {e}")
+    
+    # 파일이 없거나 오류 발생 시 빈 dict 반환
+    return {"sent_links": [], "last_update": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+def save_sent_products(sent_products):
+    """전송한 상품 목록 저장"""
+    try:
+        os.makedirs(os.path.dirname(SENT_RECORD_FILE), exist_ok=True)
+        with open(SENT_RECORD_FILE, 'w', encoding='utf-8') as f:
+            json.dump(sent_products, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logger.error(f"전송 기록 파일 저장 오류: {e}")
 
 async def send_deal_message(bot, deal, retry_count=3):
     """개별 핫딜 상품 메시지 전송"""
@@ -158,17 +183,35 @@ async def send_top_deals(deals, max_items=10, use_images=True):
         logger.error("텔레그램 설정이 없습니다. .env 파일을 확인하세요.")
         return 0
     
+    # 이전에 전송한 상품 기록 불러오기
+    sent_products = load_sent_products()
+    sent_links = set(sent_products["sent_links"])
+    
+    # 최근 전송 기록 정리 (최대 500개 유지)
+    if len(sent_links) > 500:
+        sent_products["sent_links"] = sent_products["sent_links"][-500:]
+        sent_links = set(sent_products["sent_links"])
+    
     # 봇 객체 생성
     bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
     
     # 할인율 기준으로 정렬
     sorted_deals = sorted(deals, key=lambda x: x["discount"], reverse=True)
     
-    # 상위 N개 또는 MIN_DISCOUNT% 이상 할인된 모든 상품
-    filtered_deals = [d for d in sorted_deals if d["discount"] >= MIN_DISCOUNT][:max_items]
+    # 이미 전송한 상품 제외 및 최소 할인율 필터링
+    new_deals = []
+    for deal in sorted_deals:
+        if deal["discount"] >= MIN_DISCOUNT and deal["link"] not in sent_links:
+            new_deals.append(deal)
+            # 중복 전송 방지를 위해 링크 추가
+            sent_links.add(deal["link"])
+            sent_products["sent_links"].append(deal["link"])
     
-    if not filtered_deals:
-        logger.info(f"전송할 핫딜이 없습니다. (최소 할인율: {MIN_DISCOUNT}%)")
+    # 최대 개수 제한
+    new_deals = new_deals[:max_items]
+    
+    if not new_deals:
+        logger.info(f"전송할 새로운 핫딜이 없습니다. (최소 할인율: {MIN_DISCOUNT}%)")
         return 0
     
     # 헤더 메시지 전송
@@ -176,7 +219,7 @@ async def send_top_deals(deals, max_items=10, use_images=True):
     try:
         await bot.send_message(
             chat_id=TELEGRAM_CHAT_ID,
-            text=f"📢 <b>{today} 쿠팡 핫딜 TOP {len(filtered_deals)}</b>",
+            text=f"📢 <b>{today} 쿠팡 핫딜 TOP {len(new_deals)}</b>",
             parse_mode="HTML"
         )
         logger.info(f"헤더 메시지 전송 완료")
@@ -185,7 +228,7 @@ async def send_top_deals(deals, max_items=10, use_images=True):
     
     # 개별 상품 메시지 전송
     sent_count = 0
-    for deal in filtered_deals:
+    for deal in new_deals:
         try:
             if use_images and deal.get("image_url"):
                 success = await send_image_message(bot, deal)
@@ -211,6 +254,10 @@ async def send_top_deals(deals, max_items=10, use_images=True):
             logger.info("푸터 메시지 전송 완료")
         except Exception as e:
             logger.error(f"푸터 메시지 전송 중 오류: {e}")
+    
+    # 전송 기록 저장
+    sent_products["last_update"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    save_sent_products(sent_products)
     
     return sent_count
 
