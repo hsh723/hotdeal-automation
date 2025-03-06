@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add data/
-          git diff --quiet && git diff --staged --quiet || git commit -m "자동 업데이트: 쿠팡 핫딜 데이터 ($(date +'%Y-%m-%d'))"
-          git push
+          git add data || true
+          git commit -m "자동 업데이트: 쿠팡 핫딜 데이터 ($(date +'%Y-%m-%d'))" || true
+          git push || true
