@@ -34,25 +34,55 @@ MIN_DISCOUNT = int(os.getenv("MIN_DISCOUNT", "20"))  # 기본값 20% 이상 할�
 
 # 이전에 전송한 상품 기록 관리
 SENT_RECORD_FILE = "data/sent_products.json"
+GITHUB_SENT_RECORD_URL = "https://raw.githubusercontent.com/username/repo/main/data/sent_products.json"
 
 def load_sent_products():
     """이전에 전송한 상품 목록 불러오기"""
+    sent_products = {"sent_links": [], "last_update": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+    
+    # 로컬 파일 확인
     if os.path.exists(SENT_RECORD_FILE):
         try:
             with open(SENT_RECORD_FILE, 'r', encoding='utf-8') as f:
-                return json.load(f)
+                local_data = json.load(f)
+                if isinstance(local_data, dict) and "sent_links" in local_data:
+                    sent_products = local_data
+                    logger.info(f"로컬 전송 기록 파일 로드: {len(sent_products['sent_links'])}개 링크")
         except Exception as e:
-            logger.error(f"전송 기록 파일 읽기 오류: {e}")
+            logger.error(f"로컬 전송 기록 파일 읽기 오류: {e}")
     
-    # 파일이 없거나 오류 발생 시 빈 dict 반환
-    return {"sent_links": [], "last_update": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+    # GitHub Actions 환경에서 실행 중인지 확인
+    if os.environ.get("GITHUB_ACTIONS") == "true" and not os.path.exists(SENT_RECORD_FILE):
+        try:
+            import requests
+            response = requests.get(GITHUB_SENT_RECORD_URL)
+            if response.status_code == 200:
+                github_data = response.json()
+                if isinstance(github_data, dict) and "sent_links" in github_data:
+                    # 로컬 데이터와 GitHub 데이터 병합
+                    github_links = set(github_data["sent_links"])
+                    local_links = set(sent_products["sent_links"])
+                    all_links = list(github_links.union(local_links))
+                    
+                    sent_products["sent_links"] = all_links
+                    logger.info(f"GitHub 전송 기록 파일 로드: {len(github_links)}개 링크")
+        except Exception as e:
+            logger.error(f"GitHub 전송 기록 파일 읽기 오류: {e}")
+    
+    return sent_products
 
 def save_sent_products(sent_products):
     """전송한 상품 목록 저장"""
     try:
         os.makedirs(os.path.dirname(SENT_RECORD_FILE), exist_ok=True)
+        
+        # 중복 제거 (set 변환 후 다시 list로)
+        sent_products["sent_links"] = list(set(sent_products["sent_links"]))
+        
         with open(SENT_RECORD_FILE, 'w', encoding='utf-8') as f:
             json.dump(sent_products, f, ensure_ascii=False, indent=2)
+            
+        logger.info(f"전송 기록 파일 저장 완료: {len(sent_products['sent_links'])}개 링크")
     except Exception as e:
         logger.error(f"전송 기록 파일 저장 오류: {e}")
 
@@ -187,10 +217,11 @@ async def send_top_deals(deals, max_items=10, use_images=True):
     sent_products = load_sent_products()
     sent_links = set(sent_products["sent_links"])
     
-    # 최근 전송 기록 정리 (최대 500개 유지)
-    if len(sent_links) > 500:
-        sent_products["sent_links"] = sent_products["sent_links"][-500:]
+    # 최근 전송 기록 정리 (최대 1000개 유지)
+    if len(sent_links) > 1000:
+        sent_products["sent_links"] = list(sent_links)[-1000:]
         sent_links = set(sent_products["sent_links"])
+        logger.info(f"전송 기록 정리: 1000개로 제한 (원래: {len(sent_links)}개)")
     
     # 봇 객체 생성
     bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
@@ -200,18 +231,34 @@ async def send_top_deals(deals, max_items=10, use_images=True):
     
     # 이미 전송한 상품 제외 및 최소 할인율 필터링
     new_deals = []
+    filtered_count = 0
+    
     for deal in sorted_deals:
-        if deal["discount"] >= MIN_DISCOUNT and deal["link"] not in sent_links:
+        # 링크 정규화 (쿼리 파라미터 제거)
+        link = deal["link"].split("?")[0] if "?" in deal["link"] else deal["link"]
+        
+        # 이미 전송한 링크인지 확인 (정규화된 링크로 비교)
+        if link in sent_links:
+            filtered_count += 1
+            continue
+            
+        # 최소 할인율 확인
+        if deal["discount"] >= MIN_DISCOUNT:
             new_deals.append(deal)
-            # 중복 전송 방지를 위해 링크 추가
-            sent_links.add(deal["link"])
-            sent_products["sent_links"].append(deal["link"])
+            # 중복 전송 방지를 위해 링크 추가 (정규화된 링크 저장)
+            sent_links.add(link)
+            sent_products["sent_links"].append(link)
+    
+    logger.info(f"중복 필터링: {filtered_count}개 상품 제외됨")
     
     # 최대 개수 제한
     new_deals = new_deals[:max_items]
     
     if not new_deals:
         logger.info(f"전송할 새로운 핫딜이 없습니다. (최소 할인율: {MIN_DISCOUNT}%)")
+        # 전송 기록 저장 (필터링된 링크 포함)
+        sent_products["last_update"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        save_sent_products(sent_products)
         return 0
     
     # 헤더 메시지 전송
@@ -239,7 +286,7 @@ async def send_top_deals(deals, max_items=10, use_images=True):
                 sent_count += 1
             
             # 너무 많은 메시지를 한꺼번에 보내지 않도록 대기
-            time.sleep(random.uniform(1, 2))
+            await asyncio.sleep(random.uniform(1, 2))
         except Exception as e:
             logger.error(f"상품 메시지 전송 중 오류: {e}")
     
@@ -259,6 +306,7 @@ async def send_top_deals(deals, max_items=10, use_images=True):
     sent_products["last_update"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     save_sent_products(sent_products)
     
+    logger.info(f"텔레그램 전송 완료! 중복 제거 후 {sent_count}개 상품 전송")
     return sent_count
 
 def find_latest_deals_file():
