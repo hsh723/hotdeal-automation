@@ -31,14 +31,6 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 # 최소 할인율 설정 (이 이상 할인된 상품만 알림)
 MIN_DISCOUNT = int(os.getenv("MIN_DISCOUNT", "20"))  # 기본값 20% 이상 할인된 상품만
 
-# python-telegram-bot 버전 호환성 처리
-try:
-    from telegram.constants import ParseMode
-    PARSE_MODE = ParseMode.HTML
-except (ImportError, AttributeError):
-    # 구 버전 python-telegram-bot은 constants 모듈이 없음
-    PARSE_MODE = "HTML"
-
 async def send_deal_message(bot, deal, retry_count=3):
     """개별 핫딜 상품 메시지 전송"""
     
@@ -75,7 +67,7 @@ async def send_deal_message(bot, deal, retry_count=3):
             await bot.send_message(
                 chat_id=TELEGRAM_CHAT_ID,
                 text=message,
-                parse_mode=PARSE_MODE,
+                parse_mode="HTML",
                 disable_web_page_preview=False
             )
             logger.info(f"메시지 전송 성공: {deal['title'][:30]}...")
@@ -133,7 +125,7 @@ async def send_image_message(bot, deal, retry_count=3):
                 chat_id=TELEGRAM_CHAT_ID,
                 photo=deal["image_url"],
                 caption=caption,
-                parse_mode=PARSE_MODE
+                parse_mode="HTML"
             )
             logger.info(f"이미지 메시지 전송 성공: {deal['title'][:30]}...")
             return True
@@ -185,7 +177,7 @@ async def send_top_deals(deals, max_items=10, use_images=True):
         await bot.send_message(
             chat_id=TELEGRAM_CHAT_ID,
             text=f"📢 <b>{today} 쿠팡 핫딜 TOP {len(filtered_deals)}</b>",
-            parse_mode=PARSE_MODE
+            parse_mode="HTML"
         )
         logger.info(f"헤더 메시지 전송 완료")
     except Exception as e:
@@ -214,7 +206,7 @@ async def send_top_deals(deals, max_items=10, use_images=True):
             await bot.send_message(
                 chat_id=TELEGRAM_CHAT_ID,
                 text="위 상품들은 재고 소진 시 종료될 수 있습니다. 더 많은 핫딜은 채널에서 확인하세요!",
-                parse_mode=PARSE_MODE
+                parse_mode="HTML"
             )
             logger.info("푸터 메시지 전송 완료")
         except Exception as e:
