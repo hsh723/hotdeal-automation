@@ -25,21 +25,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      - name: Install Chrome
+      - name: Install Chrome and ChromeDriver
         run: |
           wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
           echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
+          sudo apt-get install -y chromium-chromedriver
+          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
       
-      - name: Check Chrome version
-        run: google-chrome --version
+      - name: Check Chrome and ChromeDriver versions
+        run: |
+          google-chrome --version
+          chromedriver --version
         
       - name: Run crawler
         run: python crawler.py
         env:
           HEADLESS: "true"
           MAX_PAGES: "3"
+          USE_SYSTEM_CHROMEDRIVER: "true"  # 시스템에 설치된 ChromeDriver 사용
         
       - name: Send to Telegram
         run: python telegram_sender.py
