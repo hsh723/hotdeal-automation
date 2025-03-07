@@ -1,0 +1,169 @@
+[
+  {
+    "filename": "frames\\20250308_003539_00_intro.jpg",
+    "metadata": {
+      "type": "intro",
+      "timestamp": "20250308_003539",
+      "timecode": "00:00:00"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_01_category_골드박스.jpg",
+    "metadata": {
+      "type": "category_intro",
+      "category": "골드박스",
+      "timestamp": "20250308_003539",
+      "frame_index": 1,
+      "timecode": "00:01:00"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_02_01_골드박스_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "골드박스",
+      "product_id": "",
+      "product_title": "코멧 니트릴장갑 화이트, 중(M), 100개입, 1개",
+      "timestamp": "20250308_003539",
+      "frame_index": 2,
+      "product_index": 1,
+      "timecode": "00:02:01"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_02_02_골드박스_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "골드박스",
+      "product_id": "",
+      "product_title": "아이깨끗해 항균 폼 핸드솝 순 파우더향 리필, 600ml, 1개",
+      "timestamp": "20250308_003539",
+      "frame_index": 2,
+      "product_index": 2,
+      "timecode": "00:02:02"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_02_03_골드박스_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "골드박스",
+      "product_id": "",
+      "product_title": "크린손 크린 위생장갑 알뜰형, 500개입, 1개",
+      "timestamp": "20250308_003539",
+      "frame_index": 2,
+      "product_index": 3,
+      "timecode": "00:02:03"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_02_04_골드박스_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "골드박스",
+      "product_id": "",
+      "product_title": "버넬 고농축 섬유유연제 와일드 로즈 본품, 900ml, 1개",
+      "timestamp": "20250308_003539",
+      "frame_index": 2,
+      "product_index": 4,
+      "timecode": "00:02:04"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_02_05_골드박스_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "골드박스",
+      "product_id": "",
+      "product_title": "온더바디 발을씻자 코튼 풋샴푸 프레쉬레몬민트향, 1개입, 1개, 385ml",
+      "timestamp": "20250308_003539",
+      "frame_index": 2,
+      "product_index": 5,
+      "timecode": "00:02:05"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_03_category_일반.jpg",
+    "metadata": {
+      "type": "category_intro",
+      "category": "일반",
+      "timestamp": "20250308_003539",
+      "frame_index": 3,
+      "timecode": "00:03:00"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_04_01_일반_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "일반",
+      "product_id": "",
+      "product_title": "동원 JUST 노슈가 스위트콘, 340g, 1개",
+      "timestamp": "20250308_003539",
+      "frame_index": 4,
+      "product_index": 1,
+      "timecode": "00:04:01"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_04_02_일반_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "일반",
+      "product_id": "",
+      "product_title": "청정원 멸치 쌀국수, 92g, 12개",
+      "timestamp": "20250308_003539",
+      "frame_index": 4,
+      "product_index": 2,
+      "timecode": "00:04:02"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_04_03_일반_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "일반",
+      "product_id": "",
+      "product_title": "스팸 클래식, 200g, 3개",
+      "timestamp": "20250308_003539",
+      "frame_index": 4,
+      "product_index": 3,
+      "timecode": "00:04:03"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_04_04_일반_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "일반",
+      "product_id": "",
+      "product_title": "청정원순창 양념듬뿍 쌈장, 500g, 1개",
+      "timestamp": "20250308_003539",
+      "frame_index": 4,
+      "product_index": 4,
+      "timecode": "00:04:04"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_04_05_일반_product.jpg",
+    "metadata": {
+      "type": "product",
+      "category": "일반",
+      "product_id": "",
+      "product_title": "연세두유 뼈를 생각한 고칼슘 검은콩, 190ml, 24개",
+      "timestamp": "20250308_003539",
+      "frame_index": 4,
+      "product_index": 5,
+      "timecode": "00:04:05"
+    }
+  },
+  {
+    "filename": "frames\\20250308_003539_05_outro.jpg",
+    "metadata": {
+      "type": "outro",
+      "timestamp": "20250308_003539",
+      "frame_index": 5,
+      "timecode": "00:05:00"
+    }
+  }
+]

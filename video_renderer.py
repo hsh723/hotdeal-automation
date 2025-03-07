@@ -10,11 +10,23 @@ import datetime
 import tempfile
 import numpy as np
 from pathlib import Path
-from moviepy.editor import (
-    ImageClip, AudioFileClip, CompositeAudioClip, concatenate_videoclips, 
-    TextClip, CompositeVideoClip, VideoFileClip, AudioClip
-)
-from moviepy.video.fx import fadeout, fadein
+
+# MoviePy 기본 모듈들을 직접 임포트
+import moviepy.video.io.ImageSequenceClip as ImageSequenceClip
+from moviepy.video.VideoClip import ImageClip, TextClip
+from moviepy.video.compositing.CompositeVideoClip import CompositeVideoClip
+from moviepy.audio.AudioClip import AudioClip, CompositeAudioClip
+from moviepy.audio.io.AudioFileClip import AudioFileClip
+from moviepy.video.io.VideoFileClip import VideoFileClip
+from moviepy.video.compositing.concatenate import concatenate_videoclips
+from moviepy.video.fx.fadein import fadein
+from moviepy.video.fx.fadeout import fadeout
+
+# MoviePy 탐색을 위한 디버깅 코드 추가
+import moviepy
+print("MoviePy 경로:", moviepy.__file__)
+print("MoviePy 버전:", moviepy.__version__)
+print("MoviePy 구조:", dir(moviepy))
 
 # 로깅 설정
 logging.basicConfig(

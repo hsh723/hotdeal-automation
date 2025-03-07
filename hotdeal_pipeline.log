@@ -1,0 +1,481 @@
+2025-03-08 00:26:19,480 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 00:26:19,481 - HotdealPipeline - INFO - 파이프라인 실행 시작: crawler, telegram_sender, script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 00:26:19,481 - HotdealPipeline - INFO - ===== crawler 단계 시작 =====
+2025-03-08 00:26:22,486 - HotdealPipeline - ERROR - crawler 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:26:22,487 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\crawler.py", line 17, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+
+2025-03-08 00:26:22,487 - HotdealPipeline - INFO - crawler 단계 재시도 (1/3)...
+2025-03-08 00:27:22,488 - HotdealPipeline - INFO - ===== crawler 단계 시작 =====
+2025-03-08 00:27:23,554 - HotdealPipeline - ERROR - crawler 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:27:23,555 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\crawler.py", line 17, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+
+2025-03-08 00:27:23,555 - HotdealPipeline - INFO - crawler 단계 재시도 (2/3)...
+2025-03-08 00:28:23,556 - HotdealPipeline - INFO - ===== crawler 단계 시작 =====
+2025-03-08 00:28:24,630 - HotdealPipeline - ERROR - crawler 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:28:24,630 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\crawler.py", line 17, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+
+2025-03-08 00:28:24,630 - HotdealPipeline - INFO - crawler 단계 재시도 (3/3)...
+2025-03-08 00:29:24,631 - HotdealPipeline - INFO - ===== crawler 단계 시작 =====
+2025-03-08 00:29:25,683 - HotdealPipeline - ERROR - crawler 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:29:25,684 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\crawler.py", line 17, in <module>
+    from webdriver_manager.chrome import ChromeDriverManager
+ModuleNotFoundError: No module named 'webdriver_manager'
+
+2025-03-08 00:29:25,684 - HotdealPipeline - ERROR - crawler 단계가 실패하여 파이프라인을 중단합니다.
+2025-03-08 00:29:25,685 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 00:29:25,685 - HotdealPipeline - ERROR - 파이프라인 실행 실패
+2025-03-08 00:35:22,595 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 00:35:22,595 - HotdealPipeline - INFO - 파이프라인 실행 시작: script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 00:35:22,595 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 00:35:22,685 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 00:35:22,685 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 00:35:22,685 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 00:35:22,685 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 00:35:22,685 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.09초) =====
+2025-03-08 00:35:22,686 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 00:35:38,175 - HotdealPipeline - INFO - ===== tts_generator 단계 완료 (소요 시간: 15.49초) =====
+2025-03-08 00:35:38,176 - HotdealPipeline - INFO - ===== video_frame_generator 단계 시작 =====
+2025-03-08 00:35:40,507 - HotdealPipeline - INFO - ===== video_frame_generator 단계 완료 (소요 시간: 2.33초) =====
+2025-03-08 00:35:40,508 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:35:41,402 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:35:41,403 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:35:41,403 - HotdealPipeline - INFO - video_renderer 단계 재시도 (1/3)...
+2025-03-08 00:36:41,405 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:36:41,837 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:36:41,837 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:36:41,838 - HotdealPipeline - INFO - video_renderer 단계 재시도 (2/3)...
+2025-03-08 00:37:41,839 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:37:42,252 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:37:42,252 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:37:42,253 - HotdealPipeline - INFO - video_renderer 단계 재시도 (3/3)...
+2025-03-08 00:38:42,254 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:38:42,670 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:38:42,670 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:38:42,671 - HotdealPipeline - ERROR - video_renderer 단계가 실패하여 파이프라인을 중단합니다.
+2025-03-08 00:38:42,672 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 00:38:42,673 - HotdealPipeline - ERROR - 파이프라인 실행 실패
+2025-03-08 00:40:25,541 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 00:40:25,541 - HotdealPipeline - INFO - 파이프라인 실행 시작: script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 00:40:25,541 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 00:40:25,613 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 00:40:25,613 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 00:40:25,613 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 00:40:25,613 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 00:40:25,613 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.07초) =====
+2025-03-08 00:40:25,614 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 00:40:40,405 - HotdealPipeline - INFO - ===== tts_generator 단계 완료 (소요 시간: 14.79초) =====
+2025-03-08 00:40:40,405 - HotdealPipeline - INFO - ===== video_frame_generator 단계 시작 =====
+2025-03-08 00:40:42,691 - HotdealPipeline - INFO - ===== video_frame_generator 단계 완료 (소요 시간: 2.29초) =====
+2025-03-08 00:40:42,692 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:40:43,121 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:40:43,122 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:40:43,122 - HotdealPipeline - INFO - video_renderer 단계 재시도 (1/3)...
+2025-03-08 00:41:43,123 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:41:43,541 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:41:43,542 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:41:43,543 - HotdealPipeline - INFO - video_renderer 단계 재시도 (2/3)...
+2025-03-08 00:42:43,544 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:42:43,983 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:42:43,984 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:42:43,984 - HotdealPipeline - INFO - video_renderer 단계 재시도 (3/3)...
+2025-03-08 00:43:43,986 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:43:44,405 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:43:44,406 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:43:44,406 - HotdealPipeline - ERROR - video_renderer 단계가 실패하여 파이프라인을 중단합니다.
+2025-03-08 00:43:44,408 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 00:43:44,408 - HotdealPipeline - ERROR - 파이프라인 실행 실패
+2025-03-08 00:46:42,757 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 00:46:42,757 - HotdealPipeline - INFO - 파이프라인 실행 시작: script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 00:46:42,758 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 00:46:42,826 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 00:46:42,826 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 00:46:42,827 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 00:46:42,827 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 00:46:42,827 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.07초) =====
+2025-03-08 00:46:42,827 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 00:46:56,565 - HotdealPipeline - INFO - ===== tts_generator 단계 완료 (소요 시간: 13.74초) =====
+2025-03-08 00:46:56,565 - HotdealPipeline - INFO - ===== video_frame_generator 단계 시작 =====
+2025-03-08 00:46:58,821 - HotdealPipeline - INFO - ===== video_frame_generator 단계 완료 (소요 시간: 2.26초) =====
+2025-03-08 00:46:58,821 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 00:46:59,267 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 00:46:59,267 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 13, in <module>
+    from moviepy.editor import (
+    ...<2 lines>...
+    )
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 00:46:59,268 - HotdealPipeline - INFO - video_renderer 단계 재시도 (1/3)...
+2025-03-08 03:49:50,362 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 03:49:50,362 - HotdealPipeline - INFO - 파이프라인 실행 시작: video_renderer
+2025-03-08 03:49:50,363 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:49:51,695 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:49:51,696 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 28, in <module>
+    from moviepy.video.compositing.concatenate import concatenate_videoclips
+ModuleNotFoundError: No module named 'moviepy.video.compositing.concatenate'
+
+2025-03-08 03:49:51,696 - HotdealPipeline - INFO - video_renderer 단계 재시도 (1/3)...
+2025-03-08 03:50:51,697 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:50:52,112 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:50:52,112 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 28, in <module>
+    from moviepy.video.compositing.concatenate import concatenate_videoclips
+ModuleNotFoundError: No module named 'moviepy.video.compositing.concatenate'
+
+2025-03-08 03:50:52,113 - HotdealPipeline - INFO - video_renderer 단계 재시도 (2/3)...
+2025-03-08 03:51:52,114 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:51:52,526 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:51:52,526 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 28, in <module>
+    from moviepy.video.compositing.concatenate import concatenate_videoclips
+ModuleNotFoundError: No module named 'moviepy.video.compositing.concatenate'
+
+2025-03-08 03:51:52,527 - HotdealPipeline - INFO - video_renderer 단계 재시도 (3/3)...
+2025-03-08 03:52:52,527 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:52:53,065 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:52:53,065 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 28, in <module>
+    from moviepy.video.compositing.concatenate import concatenate_videoclips
+ModuleNotFoundError: No module named 'moviepy.video.compositing.concatenate'
+
+2025-03-08 03:52:53,066 - HotdealPipeline - ERROR - video_renderer 단계가 실패하여 파이프라인을 중단합니다.
+2025-03-08 03:52:53,067 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 03:52:53,067 - HotdealPipeline - ERROR - 파이프라인 실행 실패
+2025-03-08 03:53:25,784 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 03:53:25,784 - HotdealPipeline - INFO - 파이프라인 실행 시작: video_renderer
+2025-03-08 03:53:25,785 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:53:26,914 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:53:26,914 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 22, in <module>
+    import moviepy.editor as mp
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 03:53:26,914 - HotdealPipeline - INFO - video_renderer 단계 재시도 (1/3)...
+2025-03-08 03:54:26,915 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:54:27,355 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:54:27,355 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 22, in <module>
+    import moviepy.editor as mp
+ModuleNotFoundError: No module named 'moviepy.editor'
+
+2025-03-08 03:54:27,356 - HotdealPipeline - INFO - video_renderer 단계 재시도 (2/3)...
+2025-03-08 03:55:27,357 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:55:27,790 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:55:27,791 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 21, in <module>
+    from moviepy.video.compositing.concatenate import concatenate_videoclips
+ModuleNotFoundError: No module named 'moviepy.video.compositing.concatenate'
+
+2025-03-08 03:55:27,791 - HotdealPipeline - INFO - video_renderer 단계 재시도 (3/3)...
+2025-03-08 03:56:27,792 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 03:56:28,230 - HotdealPipeline - ERROR - video_renderer 단계가 실패했습니다 (코드: 1)
+2025-03-08 03:56:28,231 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\video_renderer.py", line 21, in <module>
+    from moviepy.video.compositing.concatenate import concatenate_videoclips
+ModuleNotFoundError: No module named 'moviepy.video.compositing.concatenate'
+
+2025-03-08 03:56:28,231 - HotdealPipeline - ERROR - video_renderer 단계가 실패하여 파이프라인을 중단합니다.
+2025-03-08 03:56:28,233 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 03:56:28,234 - HotdealPipeline - ERROR - 파이프라인 실행 실패
+2025-03-08 04:04:07,722 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 04:04:07,722 - HotdealPipeline - INFO - 파이프라인 실행 시작: video_renderer
+2025-03-08 04:04:07,724 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 04:04:10,060 - HotdealPipeline - INFO - [video_renderer] MoviePy 경로: C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\venv39\lib\site-packages\moviepy\__init__.py
+2025-03-08 04:04:10,060 - HotdealPipeline - INFO - [video_renderer] MoviePy 버전: 1.0.3
+2025-03-08 04:04:10,061 - HotdealPipeline - INFO - [video_renderer] MoviePy 구조: ['Clip', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', 'audio', 'compat', 'config', 'config_defaults', 'decorators', 'tools', 'version', 'video']
+2025-03-08 04:04:10,062 - HotdealPipeline - INFO - ===== video_renderer 단계 완료 (소요 시간: 2.34초) =====
+2025-03-08 04:04:10,063 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 04:04:10,063 - HotdealPipeline - INFO - 파이프라인 실행 성공!
+2025-03-08 04:10:38,886 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 04:10:38,887 - HotdealPipeline - INFO - 파이프라인 실행 시작: video_renderer
+2025-03-08 04:10:38,888 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 04:10:39,228 - HotdealPipeline - INFO - [video_renderer] MoviePy 경로: C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\venv39\lib\site-packages\moviepy\__init__.py
+2025-03-08 04:10:39,228 - HotdealPipeline - INFO - [video_renderer] MoviePy 버전: 1.0.3
+2025-03-08 04:10:39,229 - HotdealPipeline - INFO - [video_renderer] MoviePy 구조: ['Clip', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', 'audio', 'compat', 'config', 'config_defaults', 'decorators', 'tools', 'version', 'video']
+2025-03-08 04:10:39,230 - HotdealPipeline - INFO - ===== video_renderer 단계 완료 (소요 시간: 0.34초) =====
+2025-03-08 04:10:39,232 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 04:10:39,232 - HotdealPipeline - INFO - 파이프라인 실행 성공!
+2025-03-08 04:12:57,475 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 04:12:57,475 - HotdealPipeline - INFO - 파이프라인 실행 시작: crawler, telegram_sender, script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 04:12:57,475 - HotdealPipeline - INFO - ===== crawler 단계 시작 =====
+2025-03-08 04:13:13,919 - HotdealPipeline - INFO - ===== crawler 단계 완료 (소요 시간: 16.44초) =====
+2025-03-08 04:13:13,919 - HotdealPipeline - INFO - ===== telegram_sender 단계 시작 =====
+2025-03-08 04:13:14,761 - HotdealPipeline - INFO - ===== telegram_sender 단계 완료 (소요 시간: 0.84초) =====
+2025-03-08 04:13:14,761 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 04:13:15,351 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:13:15,351 - HotdealPipeline - INFO - [script_generator] CSV 파일에서 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:13:15,351 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:13:15,351 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 60g, 1개, 카테고리: 골드박스, 할인율: 42%
+2025-03-08 04:13:15,351 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 주방세제 리필, 1.2L, 1개, 카테고리: 골드박스, 할인율: 46%
+2025-03-08 04:13:15,352 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 맛술, 830ml, 1개, 카테고리: 골드박스, 할인율: 36%
+2025-03-08 04:13:15,352 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 베이킹소다 주방세제 레몬, 780ml, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:13:15,352 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 흙당근, 1kg, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:13:15,352 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:13:15,352 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 300g, 1개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:13:15,352 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:13:15,352 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 크고 단단한 두부, 1kg, 1개, 카테고리: 골드박스, 할인율: 25%
+2025-03-08 04:13:15,353 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 버넬 고농축 섬유유연제 와일드 로즈 본품, 900ml, 1개, 카테고리: 골드박스, 할인율: 59%
+2025-03-08 04:13:15,353 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 깐마늘, 1kg, 1개, 카테고리: 골드박스, 할인율: 45%
+2025-03-08 04:13:15,353 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스카트 유리 거울 세정 청소티슈, 1개, 카테고리: 골드박스, 할인율: 40%
+2025-03-08 04:13:15,353 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 도브 뷰티 너리싱 바디워시, 1kg, 1개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:13:15,353 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크린손 크린 위생장갑 알뜰형, 500개입, 1개, 카테고리: 골드박스, 할인율: 60%
+2025-03-08 04:13:15,353 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 깨끗한 천연펄프 키친타월, 150매, 8개, 카테고리: 골드박스, 할인율: 43%
+2025-03-08 04:13:15,353 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 온더바디 발을씻자 코튼 풋샴푸 프레쉬레몬민트향, 1개입, 1개, 385ml, 카테고리: 골드박스, 할인율: 58%
+2025-03-08 04:13:15,354 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 파우더향 리필, 600ml, 1개, 카테고리: 골드박스, 할인율: 62%
+2025-03-08 04:13:15,354 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 중간글씨용 네임펜 세트, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 50%
+2025-03-08 04:13:15,354 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 자연다움 우리쌀로 만든 끓여먹는 솥뚜껑 누룽지, 1kg, 1개, 카테고리: 골드박스, 할인율: 20%
+2025-03-08 04:13:15,354 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 니트릴장갑 화이트, 중(M), 100개입, 1개, 카테고리: 골드박스, 할인율: 72%
+2025-03-08 04:13:15,354 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 2개, 카테고리: 골드박스, 할인율: 54%
+2025-03-08 04:13:15,355 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아리얼 스트레스 릴리빙 퓨어풀 클렌징 티슈, 80개입, 1개, 카테고리: 골드박스, 할인율: 48%
+2025-03-08 04:13:15,355 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크리오 덴티메이트 시즌2 초극세모 칫솔, 10개입, 1세트, 카테고리: 골드박스, 할인율: 57%
+2025-03-08 04:13:15,355 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 새미네부엌 겉절이 양념, 90g, 2개, 카테고리: 골드박스, 할인율: 26%
+2025-03-08 04:13:15,355 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 골드박스, 할인율: 33%
+2025-03-08 04:13:15,355 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 요플레 플레인 멀티, 85g, 8개, 카테고리: 골드박스, 할인율: 38%
+2025-03-08 04:13:15,355 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 보송보송 파우더향, 490ml, 1개, 카테고리: 골드박스, 할인율: 44%
+2025-03-08 04:13:15,356 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 유성 매직, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:13:15,356 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:13:15,356 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 맛있는 오뚜기밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:13:15,356 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해태제과 오예스 30p, 900g, 1개, 카테고리: 일반, 할인율: 40%
+2025-03-08 04:13:15,356 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 12개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:13:15,356 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 1개, 카테고리: 일반, 할인율: 52%
+2025-03-08 04:13:15,357 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: CJ맛밤, 42g, 10개, 카테고리: 일반, 할인율: 26%
+2025-03-08 04:13:15,357 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 참깨라면 115g, 8개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:13:15,357 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 델몬트 필리핀 바나나, 1.4kg 내외, 1개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:13:15,357 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 사골곰탕, 500g, 6개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:13:15,357 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:13:15,357 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기3분 카레 약간매운맛, 200g, 6개, 카테고리: 일반, 할인율: 47%
+2025-03-08 04:13:15,358 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 하림 닭볶음탕용 (냉장), 1000g, 1개, 카테고리: 일반, 할인율: 45%
+2025-03-08 04:13:15,358 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 동원 JUST 노슈가 스위트콘, 340g, 1개, 카테고리: 일반, 할인율: 57%
+2025-03-08 04:13:15,358 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 한끼 연두부 + 오리엔탈 유자 소스 6개입, 708g, 1세트, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:13:15,358 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 멸균 흰우유, 200ml, 24개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:13:15,358 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스팸 클래식, 200g, 3개, 카테고리: 일반, 할인율: 53%
+2025-03-08 04:13:15,358 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 24개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:13:15,359 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 2L, 12개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:13:15,359 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 36개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:13:15,359 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진비빔면 156g, 8개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:13:15,359 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수 그린 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:13:15,359 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:13:15,359 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 켈로그 첵스초코 오곡으로 만든 시리얼, 570g, 1개, 카테고리: 일반, 할인율: 28%
+2025-03-08 04:13:15,360 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 틈새라면 빨계떡 120g, 5개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:13:15,360 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오리온 카스타드 딸기 생크림 12p, 1개, 276g, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:13:15,360 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 복음자리 딸기잼, 500g, 1개, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:13:15,360 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 연세두유 뼈를 생각한 고칼슘 검은콩, 190ml, 24개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:13:15,360 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스윗토 스테비아 대추방울토마토, 1.2kg, 1팩, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:13:15,360 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 이탈리아 정통 스파게티, 500g, 2개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:13:15,361 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 소중한 우리쌀 2024년(햅쌀), 10kg(상등급), 1개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:13:15,361 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 20개, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:13:15,361 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 6개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:13:15,361 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 60개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:13:15,361 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 한알 육수 3g 70입, 210g, 1개, 카테고리: 일반, 할인율: 46%
+2025-03-08 04:13:15,361 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 블루다이아몬드 아몬드 브리즈 오리지널, 190ml, 24개, 카테고리: 일반, 할인율: 41%
+2025-03-08 04:13:15,362 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 직화 참기름김, 4.5g, 24개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:13:15,362 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 반숙란 (냉장), 20구, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:13:15,362 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:13:15,362 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 40개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:13:15,362 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 양반 현미밥, 130g, 24개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:13:15,362 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 성주 당도선별 미니참외, 1.5kg(6입~9입), 1봉, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:13:15,363 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 이롬 황성주 박사의 국산콩 두유 검은콩 고칼슘, 190ml, 24개, 카테고리: 일반, 할인율: 49%
+2025-03-08 04:13:15,363 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 흑미밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:13:15,363 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 짜슐랭 145g, 15개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:13:15,363 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 36개, 카테고리: 일반, 할인율: 43%
+2025-03-08 04:13:15,363 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해표 식용유, 1.8L, 1개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:13:15,363 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 나 100% 우유, 1L, 2개, 카테고리: 일반, 할인율: 50%
+2025-03-08 04:13:15,364 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 즉석 백미밥, 210g, 36개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:13:15,364 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 멸치 쌀국수, 92g, 12개, 카테고리: 일반, 할인율: 54%
+2025-03-08 04:13:15,364 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 별하수 보리차 진액, 270g, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:13:15,364 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 24개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:13:15,364 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:13:15,365 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 04:13:15,365 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.60초) =====
+2025-03-08 04:13:15,365 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:13:15,442 - HotdealPipeline - ERROR - tts_generator 단계가 실패했습니다 (코드: 1)
+2025-03-08 04:13:15,442 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\tts_generator.py", line 10, in <module>
+    from gtts import gTTS
+ModuleNotFoundError: No module named 'gtts'
+
+2025-03-08 04:13:15,443 - HotdealPipeline - INFO - tts_generator 단계 재시도 (1/3)...
+2025-03-08 04:14:15,453 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:14:15,526 - HotdealPipeline - ERROR - tts_generator 단계가 실패했습니다 (코드: 1)
+2025-03-08 04:14:15,526 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\tts_generator.py", line 10, in <module>
+    from gtts import gTTS
+ModuleNotFoundError: No module named 'gtts'
+
+2025-03-08 04:14:15,527 - HotdealPipeline - INFO - tts_generator 단계 재시도 (2/3)...
+2025-03-08 04:15:15,527 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:15:15,600 - HotdealPipeline - ERROR - tts_generator 단계가 실패했습니다 (코드: 1)
+2025-03-08 04:15:15,601 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\tts_generator.py", line 10, in <module>
+    from gtts import gTTS
+ModuleNotFoundError: No module named 'gtts'
+
+2025-03-08 04:15:15,601 - HotdealPipeline - INFO - tts_generator 단계 재시도 (3/3)...
+2025-03-08 04:16:15,604 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:16:15,676 - HotdealPipeline - ERROR - tts_generator 단계가 실패했습니다 (코드: 1)
+2025-03-08 04:16:15,677 - HotdealPipeline - ERROR - 오류 메시지: Traceback (most recent call last):
+  File "C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\tts_generator.py", line 10, in <module>
+    from gtts import gTTS
+ModuleNotFoundError: No module named 'gtts'
+
+2025-03-08 04:16:15,677 - HotdealPipeline - ERROR - tts_generator 단계가 실패하여 파이프라인을 중단합니다.
+2025-03-08 04:16:15,679 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 04:16:15,679 - HotdealPipeline - ERROR - 파이프라인 실행 실패
+2025-03-08 04:17:29,422 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 04:17:29,422 - HotdealPipeline - INFO - 파이프라인 실행 시작: script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 04:17:29,423 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 04:17:30,046 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:17:30,046 - HotdealPipeline - INFO - [script_generator] CSV 파일에서 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:17:30,047 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:17:30,047 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 60g, 1개, 카테고리: 골드박스, 할인율: 42%
+2025-03-08 04:17:30,047 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 주방세제 리필, 1.2L, 1개, 카테고리: 골드박스, 할인율: 46%
+2025-03-08 04:17:30,047 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 맛술, 830ml, 1개, 카테고리: 골드박스, 할인율: 36%
+2025-03-08 04:17:30,047 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 베이킹소다 주방세제 레몬, 780ml, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:17:30,047 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 흙당근, 1kg, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:17:30,048 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:17:30,048 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 300g, 1개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:17:30,048 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:17:30,048 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 크고 단단한 두부, 1kg, 1개, 카테고리: 골드박스, 할인율: 25%
+2025-03-08 04:17:30,048 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 버넬 고농축 섬유유연제 와일드 로즈 본품, 900ml, 1개, 카테고리: 골드박스, 할인율: 59%
+2025-03-08 04:17:30,049 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 깐마늘, 1kg, 1개, 카테고리: 골드박스, 할인율: 45%
+2025-03-08 04:17:30,049 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스카트 유리 거울 세정 청소티슈, 1개, 카테고리: 골드박스, 할인율: 40%
+2025-03-08 04:17:30,049 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 도브 뷰티 너리싱 바디워시, 1kg, 1개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:17:30,049 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크린손 크린 위생장갑 알뜰형, 500개입, 1개, 카테고리: 골드박스, 할인율: 60%
+2025-03-08 04:17:30,049 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 깨끗한 천연펄프 키친타월, 150매, 8개, 카테고리: 골드박스, 할인율: 43%
+2025-03-08 04:17:30,050 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 온더바디 발을씻자 코튼 풋샴푸 프레쉬레몬민트향, 1개입, 1개, 385ml, 카테고리: 골드박스, 할인율: 58%
+2025-03-08 04:17:30,050 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 파우더향 리필, 600ml, 1개, 카테고리: 골드박스, 할인율: 62%
+2025-03-08 04:17:30,050 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 중간글씨용 네임펜 세트, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 50%
+2025-03-08 04:17:30,050 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 자연다움 우리쌀로 만든 끓여먹는 솥뚜껑 누룽지, 1kg, 1개, 카테고리: 골드박스, 할인율: 20%
+2025-03-08 04:17:30,050 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 니트릴장갑 화이트, 중(M), 100개입, 1개, 카테고리: 골드박스, 할인율: 72%
+2025-03-08 04:17:30,051 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 2개, 카테고리: 골드박스, 할인율: 54%
+2025-03-08 04:17:30,051 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아리얼 스트레스 릴리빙 퓨어풀 클렌징 티슈, 80개입, 1개, 카테고리: 골드박스, 할인율: 48%
+2025-03-08 04:17:30,051 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크리오 덴티메이트 시즌2 초극세모 칫솔, 10개입, 1세트, 카테고리: 골드박스, 할인율: 57%
+2025-03-08 04:17:30,051 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 새미네부엌 겉절이 양념, 90g, 2개, 카테고리: 골드박스, 할인율: 26%
+2025-03-08 04:17:30,051 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 골드박스, 할인율: 33%
+2025-03-08 04:17:30,052 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 요플레 플레인 멀티, 85g, 8개, 카테고리: 골드박스, 할인율: 38%
+2025-03-08 04:17:30,052 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 보송보송 파우더향, 490ml, 1개, 카테고리: 골드박스, 할인율: 44%
+2025-03-08 04:17:30,052 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 유성 매직, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:17:30,052 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:17:30,053 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 맛있는 오뚜기밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:17:30,053 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해태제과 오예스 30p, 900g, 1개, 카테고리: 일반, 할인율: 40%
+2025-03-08 04:17:30,053 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 12개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:17:30,053 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 1개, 카테고리: 일반, 할인율: 52%
+2025-03-08 04:17:30,053 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: CJ맛밤, 42g, 10개, 카테고리: 일반, 할인율: 26%
+2025-03-08 04:17:30,054 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 참깨라면 115g, 8개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:17:30,054 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 델몬트 필리핀 바나나, 1.4kg 내외, 1개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:17:30,054 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 사골곰탕, 500g, 6개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:17:30,054 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:17:30,054 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기3분 카레 약간매운맛, 200g, 6개, 카테고리: 일반, 할인율: 47%
+2025-03-08 04:17:30,055 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 하림 닭볶음탕용 (냉장), 1000g, 1개, 카테고리: 일반, 할인율: 45%
+2025-03-08 04:17:30,055 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 동원 JUST 노슈가 스위트콘, 340g, 1개, 카테고리: 일반, 할인율: 57%
+2025-03-08 04:17:30,055 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 한끼 연두부 + 오리엔탈 유자 소스 6개입, 708g, 1세트, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:17:30,055 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 멸균 흰우유, 200ml, 24개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:17:30,055 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스팸 클래식, 200g, 3개, 카테고리: 일반, 할인율: 53%
+2025-03-08 04:17:30,056 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 24개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:17:30,056 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 2L, 12개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:17:30,056 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 36개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:17:30,056 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진비빔면 156g, 8개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:17:30,056 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수 그린 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:17:30,056 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:17:30,057 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 켈로그 첵스초코 오곡으로 만든 시리얼, 570g, 1개, 카테고리: 일반, 할인율: 28%
+2025-03-08 04:17:30,057 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 틈새라면 빨계떡 120g, 5개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:17:30,057 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오리온 카스타드 딸기 생크림 12p, 1개, 276g, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:17:30,057 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 복음자리 딸기잼, 500g, 1개, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:17:30,057 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 연세두유 뼈를 생각한 고칼슘 검은콩, 190ml, 24개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:17:30,058 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스윗토 스테비아 대추방울토마토, 1.2kg, 1팩, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:17:30,058 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 이탈리아 정통 스파게티, 500g, 2개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:17:30,058 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 소중한 우리쌀 2024년(햅쌀), 10kg(상등급), 1개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:17:30,058 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 20개, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:17:30,058 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 6개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:17:30,059 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 60개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:17:30,059 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 한알 육수 3g 70입, 210g, 1개, 카테고리: 일반, 할인율: 46%
+2025-03-08 04:17:30,059 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 블루다이아몬드 아몬드 브리즈 오리지널, 190ml, 24개, 카테고리: 일반, 할인율: 41%
+2025-03-08 04:17:30,059 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 직화 참기름김, 4.5g, 24개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:17:30,059 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 반숙란 (냉장), 20구, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:17:30,059 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:17:30,060 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 40개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:17:30,060 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 양반 현미밥, 130g, 24개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:17:30,060 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 성주 당도선별 미니참외, 1.5kg(6입~9입), 1봉, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:17:30,061 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 이롬 황성주 박사의 국산콩 두유 검은콩 고칼슘, 190ml, 24개, 카테고리: 일반, 할인율: 49%
+2025-03-08 04:17:30,061 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 흑미밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:17:30,061 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 짜슐랭 145g, 15개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:17:30,061 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 36개, 카테고리: 일반, 할인율: 43%
+2025-03-08 04:17:30,061 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해표 식용유, 1.8L, 1개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:17:30,062 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 나 100% 우유, 1L, 2개, 카테고리: 일반, 할인율: 50%
+2025-03-08 04:17:30,062 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 즉석 백미밥, 210g, 36개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:17:30,062 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 멸치 쌀국수, 92g, 12개, 카테고리: 일반, 할인율: 54%
+2025-03-08 04:17:30,062 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 별하수 보리차 진액, 270g, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:17:30,062 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 24개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:17:30,063 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:17:30,063 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 04:17:30,063 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.64초) =====
+2025-03-08 04:17:30,063 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:17:51,019 - HotdealPipeline - INFO - ===== tts_generator 단계 완료 (소요 시간: 20.96초) =====
+2025-03-08 04:17:51,020 - HotdealPipeline - INFO - ===== video_frame_generator 단계 시작 =====
+2025-03-08 04:17:52,843 - HotdealPipeline - INFO - ===== video_frame_generator 단계 완료 (소요 시간: 1.82초) =====
+2025-03-08 04:17:52,843 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 04:17:53,201 - HotdealPipeline - INFO - [video_renderer] MoviePy 경로: C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\venv39\lib\site-packages\moviepy\__init__.py
+2025-03-08 04:17:53,202 - HotdealPipeline - INFO - [video_renderer] MoviePy 버전: 1.0.3
+2025-03-08 04:17:53,202 - HotdealPipeline - INFO - [video_renderer] MoviePy 구조: ['Clip', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', 'audio', 'compat', 'config', 'config_defaults', 'decorators', 'tools', 'version', 'video']
+2025-03-08 04:17:53,202 - HotdealPipeline - INFO - ===== video_renderer 단계 완료 (소요 시간: 0.36초) =====
+2025-03-08 04:17:53,204 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 04:17:53,204 - HotdealPipeline - INFO - 파이프라인 실행 성공!

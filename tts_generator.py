@@ -7,8 +7,8 @@ import time
 import glob
 import logging
 import datetime
-from gtts import gTTS
-from gtts.tts import gTTSError
+import requests
+from pathlib import Path
 
 # 로깅 설정
 logging.basicConfig(
@@ -60,27 +60,80 @@ def split_script_by_category(script):
     
     return result
 
-def text_to_speech(text, output_file, lang='ko', slow=False, retry_count=3, retry_delay=2):
-    """텍스트를 음성으로 변환하여 파일로 저장"""
+def apply_pronunciation_corrections(text):
+    """발음 교정 적용"""
+    corrections = {
+        "정가": "정까",
+        "할인율": "할인율",
+        "구매하실": "구매하실",
+        "%": "퍼센트",
+        "원에서": "원에서",
+        "원": "원",
+    }
+    
+    for original, corrected in corrections.items():
+        text = text.replace(original, corrected)
+    
+    return text
+
+def generate_voice_clova(text, output_path, speaker="vhyeri", volume=0, pitch=0, speed=1.1, retry_count=3, retry_delay=2):
+    """네이버 Clova Voice로 음성 생성"""
+    # API 키 가져오기
+    api_key_id = os.environ.get('NAVER_API_KEY_ID')
+    api_secret = os.environ.get('NAVER_API_SECRET')
+    
+    if not api_key_id or not api_secret:
+        logger.error("네이버 API 키가 설정되지 않았습니다. 환경 변수 NAVER_API_KEY_ID와 NAVER_API_SECRET를 설정하세요.")
+        return False
+    
+    url = "https://naveropenapi.apigw.ntruss.com/tts-premium/v1/tts"
+    
+    headers = {
+        "X-NCP-APIGW-API-KEY-ID": api_key_id,
+        "X-NCP-APIGW-API-KEY": api_secret,
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+    
+    # 발음 교정 적용
+    text = apply_pronunciation_corrections(text)
+    
+    data = {
+        "speaker": speaker,
+        "volume": volume,
+        "speed": speed,
+        "pitch": pitch,
+        "text": text,
+        "format": "mp3"
+    }
+    
     for attempt in range(retry_count):
         try:
-            tts = gTTS(text=text, lang=lang, slow=slow)
-            tts.save(output_file)
-            logger.info(f"음성 파일 생성 완료: {output_file}")
-            return True
-        except gTTSError as e:
-            logger.warning(f"TTS 변환 실패 (시도 {attempt+1}/{retry_count}): {e}")
+            response = requests.post(url, headers=headers, data=data)
+            
+            if response.status_code == 200:
+                with open(output_path, 'wb') as f:
+                    f.write(response.content)
+                logger.info(f"음성 파일 생성 완료: {output_path}")
+                return True
+            else:
+                logger.warning(f"API 호출 실패 (시도 {attempt+1}/{retry_count}): {response.status_code}, {response.text}")
+                if attempt < retry_count - 1:
+                    logger.info(f"{retry_delay}초 후 재시도합니다...")
+                    time.sleep(retry_delay)
+                else:
+                    logger.error(f"최대 재시도 횟수 초과. 음성 변환 실패: {output_path}")
+                    return False
+        except Exception as e:
+            logger.error(f"예상치 못한 오류 발생: {e}")
             if attempt < retry_count - 1:
                 logger.info(f"{retry_delay}초 후 재시도합니다...")
                 time.sleep(retry_delay)
             else:
-                logger.error(f"최대 재시도 횟수 초과. 음성 변환 실패: {output_file}")
                 return False
-        except Exception as e:
-            logger.error(f"예상치 못한 오류 발생: {e}")
-            return False
+    
+    return False
 
-def generate_audio_files(script_parts, output_dir="audio", lang='ko', slow=False):
+def generate_audio_files(script_parts, output_dir="audio", speaker="vhyeri", speed=1.1, pitch=0, volume=0):
     """스크립트 부분별로 음성 파일 생성"""
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -94,19 +147,19 @@ def generate_audio_files(script_parts, output_dir="audio", lang='ko', slow=False
     # 인트로 음성 생성
     if script_parts["intro"]:
         intro_file = os.path.join(output_dir, f"{timestamp}_00_intro.mp3")
-        if text_to_speech(script_parts["intro"], intro_file, lang, slow):
+        if generate_voice_clova(script_parts["intro"], intro_file, speaker, volume, pitch, speed):
             generated_files.append(intro_file)
     
     # 카테고리별 음성 생성
     for i, category_text in enumerate(script_parts["categories"], 1):
         category_file = os.path.join(output_dir, f"{timestamp}_{i:02d}_category.mp3")
-        if text_to_speech(category_text, category_file, lang, slow):
+        if generate_voice_clova(category_text, category_file, speaker, volume, pitch, speed):
             generated_files.append(category_file)
     
     # 아웃트로 음성 생성
     if script_parts["outro"]:
         outro_file = os.path.join(output_dir, f"{timestamp}_{len(script_parts['categories'])+1:02d}_outro.mp3")
-        if text_to_speech(script_parts["outro"], outro_file, lang, slow):
+        if generate_voice_clova(script_parts["outro"], outro_file, speaker, volume, pitch, speed):
             generated_files.append(outro_file)
     
     return generated_files
@@ -114,9 +167,16 @@ def generate_audio_files(script_parts, output_dir="audio", lang='ko', slow=False
 def main():
     try:
         # 환경 변수에서 설정 가져오기 (기본값 제공)
-        lang = os.environ.get('TTS_LANGUAGE', 'ko')
-        slow = os.environ.get('TTS_SLOW', 'False').lower() == 'true'
+        speaker = os.environ.get('TTS_SPEAKER', 'vhyeri')  # 또는 'vminji'
+        speed = float(os.environ.get('TTS_SPEED', '1.1'))  # 약간 빠르게
+        pitch = int(os.environ.get('TTS_PITCH', '0'))
+        volume = int(os.environ.get('TTS_VOLUME', '0'))
         output_dir = os.environ.get('TTS_OUTPUT_DIR', 'audio')
+        
+        # API 키 확인
+        if not os.environ.get('NAVER_API_KEY_ID') or not os.environ.get('NAVER_API_SECRET'):
+            logger.error("네이버 API 키가 설정되지 않았습니다. 환경 변수 NAVER_API_KEY_ID와 NAVER_API_SECRET를 설정하세요.")
+            return
         
         # 최신 스크립트 파일 찾기
         script_file = get_latest_script_file()
@@ -131,7 +191,14 @@ def main():
         logger.info(f"스크립트 분리 완료: 인트로, {len(script_parts['categories'])}개 카테고리, 아웃트로")
         
         # 음성 파일 생성
-        generated_files = generate_audio_files(script_parts, output_dir, lang, slow)
+        generated_files = generate_audio_files(
+            script_parts, 
+            output_dir=output_dir,
+            speaker=speaker,
+            speed=speed,
+            pitch=pitch,
+            volume=volume
+        )
         logger.info(f"총 {len(generated_files)}개의 음성 파일 생성 완료")
         
         # 생성된 파일 목록 출력

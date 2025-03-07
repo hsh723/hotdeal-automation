@@ -1,0 +1,141 @@
+2025-03-08 00:35:39,517 - VideoFrameGenerator - INFO - 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 00:35:39,527 - VideoFrameGenerator - INFO - CSV 파일 읽기 성공: 239개 상품 정보 로드
+2025-03-08 00:35:39,527 - VideoFrameGenerator - INFO - 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 00:35:39,541 - VideoFrameGenerator - INFO - 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 00:35:39,542 - VideoFrameGenerator - INFO - 출력 디렉토리 생성: frames
+2025-03-08 00:35:39,564 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:39,575 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\logo\\logo.png'
+2025-03-08 00:35:39,628 - VideoFrameGenerator - INFO - 인트로 프레임 생성 완료: frames\20250308_003539_00_intro.jpg
+2025-03-08 00:35:39,628 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:39,657 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_003539_01_category_골드박스.jpg
+2025-03-08 00:35:39,657 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:39,729 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_02_01_골드박스_product.jpg
+2025-03-08 00:35:39,730 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:39,800 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_02_02_골드박스_product.jpg
+2025-03-08 00:35:39,801 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:39,864 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_02_03_골드박스_product.jpg
+2025-03-08 00:35:39,865 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:39,949 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_02_04_골드박스_product.jpg
+2025-03-08 00:35:39,949 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,036 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_02_05_골드박스_product.jpg
+2025-03-08 00:35:40,037 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,067 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_003539_03_category_일반.jpg
+2025-03-08 00:35:40,068 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,138 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_04_01_일반_product.jpg
+2025-03-08 00:35:40,139 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,218 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_04_02_일반_product.jpg
+2025-03-08 00:35:40,219 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,283 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_04_03_일반_product.jpg
+2025-03-08 00:35:40,284 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,354 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_04_04_일반_product.jpg
+2025-03-08 00:35:40,355 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,421 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_003539_04_05_일반_product.jpg
+2025-03-08 00:35:40,421 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:35:40,430 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\logo\\logo.png'
+2025-03-08 00:35:40,436 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_003539_05_outro.jpg
+2025-03-08 00:35:40,444 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.
+2025-03-08 00:40:41,654 - VideoFrameGenerator - INFO - 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 00:40:41,658 - VideoFrameGenerator - INFO - CSV 파일 읽기 성공: 239개 상품 정보 로드
+2025-03-08 00:40:41,658 - VideoFrameGenerator - INFO - 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 00:40:41,669 - VideoFrameGenerator - INFO - 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 00:40:41,678 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:41,687 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\logo\\logo.png'
+2025-03-08 00:40:41,714 - VideoFrameGenerator - INFO - 인트로 프레임 생성 완료: frames\20250308_004041_00_intro.jpg
+2025-03-08 00:40:41,715 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:41,744 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_004041_01_category_골드박스.jpg
+2025-03-08 00:40:41,744 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:41,827 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_02_01_골드박스_product.jpg
+2025-03-08 00:40:41,828 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:41,944 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_02_02_골드박스_product.jpg
+2025-03-08 00:40:41,945 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,042 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_02_03_골드박스_product.jpg
+2025-03-08 00:40:42,043 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,144 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_02_04_골드박스_product.jpg
+2025-03-08 00:40:42,145 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,216 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_02_05_골드박스_product.jpg
+2025-03-08 00:40:42,217 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,246 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_004041_03_category_일반.jpg
+2025-03-08 00:40:42,246 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,318 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_04_01_일반_product.jpg
+2025-03-08 00:40:42,319 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,391 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_04_02_일반_product.jpg
+2025-03-08 00:40:42,391 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,464 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_04_03_일반_product.jpg
+2025-03-08 00:40:42,464 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,533 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_04_04_일반_product.jpg
+2025-03-08 00:40:42,534 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,605 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004041_04_05_일반_product.jpg
+2025-03-08 00:40:42,606 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:40:42,615 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\logo\\logo.png'
+2025-03-08 00:40:42,621 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_004041_05_outro.jpg
+2025-03-08 00:40:42,624 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.
+2025-03-08 00:46:57,823 - VideoFrameGenerator - INFO - 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 00:46:57,828 - VideoFrameGenerator - INFO - CSV 파일 읽기 성공: 239개 상품 정보 로드
+2025-03-08 00:46:57,828 - VideoFrameGenerator - INFO - 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 00:46:57,841 - VideoFrameGenerator - INFO - 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 00:46:57,852 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:57,859 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\logo\\logo.png'
+2025-03-08 00:46:57,882 - VideoFrameGenerator - INFO - 인트로 프레임 생성 완료: frames\20250308_004657_00_intro.jpg
+2025-03-08 00:46:57,883 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:57,912 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_004657_01_category_골드박스.jpg
+2025-03-08 00:46:57,913 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:57,995 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_02_01_골드박스_product.jpg
+2025-03-08 00:46:57,996 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,070 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_02_02_골드박스_product.jpg
+2025-03-08 00:46:58,071 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,157 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_02_03_골드박스_product.jpg
+2025-03-08 00:46:58,158 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,253 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_02_04_골드박스_product.jpg
+2025-03-08 00:46:58,254 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,316 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_02_05_골드박스_product.jpg
+2025-03-08 00:46:58,317 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,347 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_004657_03_category_일반.jpg
+2025-03-08 00:46:58,348 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,428 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_04_01_일반_product.jpg
+2025-03-08 00:46:58,429 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,499 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_04_02_일반_product.jpg
+2025-03-08 00:46:58,499 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,569 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_04_03_일반_product.jpg
+2025-03-08 00:46:58,570 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,642 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_04_04_일반_product.jpg
+2025-03-08 00:46:58,643 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,731 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_004657_04_05_일반_product.jpg
+2025-03-08 00:46:58,732 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 00:46:58,741 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'C:\\Users\\momus\\hotdeal\\hotdeal-automation\\hotdeal-automation\\assets\\logo\\logo.png'
+2025-03-08 00:46:58,748 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_004657_05_outro.jpg
+2025-03-08 00:46:58,751 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.
+2025-03-08 04:17:51,767 - VideoFrameGenerator - INFO - 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:17:51,770 - VideoFrameGenerator - INFO - CSV 파일 읽기 성공: 239개 상품 정보 로드
+2025-03-08 04:17:51,771 - VideoFrameGenerator - INFO - 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:17:51,784 - VideoFrameGenerator - INFO - 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:17:51,812 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:51,820 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:17:51,840 - VideoFrameGenerator - INFO - 인트로 프레임 생성 완료: frames\20250308_041751_00_intro.jpg
+2025-03-08 04:17:51,840 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:51,867 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_041751_01_category_골드박스.jpg
+2025-03-08 04:17:51,867 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:51,958 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_02_01_골드박스_product.jpg
+2025-03-08 04:17:51,958 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,058 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_02_02_골드박스_product.jpg
+2025-03-08 04:17:52,058 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,133 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_02_03_골드박스_product.jpg
+2025-03-08 04:17:52,134 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,218 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_02_04_골드박스_product.jpg
+2025-03-08 04:17:52,219 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,318 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_02_05_골드박스_product.jpg
+2025-03-08 04:17:52,318 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,345 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_041751_03_category_일반.jpg
+2025-03-08 04:17:52,346 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,448 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_04_01_일반_product.jpg
+2025-03-08 04:17:52,449 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,540 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_04_02_일반_product.jpg
+2025-03-08 04:17:52,540 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,614 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_04_03_일반_product.jpg
+2025-03-08 04:17:52,615 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,703 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_04_04_일반_product.jpg
+2025-03-08 04:17:52,704 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,777 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_041751_04_05_일반_product.jpg
+2025-03-08 04:17:52,777 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:17:52,786 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:17:52,792 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_041751_05_outro.jpg
+2025-03-08 04:17:52,794 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.

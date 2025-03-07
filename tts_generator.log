@@ -1,0 +1,49 @@
+2025-03-08 00:35:23,537 - TTS_Generator - INFO - 최신 스크립트 파일: output\hotdeal_script_20250308.txt
+2025-03-08 00:35:23,545 - TTS_Generator - INFO - 스크립트 내용 읽기 완료 (704 바이트)
+2025-03-08 00:35:23,545 - TTS_Generator - INFO - 스크립트 분리 완료: 인트로, 2개 카테고리, 아웃트로
+2025-03-08 00:35:23,546 - TTS_Generator - INFO - 출력 디렉토리 생성: audio
+2025-03-08 00:35:24,069 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_003523_00_intro.mp3
+2025-03-08 00:35:30,772 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_003523_01_category.mp3
+2025-03-08 00:35:37,593 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_003523_02_category.mp3
+2025-03-08 00:35:38,156 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_003523_03_outro.mp3
+2025-03-08 00:35:38,156 - TTS_Generator - INFO - 총 4개의 음성 파일 생성 완료
+2025-03-08 00:35:38,156 - TTS_Generator - INFO - 생성된 파일: audio\20250308_003523_00_intro.mp3
+2025-03-08 00:35:38,156 - TTS_Generator - INFO - 생성된 파일: audio\20250308_003523_01_category.mp3
+2025-03-08 00:35:38,156 - TTS_Generator - INFO - 생성된 파일: audio\20250308_003523_02_category.mp3
+2025-03-08 00:35:38,156 - TTS_Generator - INFO - 생성된 파일: audio\20250308_003523_03_outro.mp3
+2025-03-08 00:40:26,376 - TTS_Generator - INFO - 최신 스크립트 파일: output\hotdeal_script_20250308.txt
+2025-03-08 00:40:26,377 - TTS_Generator - INFO - 스크립트 내용 읽기 완료 (704 바이트)
+2025-03-08 00:40:26,378 - TTS_Generator - INFO - 스크립트 분리 완료: 인트로, 2개 카테고리, 아웃트로
+2025-03-08 00:40:26,912 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004026_00_intro.mp3
+2025-03-08 00:40:33,479 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004026_01_category.mp3
+2025-03-08 00:40:39,767 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004026_02_category.mp3
+2025-03-08 00:40:40,377 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004026_03_outro.mp3
+2025-03-08 00:40:40,377 - TTS_Generator - INFO - 총 4개의 음성 파일 생성 완료
+2025-03-08 00:40:40,377 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004026_00_intro.mp3
+2025-03-08 00:40:40,378 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004026_01_category.mp3
+2025-03-08 00:40:40,378 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004026_02_category.mp3
+2025-03-08 00:40:40,378 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004026_03_outro.mp3
+2025-03-08 00:46:43,614 - TTS_Generator - INFO - 최신 스크립트 파일: output\hotdeal_script_20250308.txt
+2025-03-08 00:46:43,615 - TTS_Generator - INFO - 스크립트 내용 읽기 완료 (704 바이트)
+2025-03-08 00:46:43,616 - TTS_Generator - INFO - 스크립트 분리 완료: 인트로, 2개 카테고리, 아웃트로
+2025-03-08 00:46:43,999 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004643_00_intro.mp3
+2025-03-08 00:46:50,008 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004643_01_category.mp3
+2025-03-08 00:46:56,130 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004643_02_category.mp3
+2025-03-08 00:46:56,545 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_004643_03_outro.mp3
+2025-03-08 00:46:56,545 - TTS_Generator - INFO - 총 4개의 음성 파일 생성 완료
+2025-03-08 00:46:56,545 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004643_00_intro.mp3
+2025-03-08 00:46:56,545 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004643_01_category.mp3
+2025-03-08 00:46:56,545 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004643_02_category.mp3
+2025-03-08 00:46:56,545 - TTS_Generator - INFO - 생성된 파일: audio\20250308_004643_03_outro.mp3
+2025-03-08 04:17:30,300 - TTS_Generator - INFO - 최신 스크립트 파일: output\hotdeal_script_20250308.txt
+2025-03-08 04:17:30,301 - TTS_Generator - INFO - 스크립트 내용 읽기 완료 (934 바이트)
+2025-03-08 04:17:30,302 - TTS_Generator - INFO - 스크립트 분리 완료: 인트로, 2개 카테고리, 아웃트로
+2025-03-08 04:17:30,808 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_041730_00_intro.mp3
+2025-03-08 04:17:41,004 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_041730_01_category.mp3
+2025-03-08 04:17:50,441 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_041730_02_category.mp3
+2025-03-08 04:17:51,004 - TTS_Generator - INFO - 음성 파일 생성 완료: audio\20250308_041730_03_outro.mp3
+2025-03-08 04:17:51,004 - TTS_Generator - INFO - 총 4개의 음성 파일 생성 완료
+2025-03-08 04:17:51,004 - TTS_Generator - INFO - 생성된 파일: audio\20250308_041730_00_intro.mp3
+2025-03-08 04:17:51,004 - TTS_Generator - INFO - 생성된 파일: audio\20250308_041730_01_category.mp3
+2025-03-08 04:17:51,004 - TTS_Generator - INFO - 생성된 파일: audio\20250308_041730_02_category.mp3
+2025-03-08 04:17:51,004 - TTS_Generator - INFO - 생성된 파일: audio\20250308_041730_03_outro.mp3

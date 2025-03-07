@@ -1,0 +1,212 @@
+[
+  {
+    "start_time": "2025-03-08T00:26:19.481427",
+    "steps": {
+      "crawler": {
+        "success": false,
+        "start_time": "2025-03-08T00:26:19.481433",
+        "end_time": "2025-03-08T00:29:25.684631",
+        "duration_seconds": 186.20319724082947,
+        "retries": 3
+      }
+    },
+    "end_time": "2025-03-08T00:29:25.684845",
+    "success": false
+  },
+  {
+    "start_time": "2025-03-08T00:35:22.595575",
+    "steps": {
+      "script_generator": {
+        "success": true,
+        "start_time": "2025-03-08T00:35:22.595581",
+        "end_time": "2025-03-08T00:35:22.686133",
+        "duration_seconds": 0.09055161476135254,
+        "retries": 0
+      },
+      "tts_generator": {
+        "success": true,
+        "start_time": "2025-03-08T00:35:22.686147",
+        "end_time": "2025-03-08T00:35:38.176059",
+        "duration_seconds": 15.489912509918213,
+        "retries": 0
+      },
+      "video_frame_generator": {
+        "success": true,
+        "start_time": "2025-03-08T00:35:38.176077",
+        "end_time": "2025-03-08T00:35:40.508043",
+        "duration_seconds": 2.331965208053589,
+        "retries": 0
+      },
+      "video_renderer": {
+        "success": false,
+        "start_time": "2025-03-08T00:35:40.508058",
+        "end_time": "2025-03-08T00:38:42.671650",
+        "duration_seconds": 182.16359210014343,
+        "retries": 3
+      }
+    },
+    "end_time": "2025-03-08T00:38:42.671839",
+    "success": false
+  },
+  {
+    "start_time": "2025-03-08T00:40:25.541610",
+    "steps": {
+      "script_generator": {
+        "success": true,
+        "start_time": "2025-03-08T00:40:25.541618",
+        "end_time": "2025-03-08T00:40:25.614099",
+        "duration_seconds": 0.07248115539550781,
+        "retries": 0
+      },
+      "tts_generator": {
+        "success": true,
+        "start_time": "2025-03-08T00:40:25.614162",
+        "end_time": "2025-03-08T00:40:40.405573",
+        "duration_seconds": 14.79141116142273,
+        "retries": 0
+      },
+      "video_frame_generator": {
+        "success": true,
+        "start_time": "2025-03-08T00:40:40.405586",
+        "end_time": "2025-03-08T00:40:42.691861",
+        "duration_seconds": 2.2862744331359863,
+        "retries": 0
+      },
+      "video_renderer": {
+        "success": false,
+        "start_time": "2025-03-08T00:40:42.691874",
+        "end_time": "2025-03-08T00:43:44.406725",
+        "duration_seconds": 181.71485114097595,
+        "retries": 3
+      }
+    },
+    "end_time": "2025-03-08T00:43:44.406966",
+    "success": false
+  },
+  {
+    "start_time": "2025-03-08T03:49:50.363033",
+    "steps": {
+      "video_renderer": {
+        "success": false,
+        "start_time": "2025-03-08T03:49:50.363039",
+        "end_time": "2025-03-08T03:52:53.065973",
+        "duration_seconds": 182.70293426513672,
+        "retries": 3
+      }
+    },
+    "end_time": "2025-03-08T03:52:53.066238",
+    "success": false
+  },
+  {
+    "start_time": "2025-03-08T03:53:25.785124",
+    "steps": {
+      "video_renderer": {
+        "success": false,
+        "start_time": "2025-03-08T03:53:25.785131",
+        "end_time": "2025-03-08T03:56:28.231970",
+        "duration_seconds": 182.4468388557434,
+        "retries": 3
+      }
+    },
+    "end_time": "2025-03-08T03:56:28.232179",
+    "success": false
+  },
+  {
+    "start_time": "2025-03-08T04:04:07.724710",
+    "steps": {
+      "video_renderer": {
+        "success": true,
+        "start_time": "2025-03-08T04:04:07.724711",
+        "end_time": "2025-03-08T04:04:10.062238",
+        "duration_seconds": 2.337526798248291,
+        "retries": 0
+      }
+    },
+    "end_time": "2025-03-08T04:04:10.062237",
+    "success": true
+  },
+  {
+    "start_time": "2025-03-08T04:10:38.888159",
+    "steps": {
+      "video_renderer": {
+        "success": true,
+        "start_time": "2025-03-08T04:10:38.888160",
+        "end_time": "2025-03-08T04:10:39.231238",
+        "duration_seconds": 0.3430781364440918,
+        "retries": 0
+      }
+    },
+    "end_time": "2025-03-08T04:10:39.231237",
+    "success": true
+  },
+  {
+    "start_time": "2025-03-08T04:12:57.475821",
+    "steps": {
+      "crawler": {
+        "success": true,
+        "start_time": "2025-03-08T04:12:57.475821",
+        "end_time": "2025-03-08T04:13:13.919953",
+        "duration_seconds": 16.44413137435913,
+        "retries": 0
+      },
+      "telegram_sender": {
+        "success": true,
+        "start_time": "2025-03-08T04:13:13.919953",
+        "end_time": "2025-03-08T04:13:14.761142",
+        "duration_seconds": 0.8411893844604492,
+        "retries": 0
+      },
+      "script_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:13:14.761142",
+        "end_time": "2025-03-08T04:13:15.365278",
+        "duration_seconds": 0.6041362285614014,
+        "retries": 0
+      },
+      "tts_generator": {
+        "success": false,
+        "start_time": "2025-03-08T04:13:15.365278",
+        "end_time": "2025-03-08T04:16:15.677288",
+        "duration_seconds": 180.3120095729828,
+        "retries": 3
+      }
+    },
+    "end_time": "2025-03-08T04:16:15.677288",
+    "success": false
+  },
+  {
+    "start_time": "2025-03-08T04:17:29.422489",
+    "steps": {
+      "script_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:17:29.422490",
+        "end_time": "2025-03-08T04:17:30.063635",
+        "duration_seconds": 0.6411452293395996,
+        "retries": 0
+      },
+      "tts_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:17:30.063635",
+        "end_time": "2025-03-08T04:17:51.020188",
+        "duration_seconds": 20.9565532207489,
+        "retries": 0
+      },
+      "video_frame_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:17:51.020188",
+        "end_time": "2025-03-08T04:17:52.843615",
+        "duration_seconds": 1.8234267234802246,
+        "retries": 0
+      },
+      "video_renderer": {
+        "success": true,
+        "start_time": "2025-03-08T04:17:52.843615",
+        "end_time": "2025-03-08T04:17:53.203686",
+        "duration_seconds": 0.36007142066955566,
+        "retries": 0
+      }
+    },
+    "end_time": "2025-03-08T04:17:53.203686",
+    "success": true
+  }
+]

@@ -212,14 +212,13 @@ def parse_args():
     mode_group.add_argument('--run', action='store_true', help='즉시 실행')
     mode_group.add_argument('--schedule', type=str, help='예약 실행 (형식: YYYY-MM-DD HH:MM)')
     
-    # 단계 설정
-    step_group = parser.add_mutually_exclusive_group()
-    step_group.add_argument('--steps', type=str, nargs='+', choices=PIPELINE_STEPS, 
-                          help='실행할 특정 단계 (공백으로 구분)')
-    step_group.add_argument('--start-from', type=str, choices=PIPELINE_STEPS,
-                          help='시작할 단계')
-    step_group.add_argument('--end-at', type=str, choices=PIPELINE_STEPS,
-                          help='종료할 단계')
+    # 단계 설정 (상호 배타적 그룹에서 제거)
+    parser.add_argument('--steps', type=str, nargs='+', choices=PIPELINE_STEPS, 
+                      help='실행할 특정 단계 (공백으로 구분)')
+    parser.add_argument('--start-from', type=str, choices=PIPELINE_STEPS,
+                      help='시작할 단계')
+    parser.add_argument('--end-at', type=str, choices=PIPELINE_STEPS,
+                      help='종료할 단계')
     
     # 기타 옵션
     parser.add_argument('--no-retry', action='store_true', help='실패 시 재시도하지 않음')

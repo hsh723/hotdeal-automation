@@ -5,6 +5,7 @@ import os
 import csv
 import glob
 import datetime
+import pandas as pd
 from collections import defaultdict
 
 def get_latest_csv_file(directory="data"):
@@ -16,38 +17,70 @@ def get_latest_csv_file(directory="data"):
     return max(files, key=os.path.getctime)
 
 def read_deals_from_csv(file_path):
-    """CSV 파일에서 핫딜 상품 정보 읽기"""
-    deals = []
-    with open(file_path, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            # 할인율을 숫자로 변환 (예: '30%' -> 30)
-            discount = 0
-            if 'discount' in row and row['discount']:
-                discount_str = row['discount'].strip('%')
-                try:
-                    discount = int(discount_str)
-                except ValueError:
-                    discount = 0
-            
-            deal = {
-                'title': row.get('title', '제목 없음'),
-                'price': row.get('price', '가격 정보 없음'),
-                'original_price': row.get('original_price', ''),
-                'discount': discount,
-                'category': row.get('category', '기타'),
-                'url': row.get('url', '')
-            }
-            deals.append(deal)
-    return deals
+    """CSV 파일에서 핫딜 상품 정보 읽기 (pandas DataFrame 반환)"""
+    try:
+        # pandas를 사용하여 CSV 파일 읽기
+        df = pd.read_csv(file_path, encoding='utf-8')
+        
+        # 필요한 열이 있는지 확인
+        required_columns = ['title', 'price', 'original_price', 'discount', 'category', 'url']
+        for col in required_columns:
+            if col not in df.columns:
+                df[col] = None  # 없는 열은 None으로 초기화
+        
+        # 할인율 처리 - 문자열에서 숫자로 변환
+        if 'discount' in df.columns:
+            df['discount'] = df['discount'].apply(
+                lambda x: int(str(x).strip('%')) if pd.notna(x) and str(x).strip('%').isdigit() else 0
+            )
+        
+        # 제목 처리 - 빈 값이나 None 처리
+        df['title'] = df['title'].apply(
+            lambda x: x if pd.notna(x) and str(x).strip() != '' else '제목 없음'
+        )
+        
+        print(f"CSV 파일에서 {len(df)}개의 상품 정보를 읽었습니다.")
+        return df
+    
+    except Exception as e:
+        print(f"CSV 파일 읽기 실패: {e}")
+        # 오류 발생 시 빈 DataFrame 반환
+        return pd.DataFrame(columns=['title', 'price', 'original_price', 'discount', 'category', 'url'])
 
-def categorize_deals(deals, min_discount=20):
-    """상품을 카테고리별로 분류하고 할인율 높은 순으로 정렬"""
+def categorize_deals(deals_df, min_discount=20):
+    """상품을 카테고리별로 분류하고 할인율 높은 순으로 정렬 (DataFrame 입력)"""
     categorized = defaultdict(list)
     
-    for deal in deals:
-        if deal['discount'] >= min_discount:
-            categorized[deal['category']].append(deal)
+    # DataFrame 순회
+    for _, deal in deals_df.iterrows():
+        # 카테고리 처리
+        category = deal.get('category', '기타')
+        if pd.isna(category) or not category:
+            category = '기타'
+            
+        # 할인율 확인
+        discount = deal.get('discount', 0)
+        if pd.isna(discount):
+            discount = 0
+        
+        # 최소 할인율 이상인 상품만 추가
+        if discount >= min_discount:
+            # 상품 제목 처리
+            title = deal.get('title', '제목 없음')
+            if pd.isna(title) or not str(title).strip():
+                title = '제목 없음'
+            
+            # 로그 추가
+            print(f"상품 제목 확인: {title}, 카테고리: {category}, 할인율: {discount}%")
+            
+            categorized[category].append({
+                'id': deal.get('id', ''),
+                'title': title,
+                'price': deal.get('price', '가격 정보 없음'),
+                'original_price': deal.get('original_price', ''),
+                'discount': discount,
+                'url': deal.get('url', '')
+            })
     
     # 각 카테고리 내에서 할인율 높은 순으로 정렬
     for category in categorized:
@@ -125,12 +158,12 @@ def main():
         csv_file = get_latest_csv_file()
         print(f"최신 핫딜 파일: {csv_file}")
         
-        # 핫딜 데이터 읽기
-        deals = read_deals_from_csv(csv_file)
-        print(f"총 {len(deals)}개의 상품 정보를 읽었습니다.")
+        # 핫딜 데이터 읽기 (pandas DataFrame으로)
+        deals_df = read_deals_from_csv(csv_file)
+        print(f"총 {len(deals_df)}개의 상품 정보를 읽었습니다.")
         
         # 카테고리별 분류
-        categorized = categorize_deals(deals, min_discount)
+        categorized = categorize_deals(deals_df, min_discount)
         print(f"총 {len(categorized)}개의 카테고리로 분류되었습니다.")
         
         # 스크립트 생성

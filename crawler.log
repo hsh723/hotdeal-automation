@@ -1,0 +1,61 @@
+2025-03-08 04:12:58,624 - coupang_crawler - INFO - === 쿠팡 핫딜 크롤링 시작 ===
+2025-03-08 04:12:58,625 - coupang_crawler - INFO - 골드박스 핫딜 수집 중...
+2025-03-08 04:12:58,625 - coupang_crawler - INFO - URL 요청 (1/2): https://www.coupang.com/np/goldbox
+2025-03-08 04:12:58,625 - WDM - INFO - ====== WebDriver manager ======
+2025-03-08 04:12:59,829 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:12:59,891 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:12:59,931 - WDM - INFO - There is no [win64] chromedriver "133.0.6943.141" for browser google-chrome "133.0.6943" in cache
+2025-03-08 04:12:59,931 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:00,026 - WDM - INFO - WebDriver version 133.0.6943.141 selected
+2025-03-08 04:13:00,032 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/133.0.6943.141/win32/chromedriver-win32.zip
+2025-03-08 04:13:00,032 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/133.0.6943.141/win32/chromedriver-win32.zip
+2025-03-08 04:13:00,107 - WDM - INFO - Driver downloading response is 200
+2025-03-08 04:13:00,268 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:03,470 - WDM - INFO - Driver has been saved in cache [C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141]
+2025-03-08 04:13:03,472 - coupang_crawler - INFO - WebDriverManager ChromeDriver 사용: C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-03-08 04:13:03,493 - coupang_crawler - ERROR - WebDriver 초기화 중 예상치 못한 오류: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:03,493 - coupang_crawler - ERROR - 골드박스 크롤링 중 오류 발생 (URL: https://www.coupang.com/np/goldbox): [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:03,493 - coupang_crawler - INFO - URL 요청 (2/2): https://www.coupang.com/np/campaigns/82
+2025-03-08 04:13:03,493 - WDM - INFO - ====== WebDriver manager ======
+2025-03-08 04:13:04,555 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:04,600 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:04,638 - WDM - INFO - Driver [C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-03-08 04:13:04,638 - coupang_crawler - INFO - WebDriverManager ChromeDriver 사용: C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-03-08 04:13:04,639 - coupang_crawler - ERROR - WebDriver 초기화 중 예상치 못한 오류: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:04,640 - coupang_crawler - ERROR - 골드박스 크롤링 중 오류 발생 (URL: https://www.coupang.com/np/campaigns/82): [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:04,640 - coupang_crawler - ERROR - 모든 골드박스 URL에서 크롤링 실패
+2025-03-08 04:13:04,640 - coupang_crawler - WARNING - 골드박스 핫딜 수집 실패, 일반 핫딜 수집으로 진행
+2025-03-08 04:13:04,640 - coupang_crawler - INFO - 핫딜 페이지 1 수집 중...
+2025-03-08 04:13:04,640 - coupang_crawler - INFO - URL 요청: https://www.coupang.com/np/campaigns/82/components/194176?page=1
+2025-03-08 04:13:04,640 - WDM - INFO - ====== WebDriver manager ======
+2025-03-08 04:13:05,646 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:05,681 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:05,715 - WDM - INFO - Driver [C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-03-08 04:13:05,715 - coupang_crawler - INFO - WebDriverManager ChromeDriver 사용: C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-03-08 04:13:05,717 - coupang_crawler - ERROR - WebDriver 초기화 중 예상치 못한 오류: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:05,717 - coupang_crawler - ERROR - 크롤링 중 오류 발생: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:05,717 - coupang_crawler - WARNING - 페이지 1에서 상품을 찾을 수 없습니다.
+2025-03-08 04:13:05,717 - coupang_crawler - INFO - 다음 페이지 요청 전 2.42초 대기 중...
+2025-03-08 04:13:08,151 - coupang_crawler - INFO - 핫딜 페이지 2 수집 중...
+2025-03-08 04:13:08,151 - coupang_crawler - INFO - URL 요청: https://www.coupang.com/np/campaigns/82/components/194176?page=2
+2025-03-08 04:13:08,151 - WDM - INFO - ====== WebDriver manager ======
+2025-03-08 04:13:09,131 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:09,169 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:09,200 - WDM - INFO - Driver [C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-03-08 04:13:09,201 - coupang_crawler - INFO - WebDriverManager ChromeDriver 사용: C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-03-08 04:13:09,202 - coupang_crawler - ERROR - WebDriver 초기화 중 예상치 못한 오류: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:09,202 - coupang_crawler - ERROR - 크롤링 중 오류 발생: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:09,202 - coupang_crawler - WARNING - 페이지 2에서 상품을 찾을 수 없습니다.
+2025-03-08 04:13:09,202 - coupang_crawler - INFO - 다음 페이지 요청 전 3.53초 대기 중...
+2025-03-08 04:13:12,744 - coupang_crawler - INFO - 핫딜 페이지 3 수집 중...
+2025-03-08 04:13:12,744 - coupang_crawler - INFO - URL 요청: https://www.coupang.com/np/campaigns/82/components/194176?page=3
+2025-03-08 04:13:12,744 - WDM - INFO - ====== WebDriver manager ======
+2025-03-08 04:13:13,791 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:13,825 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-03-08 04:13:13,859 - WDM - INFO - Driver [C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-03-08 04:13:13,859 - coupang_crawler - INFO - WebDriverManager ChromeDriver 사용: C:\Users\momus\.wdm\drivers\chromedriver\win64\133.0.6943.141\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver
+2025-03-08 04:13:13,860 - coupang_crawler - ERROR - WebDriver 초기화 중 예상치 못한 오류: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:13,860 - coupang_crawler - ERROR - 크롤링 중 오류 발생: [WinError 193] %1은(는) 올바른 Win32 응용 프로그램이 아닙니다
+2025-03-08 04:13:13,860 - coupang_crawler - WARNING - 페이지 3에서 상품을 찾을 수 없습니다.
+2025-03-08 04:13:13,860 - coupang_crawler - ERROR - 수집된 상품이 없습니다.
+2025-03-08 04:13:13,860 - coupang_crawler - INFO - === 쿠팡 핫딜 크롤링 종료 ===
