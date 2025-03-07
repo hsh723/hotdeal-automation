@@ -1,371 +1,420 @@
-# 텔레그램 메시지 전송 모듈
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+텔레그램 핫딜 전송 스크립트
+수집된 쿠팡 핫딜 정보를 텔레그램 봇을 통해 전송합니다.
+"""
+
 import os
+import json
+import logging
 import pandas as pd
-import telegram
-import asyncio
 import datetime
 import time
 import random
-import logging
-import glob
-import json
+import telegram
+import requests
+import collections
 from dotenv import load_dotenv
+from pathlib import Path
+from telegram.error import (
+    TelegramError, BadRequest, TimedOut, 
+    NetworkError, ChatMigrated, RetryAfter
+)
 
 # 로깅 설정
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("telegram.log"),
+        logging.FileHandler("telegram_sender.log"),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger("telegram_sender")
 
-# .env 파일에서 환경변수 로드
+# 환경 변수 로드
 load_dotenv()
 
 # 텔레그램 설정
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
+MIN_DISCOUNT = int(os.environ.get('MIN_DISCOUNT', '20'))  # 기본값 20%
+MAX_SEND_COUNT = int(os.environ.get('MAX_SEND_COUNT', '30'))  # 한 번에 최대 30개 전송
+MAX_RETRIES = int(os.environ.get('MAX_RETRIES', '3'))  # 전송 실패 시 최대 재시도 횟수
+MAX_SENT_PRODUCTS = int(os.environ.get('MAX_SENT_PRODUCTS', '500'))  # 저장할 최대 전송 기록 수
 
-# 최소 할인율 설정 (이 이상 할인된 상품만 알림)
-MIN_DISCOUNT = int(os.getenv("MIN_DISCOUNT", "20"))  # 기본값 20% 이상 할인된 상품만
+# 이미 전송한 상품 목록 파일 경로
+SENT_PRODUCTS_FILE = "data/sent_products.json"
+BACKUP_SENT_PRODUCTS_FILE = "data/sent_products.backup.json"
 
-# 이전에 전송한 상품 기록 관리
-SENT_RECORD_FILE = "data/sent_products.json"
-GITHUB_SENT_RECORD_URL = "https://raw.githubusercontent.com/username/repo/main/data/sent_products.json"
+def load_deals():
+    """최신 핫딜 데이터 로드"""
+    try:
+        # data 폴더 내 가장 최신 CSV 파일 찾기
+        data_dir = Path("data")
+        if not data_dir.exists():
+            logger.error("data 폴더가 존재하지 않습니다.")
+            return None
+        
+        csv_files = list(data_dir.glob("coupang_deals_*.csv"))
+        if not csv_files:
+            logger.error("핫딜 데이터 파일을 찾을 수 없습니다.")
+            return None
+        
+        # 파일명 기준으로 정렬하여 가장 최신 파일 선택
+        latest_file = sorted(csv_files, reverse=True)[0]
+        logger.info(f"최신 핫딜 데이터 파일: {latest_file}")
+        
+        # CSV 파일 로드
+        df = pd.read_csv(latest_file)
+        logger.info(f"총 {len(df)}개 상품 데이터 로드 완료")
+        
+        return df
+    
+    except Exception as e:
+        logger.error(f"데이터 로드 중 오류 발생: {e}")
+        return None
 
 def load_sent_products():
-    """이전에 전송한 상품 목록 불러오기"""
-    sent_products = {"sent_links": [], "last_update": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+    """이미 전송한 상품 목록 로드 (복구 메커니즘 포함)"""
+    try:
+        # data 폴더 생성
+        os.makedirs(os.path.dirname(SENT_PRODUCTS_FILE), exist_ok=True)
+        
+        # 파일이 존재하면 로드
+        if os.path.exists(SENT_PRODUCTS_FILE):
+            try:
+                with open(SENT_PRODUCTS_FILE, 'r', encoding='utf-8') as f:
+                    sent_products = json.load(f)
+                logger.info(f"전송 기록 로드 완료: {len(sent_products)} 상품")
+                
+                # 백업 파일 생성
+                with open(BACKUP_SENT_PRODUCTS_FILE, 'w', encoding='utf-8') as f:
+                    json.dump(sent_products, f, ensure_ascii=False, indent=2)
+                
+                return sent_products
+            except json.JSONDecodeError:
+                logger.warning("전송 기록 파일이 손상되었습니다. 백업 파일을 확인합니다.")
+                
+                # 백업 파일이 있으면 복구 시도
+                if os.path.exists(BACKUP_SENT_PRODUCTS_FILE):
+                    try:
+                        with open(BACKUP_SENT_PRODUCTS_FILE, 'r', encoding='utf-8') as f:
+                            sent_products = json.load(f)
+                        logger.info(f"백업 파일에서 전송 기록 복구 완료: {len(sent_products)} 상품")
+                        
+                        # 복구된 데이터 저장
+                        with open(SENT_PRODUCTS_FILE, 'w', encoding='utf-8') as f:
+                            json.dump(sent_products, f, ensure_ascii=False, indent=2)
+                        
+                        return sent_products
+                    except Exception as e:
+                        logger.error(f"백업 파일에서 복구 실패: {e}")
+        
+        # 파일이 없거나 복구 실패 시 빈 딕셔너리 반환
+        logger.info("전송 기록 파일이 없거나 복구 실패. 새로 생성합니다.")
+        return {}
     
-    # 로컬 파일 확인
-    if os.path.exists(SENT_RECORD_FILE):
-        try:
-            with open(SENT_RECORD_FILE, 'r', encoding='utf-8') as f:
-                local_data = json.load(f)
-                if isinstance(local_data, dict) and "sent_links" in local_data:
-                    sent_products = local_data
-                    logger.info(f"로컬 전송 기록 파일 로드: {len(sent_products['sent_links'])}개 링크")
-        except Exception as e:
-            logger.error(f"로컬 전송 기록 파일 읽기 오류: {e}")
-    
-    # GitHub Actions 환경에서 실행 중인지 확인
-    if os.environ.get("GITHUB_ACTIONS") == "true" and not os.path.exists(SENT_RECORD_FILE):
-        try:
-            import requests
-            response = requests.get(GITHUB_SENT_RECORD_URL)
-            if response.status_code == 200:
-                github_data = response.json()
-                if isinstance(github_data, dict) and "sent_links" in github_data:
-                    # 로컬 데이터와 GitHub 데이터 병합
-                    github_links = set(github_data["sent_links"])
-                    local_links = set(sent_products["sent_links"])
-                    all_links = list(github_links.union(local_links))
-                    
-                    sent_products["sent_links"] = all_links
-                    logger.info(f"GitHub 전송 기록 파일 로드: {len(github_links)}개 링크")
-        except Exception as e:
-            logger.error(f"GitHub 전송 기록 파일 읽기 오류: {e}")
-    
-    return sent_products
+    except Exception as e:
+        logger.error(f"전송 기록 로드 중 오류 발생: {e}")
+        return {}
 
 def save_sent_products(sent_products):
-    """전송한 상품 목록 저장"""
+    """전송한 상품 목록 저장 (최대 개수 제한)"""
     try:
-        os.makedirs(os.path.dirname(SENT_RECORD_FILE), exist_ok=True)
-        
-        # 중복 제거 (set 변환 후 다시 list로)
-        sent_products["sent_links"] = list(set(sent_products["sent_links"]))
-        
-        with open(SENT_RECORD_FILE, 'w', encoding='utf-8') as f:
-            json.dump(sent_products, f, ensure_ascii=False, indent=2)
+        # 최대 개수 제한 (최신 항목 유지)
+        if len(sent_products) > MAX_SENT_PRODUCTS:
+            logger.info(f"전송 기록이 {len(sent_products)}개로 제한 ({MAX_SENT_PRODUCTS}개)을 초과하여 정리합니다.")
             
-        logger.info(f"전송 기록 파일 저장 완료: {len(sent_products['sent_links'])}개 링크")
+            # OrderedDict로 변환하여 최신 항목만 유지
+            ordered_dict = collections.OrderedDict()
+            
+            # 날짜 기준으로 정렬 (최신순)
+            sorted_items = sorted(
+                sent_products.items(),
+                key=lambda x: x[1].get('sent_date', '2000-01-01'),
+                reverse=True
+            )
+            
+            # 최대 개수만큼만 유지
+            for i, (key, value) in enumerate(sorted_items):
+                if i < MAX_SENT_PRODUCTS:
+                    ordered_dict[key] = value
+            
+            sent_products = dict(ordered_dict)
+            logger.info(f"전송 기록을 {len(sent_products)}개로 정리했습니다.")
+        
+        # 파일 저장
+        with open(SENT_PRODUCTS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(sent_products, f, ensure_ascii=False, indent=2)
+        logger.info(f"전송 기록 저장 완료: {len(sent_products)} 상품")
+        
+        # 백업 파일도 업데이트
+        with open(BACKUP_SENT_PRODUCTS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(sent_products, f, ensure_ascii=False, indent=2)
+    
     except Exception as e:
-        logger.error(f"전송 기록 파일 저장 오류: {e}")
+        logger.error(f"전송 기록 저장 중 오류 발생: {e}")
 
-async def send_deal_message(bot, deal, retry_count=3):
-    """개별 핫딜 상품 메시지 전송"""
+def filter_deals(df, min_discount=MIN_DISCOUNT):
+    """핫딜 필터링: 할인율 기준"""
+    if df is None or len(df) == 0:
+        return []
     
-    # 할인율이 최소 기준 미만이면 전송 안함
-    if deal["discount"] < MIN_DISCOUNT:
-        logger.info(f"할인율 부족으로 전송 제외: {deal['title'][:30]}... ({deal['discount']}%)")
-        return False
-    
-    # 원래 가격과 현재 가격 숫자 형식 확인 및 변환
-    try:
-        original_price = int(deal["original_price"]) if isinstance(deal["original_price"], str) else deal["original_price"]
-        price = int(deal["price"]) if isinstance(deal["price"], str) else deal["price"]
-    except (ValueError, TypeError):
-        original_price = 0
-        price = 0
-        logger.warning(f"가격 형식 오류: {deal['title']}")
-    
-    # 카테고리 확인
-    category = deal.get("category", "일반")
-    
-    # 메시지 생성
-    message = f"""🔥 <b>{deal['title']}</b>
-
-💰 <b>{price:,}원</b> (원가: {original_price:,}원)
-🏷️ <b>{deal['discount']}% 할인</b>
-📁 {category}
-
-🔗 <a href="{deal['link']}">구매 링크</a>
-"""
-    
-    for attempt in range(retry_count):
-        try:
-            # 메시지 전송
-            await bot.send_message(
-                chat_id=TELEGRAM_CHAT_ID,
-                text=message,
-                parse_mode="HTML",
-                disable_web_page_preview=False
-            )
-            logger.info(f"메시지 전송 성공: {deal['title'][:30]}...")
-            return True
-        
-        except telegram.error.RetryAfter as e:
-            # 텔레그램 rate limit 오류 처리
-            wait_time = e.retry_after + 1
-            logger.warning(f"텔레그램 rate limit (재시도 {attempt+1}/{retry_count}): {wait_time}초 대기")
-            time.sleep(wait_time)
-        
-        except Exception as e:
-            logger.error(f"메시지 전송 중 오류 (재시도 {attempt+1}/{retry_count}): {e}")
-            time.sleep(3)  # 잠시 대기 후 재시도
-    
-    logger.error(f"최대 재시도 횟수 초과. 메시지 전송 실패: {deal['title']}")
-    return False
-
-async def send_image_message(bot, deal, retry_count=3):
-    """이미지와 함께 핫딜 상품 메시지 전송"""
-    
-    # 할인율이 최소 기준 미만이면 전송 안함
-    if deal["discount"] < MIN_DISCOUNT:
-        return False
-    
-    # 이미지 URL이 없는 경우 텍스트만 전송
-    if not deal.get("image_url"):
-        return await send_deal_message(bot, deal, retry_count)
-    
-    # 원래 가격과 현재 가격 형식 변환
-    try:
-        original_price = int(deal["original_price"]) if isinstance(deal["original_price"], str) else deal["original_price"]
-        price = int(deal["price"]) if isinstance(deal["price"], str) else deal["price"]
-    except (ValueError, TypeError):
-        original_price = 0
-        price = 0
-    
-    # 카테고리 확인
-    category = deal.get("category", "일반")
-    
-    # 캡션 생성
-    caption = f"""🔥 <b>{deal['title']}</b>
-
-💰 <b>{price:,}원</b> (원가: {original_price:,}원)
-🏷️ <b>{deal['discount']}% 할인</b>
-📁 {category}
-
-🔗 <a href="{deal['link']}">구매 링크</a>
-"""
-    
-    for attempt in range(retry_count):
-        try:
-            # 이미지와 함께 메시지 전송
-            await bot.send_photo(
-                chat_id=TELEGRAM_CHAT_ID,
-                photo=deal["image_url"],
-                caption=caption,
-                parse_mode="HTML"
-            )
-            logger.info(f"이미지 메시지 전송 성공: {deal['title'][:30]}...")
-            return True
-        
-        except telegram.error.BadRequest:
-            # 이미지 URL 오류 시 텍스트만 전송
-            logger.warning(f"이미지 URL 오류, 텍스트만 전송: {deal['title']}")
-            return await send_deal_message(bot, deal)
-        
-        except telegram.error.RetryAfter as e:
-            # 텔레그램 rate limit 오류 처리
-            wait_time = e.retry_after + 1
-            logger.warning(f"텔레그램 rate limit (재시도 {attempt+1}/{retry_count}): {wait_time}초 대기")
-            time.sleep(wait_time)
-        
-        except Exception as e:
-            logger.error(f"이미지 메시지 전송 중 오류 (재시도 {attempt+1}/{retry_count}): {e}")
-            if attempt == retry_count - 1:
-                # 마지막 시도에서는 텍스트만 전송 시도
-                logger.info(f"이미지 전송 실패, 텍스트만 전송 시도: {deal['title']}")
-                return await send_deal_message(bot, deal)
-            time.sleep(3)  # 잠시 대기 후 재시도
-    
-    return False
-
-async def send_top_deals(deals, max_items=10, use_images=True):
-    """최근 수집한 핫딜 중 상위 N개 알림 전송"""
-    
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        logger.error("텔레그램 설정이 없습니다. .env 파일을 확인하세요.")
-        return 0
-    
-    # 이전에 전송한 상품 기록 불러오기
-    sent_products = load_sent_products()
-    sent_links = set(sent_products["sent_links"])
-    
-    # 최근 전송 기록 정리 (최대 1000개 유지)
-    if len(sent_links) > 1000:
-        sent_products["sent_links"] = list(sent_links)[-1000:]
-        sent_links = set(sent_products["sent_links"])
-        logger.info(f"전송 기록 정리: 1000개로 제한 (원래: {len(sent_links)}개)")
-    
-    # 봇 객체 생성
-    bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
+    # 할인율 기준으로 필터링
+    filtered_df = df[df['discount'] >= min_discount].copy()
     
     # 할인율 기준으로 정렬
-    sorted_deals = sorted(deals, key=lambda x: x["discount"], reverse=True)
+    filtered_df = filtered_df.sort_values(by='discount', ascending=False)
     
-    # 이미 전송한 상품 제외 및 최소 할인율 필터링
-    new_deals = []
-    filtered_count = 0
+    logger.info(f"할인율 {min_discount}% 이상 상품: {len(filtered_df)}개")
     
-    for deal in sorted_deals:
-        # 링크 정규화 (쿼리 파라미터 제거)
-        link = deal["link"].split("?")[0] if "?" in deal["link"] else deal["link"]
-        
-        # 이미 전송한 링크인지 확인 (정규화된 링크로 비교)
-        if link in sent_links:
-            filtered_count += 1
-            continue
-            
-        # 최소 할인율 확인
-        if deal["discount"] >= MIN_DISCOUNT:
-            new_deals.append(deal)
-            # 중복 전송 방지를 위해 링크 추가 (정규화된 링크 저장)
-            sent_links.add(link)
-            sent_products["sent_links"].append(link)
-    
-    logger.info(f"중복 필터링: {filtered_count}개 상품 제외됨")
-    
-    # 최대 개수 제한
-    new_deals = new_deals[:max_items]
-    
-    if not new_deals:
-        logger.info(f"전송할 새로운 핫딜이 없습니다. (최소 할인율: {MIN_DISCOUNT}%)")
-        # 전송 기록 저장 (필터링된 링크 포함)
-        sent_products["last_update"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        save_sent_products(sent_products)
-        return 0
-    
-    # 헤더 메시지 전송
-    today = datetime.datetime.now().strftime("%Y년 %m월 %d일 %H시")
-    try:
-        await bot.send_message(
-            chat_id=TELEGRAM_CHAT_ID,
-            text=f"📢 <b>{today} 쿠팡 핫딜 TOP {len(new_deals)}</b>",
-            parse_mode="HTML"
-        )
-        logger.info(f"헤더 메시지 전송 완료")
-    except Exception as e:
-        logger.error(f"헤더 메시지 전송 중 오류: {e}")
-    
-    # 개별 상품 메시지 전송
-    sent_count = 0
-    for deal in new_deals:
-        try:
-            if use_images and deal.get("image_url"):
-                success = await send_image_message(bot, deal)
-            else:
-                success = await send_deal_message(bot, deal)
-                
-            if success:
-                sent_count += 1
-            
-            # 너무 많은 메시지를 한꺼번에 보내지 않도록 대기
-            await asyncio.sleep(random.uniform(1, 2))
-        except Exception as e:
-            logger.error(f"상품 메시지 전송 중 오류: {e}")
-    
-    # 푸터 메시지
-    if sent_count > 0:
-        try:
-            await bot.send_message(
-                chat_id=TELEGRAM_CHAT_ID,
-                text="위 상품들은 재고 소진 시 종료될 수 있습니다. 더 많은 핫딜은 채널에서 확인하세요!",
-                parse_mode="HTML"
-            )
-            logger.info("푸터 메시지 전송 완료")
-        except Exception as e:
-            logger.error(f"푸터 메시지 전송 중 오류: {e}")
-    
-    # 전송 기록 저장
-    sent_products["last_update"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    save_sent_products(sent_products)
-    
-    logger.info(f"텔레그램 전송 완료! 중복 제거 후 {sent_count}개 상품 전송")
-    return sent_count
+    return filtered_df
 
-def find_latest_deals_file():
-    """가장 최근에 생성된 핫딜 CSV 파일 찾기"""
+def download_image(image_url, max_retries=MAX_RETRIES):
+    """이미지 다운로드 (재시도 로직 포함)"""
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(image_url, stream=True, timeout=10)
+            if response.status_code == 200:
+                return response.content
+            else:
+                logger.warning(f"이미지 다운로드 실패 ({attempt+1}/{max_retries}): HTTP {response.status_code} - {image_url}")
+                if attempt < max_retries - 1:
+                    time.sleep(1)  # 재시도 전 대기
+        except requests.exceptions.Timeout:
+            logger.warning(f"이미지 다운로드 타임아웃 ({attempt+1}/{max_retries}): {image_url}")
+            if attempt < max_retries - 1:
+                time.sleep(1)
+        except requests.exceptions.ConnectionError:
+            logger.warning(f"이미지 다운로드 연결 오류 ({attempt+1}/{max_retries}): {image_url}")
+            if attempt < max_retries - 1:
+                time.sleep(2)
+        except Exception as e:
+            logger.error(f"이미지 다운로드 중 예상치 못한 오류 ({attempt+1}/{max_retries}): {e} - {image_url}")
+            if attempt < max_retries - 1:
+                time.sleep(1)
     
-    # data 디렉토리 내 모든 CSV 파일 검색
-    csv_files = glob.glob("data/coupang_deals_*.csv")
+    logger.error(f"이미지 다운로드 최종 실패: {image_url}")
+    return None
+
+def send_telegram_message(bot, chat_id, text=None, photo=None, parse_mode='HTML', max_retries=MAX_RETRIES):
+    """텔레그램 메시지 전송 (재시도 로직 포함)"""
+    for attempt in range(max_retries):
+        try:
+            if photo:
+                message = bot.send_photo(
+                    chat_id=chat_id,
+                    photo=photo,
+                    caption=text,
+                    parse_mode=parse_mode
+                )
+            else:
+                message = bot.send_message(
+                    chat_id=chat_id,
+                    text=text,
+                    parse_mode=parse_mode,
+                    disable_web_page_preview=False
+                )
+            return True, message
+        
+        except RetryAfter as e:
+            # 텔레그램 API 제한에 걸린 경우 (초당 메시지 수 제한)
+            retry_seconds = e.retry_after
+            logger.warning(f"텔레그램 API 제한 ({attempt+1}/{max_retries}): {retry_seconds}초 후 재시도")
+            if attempt < max_retries - 1:
+                time.sleep(retry_seconds + 0.5)  # 여유있게 대기
+        
+        except BadRequest as e:
+            # 잘못된 요청 (메시지 형식 오류 등)
+            logger.error(f"텔레그램 BadRequest 오류 ({attempt+1}/{max_retries}): {e}")
+            if "can't parse entities" in str(e).lower():
+                # HTML/Markdown 파싱 오류인 경우 파싱 모드 없이 재시도
+                logger.warning("파싱 모드 오류로 인해 일반 텍스트로 재시도합니다.")
+                try:
+                    if photo:
+                        message = bot.send_photo(
+                            chat_id=chat_id,
+                            photo=photo,
+                            caption=text,
+                            parse_mode=None
+                        )
+                    else:
+                        message = bot.send_message(
+                            chat_id=chat_id,
+                            text=text,
+                            parse_mode=None,
+                            disable_web_page_preview=False
+                        )
+                    return True, message
+                except Exception as inner_e:
+                    logger.error(f"일반 텍스트로 재시도 중 오류: {inner_e}")
+            return False, None
+        
+        except TimedOut as e:
+            # 타임아웃
+            logger.warning(f"텔레그램 타임아웃 ({attempt+1}/{max_retries}): {e}")
+            if attempt < max_retries - 1:
+                time.sleep(2)  # 재시도 전 대기
+        
+        except NetworkError as e:
+            # 네트워크 오류
+            logger.warning(f"텔레그램 네트워크 오류 ({attempt+1}/{max_retries}): {e}")
+            if attempt < max_retries - 1:
+                time.sleep(3)  # 재시도 전 대기
+        
+        except TelegramError as e:
+            # 기타 텔레그램 오류
+            logger.error(f"텔레그램 오류 ({attempt+1}/{max_retries}): {e}")
+            if attempt < max_retries - 1:
+                time.sleep(2)
+            else:
+                return False, None
+        
+        except Exception as e:
+            # 예상치 못한 오류
+            logger.error(f"텔레그램 전송 중 예상치 못한 오류 ({attempt+1}/{max_retries}): {e}")
+            if attempt < max_retries - 1:
+                time.sleep(2)
+            else:
+                return False, None
     
-    if not csv_files:
-        logger.error("데이터 파일을 찾을 수 없습니다.")
-        return None
+    logger.error("텔레그램 전송 최종 실패")
+    return False, None
+
+def send_deal_to_telegram(bot, chat_id, deal, with_image=True):
+    """텔레그램으로 핫딜 정보 전송"""
+    try:
+        # HTML 형식으로 메시지 생성
+        message = f"🔥 <b>{deal['title']}</b>\n\n"
+        message += f"💰 가격: {deal['price']:,}원 (원가: {deal['original_price']:,}원)\n"
+        message += f"🏷️ 할인율: <b>{deal['discount']}%</b>\n"
+        if 'category' in deal and deal['category']:
+            message += f"📂 카테고리: {deal['category']}\n"
+        message += f"🔗 <a href=\"{deal['link']}\">상품 링크</a>"
+        
+        # 이미지가 있고 with_image가 True인 경우 이미지와 함께 전송
+        if with_image and deal.get('image_url'):
+            image_data = download_image(deal['image_url'])
+            if image_data:
+                success, _ = send_telegram_message(
+                    bot=bot,
+                    chat_id=chat_id,
+                    text=message,
+                    photo=image_data,
+                    parse_mode='HTML'
+                )
+                
+                if success:
+                    logger.info(f"이미지와 함께 전송 완료: {deal['title']}")
+                    return True
+                else:
+                    logger.warning(f"이미지 전송 실패, 텍스트만 전송 시도: {deal['title']}")
+        
+        # 이미지가 없거나 다운로드 실패한 경우 텍스트만 전송
+        success, _ = send_telegram_message(
+            bot=bot,
+            chat_id=chat_id,
+            text=message,
+            parse_mode='HTML'
+        )
+        
+        if success:
+            logger.info(f"텍스트로 전송 완료: {deal['title']}")
+            return True
+        else:
+            logger.error(f"텍스트 전송도 실패: {deal['title']}")
+            return False
     
-    # 파일 생성 시간 기준으로 정렬
-    latest_file = max(csv_files, key=os.path.getmtime)
-    logger.info(f"최근 CSV 파일: {latest_file}")
-    
-    return latest_file
+    except Exception as e:
+        logger.error(f"텔레그램 전송 중 오류 발생: {e}")
+        return False
 
 def main():
-    """메인 함수: 최근 크롤링한 핫딜 정보를 텔레그램으로 전송"""
+    """메인 함수: 핫딜 정보 필터링 및 텔레그램 전송"""
+    logger.info("=== 텔레그램 핫딜 전송 시작 ===")
     
-    logger.info("=== 텔레그램 핫딜 알림 전송 시작 ===")
-    
-    # 환경변수 확인
+    # 환경 변수 확인
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        logger.error("오류: 텔레그램 설정이 없습니다. .env 파일을 확인하세요.")
+        logger.error("텔레그램 설정이 없습니다. 환경 변수를 확인하세요.")
         return
     
-    # 최근 파일 찾기
-    file_path = find_latest_deals_file()
-    
-    if not file_path:
-        logger.error("오류: 수집한 데이터를 찾을 수 없습니다.")
-        return
-    
+    # 텔레그램 봇 초기화
     try:
-        # 데이터 읽기
-        df = pd.read_csv(file_path)
-        logger.info(f"파일 '{file_path}'에서 {len(df)}개 상품 정보를 읽었습니다.")
-        
-        # 데이터프레임을 딕셔너리 리스트로 변환
-        deals = df.to_dict('records')
-        
-        # 할인율 확인
-        discount_stats = df['discount'].describe()
-        logger.info(f"할인율 통계: 평균={discount_stats['mean']:.2f}%, 최대={discount_stats['max']}%")
-        
-        # 최소 할인율 이상인 상품 수
-        eligible_count = len(df[df['discount'] >= MIN_DISCOUNT])
-        logger.info(f"{MIN_DISCOUNT}% 이상 할인된 상품: {eligible_count}개")
-        
-        # 비동기 함수 실행
-        sent_count = asyncio.run(send_top_deals(deals))
-        logger.info(f"텔레그램 전송 완료: {sent_count}개 상품")
-        
+        bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
+        logger.info("텔레그램 봇 초기화 완료")
     except Exception as e:
-        logger.error(f"데이터 처리 및 전송 중 오류: {e}", exc_info=True)
+        logger.error(f"텔레그램 봇 초기화 실패: {e}")
+        return
     
-    logger.info("=== 텔레그램 핫딜 알림 전송 종료 ===")
+    # 핫딜 데이터 로드
+    df = load_deals()
+    if df is None:
+        logger.error("핫딜 데이터를 로드할 수 없습니다.")
+        return
+    
+    # 이미 전송한 상품 목록 로드
+    sent_products = load_sent_products()
+    
+    # 핫딜 필터링
+    filtered_deals = filter_deals(df, min_discount=MIN_DISCOUNT)
+    if len(filtered_deals) == 0:
+        logger.info(f"전송할 핫딜이 없습니다. (할인율 {MIN_DISCOUNT}% 이상)")
+        return
+    
+    # 현재 날짜 (전송 날짜 기록용)
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    
+    # 전송 카운터
+    sent_count = 0
+    already_sent_count = 0
+    
+    # 핫딜 전송 (최대 개수 제한)
+    for _, deal in filtered_deals.iterrows():
+        # 최대 전송 수 제한 확인
+        if sent_count >= MAX_SEND_COUNT:
+            logger.info(f"최대 전송 수 ({MAX_SEND_COUNT}개)에 도달하여 중단합니다.")
+            break
+        
+        # 딕셔너리로 변환
+        deal_dict = deal.to_dict()
+        
+        # 상품 ID (링크 기준)
+        product_id = deal_dict['link']
+        
+        # 이미 전송한 상품인지 확인
+        if product_id in sent_products:
+            logger.info(f"이미 전송한 상품: {deal_dict['title']}")
+            already_sent_count += 1
+            continue
+        
+        # 텔레그램으로 전송
+        success = send_deal_to_telegram(bot, TELEGRAM_CHAT_ID, deal_dict)
+        
+        if success:
+            # 전송 기록 추가
+            sent_products[product_id] = {
+                "title": deal_dict['title'],
+                "price": int(deal_dict['price']),
+                "discount": int(deal_dict['discount']),
+                "sent_date": today
+            }
+            sent_count += 1
+            
+            # 전송 기록 저장 (5개마다)
+            if sent_count % 5 == 0:
+                save_sent_products(sent_products)
+            
+            # 텔레그램 API 제한 방지를 위한 대기
+            time.sleep(random.uniform(1.5, 3.0))
+    
+    # 최종 전송 기록 저장
+    save_sent_products(sent_products)
+    
+    logger.info(f"총 {sent_count}개 상품 전송 완료 (이미 전송: {already_sent_count}개, 최대 제한: {MAX_SEND_COUNT}개)")
+    logger.info("=== 텔레그램 핫딜 전송 종료 ===")
 
 if __name__ == "__main__":
     main()
