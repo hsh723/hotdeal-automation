@@ -139,3 +139,108 @@
 2025-03-08 04:17:52,786 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
 2025-03-08 04:17:52,792 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_041751_05_outro.jpg
 2025-03-08 04:17:52,794 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.
+2025-03-08 04:51:35,051 - VideoFrameGenerator - INFO - 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:51:35,054 - VideoFrameGenerator - INFO - CSV 파일 읽기 성공: 239개 상품 정보 로드
+2025-03-08 04:51:35,054 - VideoFrameGenerator - INFO - 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:51:35,067 - VideoFrameGenerator - INFO - 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:51:35,078 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,085 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:51:35,103 - VideoFrameGenerator - INFO - 인트로 프레임 생성 완료: frames\20250308_045135_00_intro.jpg
+2025-03-08 04:51:35,103 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,128 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_045135_01_category_골드박스.jpg
+2025-03-08 04:51:35,128 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,219 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_02_01_골드박스_product.jpg
+2025-03-08 04:51:35,219 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,300 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_02_02_골드박스_product.jpg
+2025-03-08 04:51:35,300 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,396 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_02_03_골드박스_product.jpg
+2025-03-08 04:51:35,396 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,487 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_02_04_골드박스_product.jpg
+2025-03-08 04:51:35,487 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,559 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_02_05_골드박스_product.jpg
+2025-03-08 04:51:35,560 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,585 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_045135_03_category_일반.jpg
+2025-03-08 04:51:35,586 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,679 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_04_01_일반_product.jpg
+2025-03-08 04:51:35,679 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,755 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_04_02_일반_product.jpg
+2025-03-08 04:51:35,755 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,829 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_04_03_일반_product.jpg
+2025-03-08 04:51:35,830 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,904 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_04_04_일반_product.jpg
+2025-03-08 04:51:35,904 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,984 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045135_04_05_일반_product.jpg
+2025-03-08 04:51:35,984 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:51:35,992 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:51:35,998 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_045135_05_outro.jpg
+2025-03-08 04:51:36,005 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.
+2025-03-08 04:54:23,463 - VideoFrameGenerator - INFO - 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:54:23,467 - VideoFrameGenerator - INFO - CSV 파일 읽기 성공: 239개 상품 정보 로드
+2025-03-08 04:54:23,467 - VideoFrameGenerator - INFO - 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:54:23,480 - VideoFrameGenerator - INFO - 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:54:23,489 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:23,495 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:54:23,514 - VideoFrameGenerator - INFO - 인트로 프레임 생성 완료: frames\20250308_045423_00_intro.jpg
+2025-03-08 04:54:23,514 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:23,539 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_045423_01_category_골드박스.jpg
+2025-03-08 04:54:23,540 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:23,634 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_02_01_골드박스_product.jpg
+2025-03-08 04:54:23,635 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:23,729 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_02_02_골드박스_product.jpg
+2025-03-08 04:54:23,729 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:23,828 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_02_03_골드박스_product.jpg
+2025-03-08 04:54:23,828 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:23,921 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_02_04_골드박스_product.jpg
+2025-03-08 04:54:23,922 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,013 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_02_05_골드박스_product.jpg
+2025-03-08 04:54:24,013 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,038 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_045423_03_category_일반.jpg
+2025-03-08 04:54:24,038 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,137 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_04_01_일반_product.jpg
+2025-03-08 04:54:24,138 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,212 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_04_02_일반_product.jpg
+2025-03-08 04:54:24,212 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,292 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_04_03_일반_product.jpg
+2025-03-08 04:54:24,292 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,371 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_04_04_일반_product.jpg
+2025-03-08 04:54:24,371 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,448 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045423_04_05_일반_product.jpg
+2025-03-08 04:54:24,448 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:54:24,457 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:54:24,462 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_045423_05_outro.jpg
+2025-03-08 04:54:24,464 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.
+2025-03-08 04:55:56,387 - VideoFrameGenerator - INFO - 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:55:56,391 - VideoFrameGenerator - INFO - CSV 파일 읽기 성공: 239개 상품 정보 로드
+2025-03-08 04:55:56,391 - VideoFrameGenerator - INFO - 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:55:56,404 - VideoFrameGenerator - INFO - 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:55:56,414 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,420 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:55:56,438 - VideoFrameGenerator - INFO - 인트로 프레임 생성 완료: frames\20250308_045556_00_intro.jpg
+2025-03-08 04:55:56,438 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,462 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_045556_01_category_골드박스.jpg
+2025-03-08 04:55:56,462 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,550 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_02_01_골드박스_product.jpg
+2025-03-08 04:55:56,551 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,640 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_02_02_골드박스_product.jpg
+2025-03-08 04:55:56,640 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,730 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_02_03_골드박스_product.jpg
+2025-03-08 04:55:56,730 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,811 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_02_04_골드박스_product.jpg
+2025-03-08 04:55:56,811 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,905 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_02_05_골드박스_product.jpg
+2025-03-08 04:55:56,905 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:56,931 - VideoFrameGenerator - INFO - 카테고리 인트로 프레임 생성 완료: frames\20250308_045556_03_category_일반.jpg
+2025-03-08 04:55:56,931 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:57,012 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_04_01_일반_product.jpg
+2025-03-08 04:55:57,012 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:57,101 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_04_02_일반_product.jpg
+2025-03-08 04:55:57,101 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:57,189 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_04_03_일반_product.jpg
+2025-03-08 04:55:57,190 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:57,259 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_04_04_일반_product.jpg
+2025-03-08 04:55:57,259 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:57,363 - VideoFrameGenerator - INFO - 상품 프레임 생성 완료: frames\20250308_045556_04_05_일반_product.jpg
+2025-03-08 04:55:57,363 - VideoFrameGenerator - WARNING - 배경 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\backgrounds\\background.jpg', 기본 배경 생성
+2025-03-08 04:55:57,372 - VideoFrameGenerator - WARNING - 로고 이미지 로드 실패: [Errno 2] No such file or directory: 'assets\\logo\\logo.png'
+2025-03-08 04:55:57,377 - VideoFrameGenerator - INFO - 아웃트로 프레임 생성 완료: frames\20250308_045556_05_outro.jpg
+2025-03-08 04:55:57,379 - VideoFrameGenerator - INFO - 총 14개의 프레임이 생성되었습니다.

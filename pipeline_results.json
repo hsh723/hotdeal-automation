@@ -208,5 +208,110 @@
     },
     "end_time": "2025-03-08T04:17:53.203686",
     "success": true
+  },
+  {
+    "start_time": "2025-03-08T04:51:17.104924",
+    "steps": {
+      "script_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:51:17.104924",
+        "end_time": "2025-03-08T04:51:17.700058",
+        "duration_seconds": 0.5951335430145264,
+        "retries": 0
+      },
+      "tts_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:51:17.700058",
+        "end_time": "2025-03-08T04:51:34.401258",
+        "duration_seconds": 16.701200485229492,
+        "retries": 0
+      },
+      "video_frame_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:51:34.401258",
+        "end_time": "2025-03-08T04:51:36.058633",
+        "duration_seconds": 1.657374620437622,
+        "retries": 0
+      },
+      "video_renderer": {
+        "success": true,
+        "start_time": "2025-03-08T04:51:36.058633",
+        "end_time": "2025-03-08T04:51:36.413711",
+        "duration_seconds": 0.35507798194885254,
+        "retries": 0
+      }
+    },
+    "end_time": "2025-03-08T04:51:36.413710",
+    "success": true
+  },
+  {
+    "start_time": "2025-03-08T04:54:05.478567",
+    "steps": {
+      "script_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:54:05.478567",
+        "end_time": "2025-03-08T04:54:06.096707",
+        "duration_seconds": 0.6181399822235107,
+        "retries": 0
+      },
+      "tts_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:54:06.096707",
+        "end_time": "2025-03-08T04:54:22.806658",
+        "duration_seconds": 16.709951162338257,
+        "retries": 0
+      },
+      "video_frame_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:54:22.806658",
+        "end_time": "2025-03-08T04:54:24.513043",
+        "duration_seconds": 1.7063848972320557,
+        "retries": 0
+      },
+      "video_renderer": {
+        "success": true,
+        "start_time": "2025-03-08T04:54:24.513043",
+        "end_time": "2025-03-08T04:54:24.854120",
+        "duration_seconds": 0.3410768508911133,
+        "retries": 0
+      }
+    },
+    "end_time": "2025-03-08T04:54:24.854119",
+    "success": true
+  },
+  {
+    "start_time": "2025-03-08T04:55:38.396210",
+    "steps": {
+      "script_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:55:38.396210",
+        "end_time": "2025-03-08T04:55:39.006348",
+        "duration_seconds": 0.6101374626159668,
+        "retries": 0
+      },
+      "tts_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:55:39.006348",
+        "end_time": "2025-03-08T04:55:55.704366",
+        "duration_seconds": 16.698018074035645,
+        "retries": 0
+      },
+      "video_frame_generator": {
+        "success": true,
+        "start_time": "2025-03-08T04:55:55.704366",
+        "end_time": "2025-03-08T04:55:57.429755",
+        "duration_seconds": 1.725388765335083,
+        "retries": 0
+      },
+      "video_renderer": {
+        "success": true,
+        "start_time": "2025-03-08T04:55:57.429755",
+        "end_time": "2025-03-08T04:55:57.764830",
+        "duration_seconds": 0.33507490158081055,
+        "retries": 0
+      }
+    },
+    "end_time": "2025-03-08T04:55:57.764829",
+    "success": true
   }
 ]

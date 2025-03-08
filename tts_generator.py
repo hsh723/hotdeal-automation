@@ -76,18 +76,20 @@ def apply_pronunciation_corrections(text):
     
     return text
 
-def generate_voice_clova(text, output_path, speaker="vhyeri", volume=0, pitch=0, speed=1.1, retry_count=3, retry_delay=2):
+def generate_voice_clova(text, output_path, speaker="nara", volume=0, pitch=0, speed=0, retry_count=3, retry_delay=2):
     """네이버 Clova Voice로 음성 생성"""
-    # API 키 가져오기
-    api_key_id = os.environ.get('NAVER_API_KEY_ID')
-    api_secret = os.environ.get('NAVER_API_SECRET')
+    # API 키 가져오기 (공백 제거)
+    api_key_id = os.environ.get('NAVER_API_KEY_ID', '').strip()
+    api_secret = os.environ.get('NAVER_API_SECRET', '').strip()
     
     if not api_key_id or not api_secret:
         logger.error("네이버 API 키가 설정되지 않았습니다. 환경 변수 NAVER_API_KEY_ID와 NAVER_API_SECRET를 설정하세요.")
         return False
     
+    # 정확한 엔드포인트 URL
     url = "https://naveropenapi.apigw.ntruss.com/tts-premium/v1/tts"
     
+    # 정확한 헤더 설정
     headers = {
         "X-NCP-APIGW-API-KEY-ID": api_key_id,
         "X-NCP-APIGW-API-KEY": api_secret,
@@ -97,17 +99,19 @@ def generate_voice_clova(text, output_path, speaker="vhyeri", volume=0, pitch=0,
     # 발음 교정 적용
     text = apply_pronunciation_corrections(text)
     
+    # 요청 데이터
     data = {
         "speaker": speaker,
-        "volume": volume,
-        "speed": speed,
-        "pitch": pitch,
+        "volume": str(volume),
+        "speed": str(speed),
+        "pitch": str(pitch),
         "text": text,
         "format": "mp3"
     }
     
     for attempt in range(retry_count):
         try:
+            logger.info(f"API 호출 시도 {attempt+1}/{retry_count}...")
             response = requests.post(url, headers=headers, data=data)
             
             if response.status_code == 200:

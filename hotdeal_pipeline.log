@@ -479,3 +479,300 @@ ModuleNotFoundError: No module named 'gtts'
 2025-03-08 04:17:53,202 - HotdealPipeline - INFO - ===== video_renderer 단계 완료 (소요 시간: 0.36초) =====
 2025-03-08 04:17:53,204 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
 2025-03-08 04:17:53,204 - HotdealPipeline - INFO - 파이프라인 실행 성공!
+2025-03-08 04:51:17,103 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 04:51:17,103 - HotdealPipeline - INFO - 파이프라인 실행 시작: script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 04:51:17,104 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 04:51:17,686 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:51:17,686 - HotdealPipeline - INFO - [script_generator] CSV 파일에서 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:51:17,687 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:51:17,687 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 60g, 1개, 카테고리: 골드박스, 할인율: 42%
+2025-03-08 04:51:17,687 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 주방세제 리필, 1.2L, 1개, 카테고리: 골드박스, 할인율: 46%
+2025-03-08 04:51:17,687 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 맛술, 830ml, 1개, 카테고리: 골드박스, 할인율: 36%
+2025-03-08 04:51:17,687 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 베이킹소다 주방세제 레몬, 780ml, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:51:17,687 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 흙당근, 1kg, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:51:17,687 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:51:17,688 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 300g, 1개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:51:17,688 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:51:17,688 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 크고 단단한 두부, 1kg, 1개, 카테고리: 골드박스, 할인율: 25%
+2025-03-08 04:51:17,688 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 버넬 고농축 섬유유연제 와일드 로즈 본품, 900ml, 1개, 카테고리: 골드박스, 할인율: 59%
+2025-03-08 04:51:17,688 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 깐마늘, 1kg, 1개, 카테고리: 골드박스, 할인율: 45%
+2025-03-08 04:51:17,688 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스카트 유리 거울 세정 청소티슈, 1개, 카테고리: 골드박스, 할인율: 40%
+2025-03-08 04:51:17,689 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 도브 뷰티 너리싱 바디워시, 1kg, 1개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:51:17,689 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크린손 크린 위생장갑 알뜰형, 500개입, 1개, 카테고리: 골드박스, 할인율: 60%
+2025-03-08 04:51:17,689 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 깨끗한 천연펄프 키친타월, 150매, 8개, 카테고리: 골드박스, 할인율: 43%
+2025-03-08 04:51:17,689 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 온더바디 발을씻자 코튼 풋샴푸 프레쉬레몬민트향, 1개입, 1개, 385ml, 카테고리: 골드박스, 할인율: 58%
+2025-03-08 04:51:17,689 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 파우더향 리필, 600ml, 1개, 카테고리: 골드박스, 할인율: 62%
+2025-03-08 04:51:17,689 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 중간글씨용 네임펜 세트, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 50%
+2025-03-08 04:51:17,689 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 자연다움 우리쌀로 만든 끓여먹는 솥뚜껑 누룽지, 1kg, 1개, 카테고리: 골드박스, 할인율: 20%
+2025-03-08 04:51:17,690 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 니트릴장갑 화이트, 중(M), 100개입, 1개, 카테고리: 골드박스, 할인율: 72%
+2025-03-08 04:51:17,690 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 2개, 카테고리: 골드박스, 할인율: 54%
+2025-03-08 04:51:17,690 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아리얼 스트레스 릴리빙 퓨어풀 클렌징 티슈, 80개입, 1개, 카테고리: 골드박스, 할인율: 48%
+2025-03-08 04:51:17,690 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크리오 덴티메이트 시즌2 초극세모 칫솔, 10개입, 1세트, 카테고리: 골드박스, 할인율: 57%
+2025-03-08 04:51:17,690 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 새미네부엌 겉절이 양념, 90g, 2개, 카테고리: 골드박스, 할인율: 26%
+2025-03-08 04:51:17,690 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 골드박스, 할인율: 33%
+2025-03-08 04:51:17,690 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 요플레 플레인 멀티, 85g, 8개, 카테고리: 골드박스, 할인율: 38%
+2025-03-08 04:51:17,691 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 보송보송 파우더향, 490ml, 1개, 카테고리: 골드박스, 할인율: 44%
+2025-03-08 04:51:17,691 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 유성 매직, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:51:17,691 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:51:17,691 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 맛있는 오뚜기밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:51:17,691 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해태제과 오예스 30p, 900g, 1개, 카테고리: 일반, 할인율: 40%
+2025-03-08 04:51:17,691 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 12개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:51:17,691 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 1개, 카테고리: 일반, 할인율: 52%
+2025-03-08 04:51:17,692 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: CJ맛밤, 42g, 10개, 카테고리: 일반, 할인율: 26%
+2025-03-08 04:51:17,692 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 참깨라면 115g, 8개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:51:17,692 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 델몬트 필리핀 바나나, 1.4kg 내외, 1개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:51:17,692 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 사골곰탕, 500g, 6개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:51:17,692 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:51:17,693 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기3분 카레 약간매운맛, 200g, 6개, 카테고리: 일반, 할인율: 47%
+2025-03-08 04:51:17,693 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 하림 닭볶음탕용 (냉장), 1000g, 1개, 카테고리: 일반, 할인율: 45%
+2025-03-08 04:51:17,693 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 동원 JUST 노슈가 스위트콘, 340g, 1개, 카테고리: 일반, 할인율: 57%
+2025-03-08 04:51:17,693 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 한끼 연두부 + 오리엔탈 유자 소스 6개입, 708g, 1세트, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:51:17,693 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 멸균 흰우유, 200ml, 24개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:51:17,694 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스팸 클래식, 200g, 3개, 카테고리: 일반, 할인율: 53%
+2025-03-08 04:51:17,694 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 24개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:51:17,694 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 2L, 12개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:51:17,694 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 36개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:51:17,694 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진비빔면 156g, 8개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:51:17,694 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수 그린 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:51:17,695 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:51:17,695 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 켈로그 첵스초코 오곡으로 만든 시리얼, 570g, 1개, 카테고리: 일반, 할인율: 28%
+2025-03-08 04:51:17,695 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 틈새라면 빨계떡 120g, 5개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:51:17,695 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오리온 카스타드 딸기 생크림 12p, 1개, 276g, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:51:17,695 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 복음자리 딸기잼, 500g, 1개, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:51:17,695 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 연세두유 뼈를 생각한 고칼슘 검은콩, 190ml, 24개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:51:17,696 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스윗토 스테비아 대추방울토마토, 1.2kg, 1팩, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:51:17,696 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 이탈리아 정통 스파게티, 500g, 2개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:51:17,696 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 소중한 우리쌀 2024년(햅쌀), 10kg(상등급), 1개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:51:17,696 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 20개, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:51:17,696 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 6개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:51:17,697 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 60개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:51:17,697 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 한알 육수 3g 70입, 210g, 1개, 카테고리: 일반, 할인율: 46%
+2025-03-08 04:51:17,697 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 블루다이아몬드 아몬드 브리즈 오리지널, 190ml, 24개, 카테고리: 일반, 할인율: 41%
+2025-03-08 04:51:17,697 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 직화 참기름김, 4.5g, 24개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:51:17,697 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 반숙란 (냉장), 20구, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:51:17,697 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:51:17,698 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 40개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:51:17,698 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 양반 현미밥, 130g, 24개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:51:17,698 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 성주 당도선별 미니참외, 1.5kg(6입~9입), 1봉, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:51:17,698 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 이롬 황성주 박사의 국산콩 두유 검은콩 고칼슘, 190ml, 24개, 카테고리: 일반, 할인율: 49%
+2025-03-08 04:51:17,698 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 흑미밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:51:17,698 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 짜슐랭 145g, 15개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:51:17,698 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 36개, 카테고리: 일반, 할인율: 43%
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해표 식용유, 1.8L, 1개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 나 100% 우유, 1L, 2개, 카테고리: 일반, 할인율: 50%
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 즉석 백미밥, 210g, 36개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 멸치 쌀국수, 92g, 12개, 카테고리: 일반, 할인율: 54%
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 별하수 보리차 진액, 270g, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 24개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:51:17,699 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 04:51:17,700 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.60초) =====
+2025-03-08 04:51:17,700 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:51:34,401 - HotdealPipeline - INFO - ===== tts_generator 단계 완료 (소요 시간: 16.70초) =====
+2025-03-08 04:51:34,401 - HotdealPipeline - INFO - ===== video_frame_generator 단계 시작 =====
+2025-03-08 04:51:36,058 - HotdealPipeline - INFO - ===== video_frame_generator 단계 완료 (소요 시간: 1.66초) =====
+2025-03-08 04:51:36,058 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 04:51:36,412 - HotdealPipeline - INFO - [video_renderer] MoviePy 경로: C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\venv39\lib\site-packages\moviepy\__init__.py
+2025-03-08 04:51:36,413 - HotdealPipeline - INFO - [video_renderer] MoviePy 버전: 1.0.3
+2025-03-08 04:51:36,413 - HotdealPipeline - INFO - [video_renderer] MoviePy 구조: ['Clip', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', 'audio', 'compat', 'config', 'config_defaults', 'decorators', 'tools', 'version', 'video']
+2025-03-08 04:51:36,413 - HotdealPipeline - INFO - ===== video_renderer 단계 완료 (소요 시간: 0.36초) =====
+2025-03-08 04:51:36,415 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 04:51:36,415 - HotdealPipeline - INFO - 파이프라인 실행 성공!
+2025-03-08 04:54:05,477 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 04:54:05,478 - HotdealPipeline - INFO - 파이프라인 실행 시작: script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 04:54:05,478 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 04:54:06,082 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:54:06,082 - HotdealPipeline - INFO - [script_generator] CSV 파일에서 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:54:06,082 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:54:06,082 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 60g, 1개, 카테고리: 골드박스, 할인율: 42%
+2025-03-08 04:54:06,082 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 주방세제 리필, 1.2L, 1개, 카테고리: 골드박스, 할인율: 46%
+2025-03-08 04:54:06,082 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 맛술, 830ml, 1개, 카테고리: 골드박스, 할인율: 36%
+2025-03-08 04:54:06,083 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 베이킹소다 주방세제 레몬, 780ml, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:54:06,083 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 흙당근, 1kg, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:54:06,083 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:54:06,083 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 300g, 1개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:54:06,084 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:54:06,084 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 크고 단단한 두부, 1kg, 1개, 카테고리: 골드박스, 할인율: 25%
+2025-03-08 04:54:06,084 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 버넬 고농축 섬유유연제 와일드 로즈 본품, 900ml, 1개, 카테고리: 골드박스, 할인율: 59%
+2025-03-08 04:54:06,084 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 깐마늘, 1kg, 1개, 카테고리: 골드박스, 할인율: 45%
+2025-03-08 04:54:06,085 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스카트 유리 거울 세정 청소티슈, 1개, 카테고리: 골드박스, 할인율: 40%
+2025-03-08 04:54:06,085 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 도브 뷰티 너리싱 바디워시, 1kg, 1개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:54:06,085 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크린손 크린 위생장갑 알뜰형, 500개입, 1개, 카테고리: 골드박스, 할인율: 60%
+2025-03-08 04:54:06,085 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 깨끗한 천연펄프 키친타월, 150매, 8개, 카테고리: 골드박스, 할인율: 43%
+2025-03-08 04:54:06,085 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 온더바디 발을씻자 코튼 풋샴푸 프레쉬레몬민트향, 1개입, 1개, 385ml, 카테고리: 골드박스, 할인율: 58%
+2025-03-08 04:54:06,086 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 파우더향 리필, 600ml, 1개, 카테고리: 골드박스, 할인율: 62%
+2025-03-08 04:54:06,086 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 중간글씨용 네임펜 세트, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 50%
+2025-03-08 04:54:06,086 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 자연다움 우리쌀로 만든 끓여먹는 솥뚜껑 누룽지, 1kg, 1개, 카테고리: 골드박스, 할인율: 20%
+2025-03-08 04:54:06,086 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 니트릴장갑 화이트, 중(M), 100개입, 1개, 카테고리: 골드박스, 할인율: 72%
+2025-03-08 04:54:06,086 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 2개, 카테고리: 골드박스, 할인율: 54%
+2025-03-08 04:54:06,087 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아리얼 스트레스 릴리빙 퓨어풀 클렌징 티슈, 80개입, 1개, 카테고리: 골드박스, 할인율: 48%
+2025-03-08 04:54:06,087 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크리오 덴티메이트 시즌2 초극세모 칫솔, 10개입, 1세트, 카테고리: 골드박스, 할인율: 57%
+2025-03-08 04:54:06,087 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 새미네부엌 겉절이 양념, 90g, 2개, 카테고리: 골드박스, 할인율: 26%
+2025-03-08 04:54:06,087 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 골드박스, 할인율: 33%
+2025-03-08 04:54:06,087 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 요플레 플레인 멀티, 85g, 8개, 카테고리: 골드박스, 할인율: 38%
+2025-03-08 04:54:06,087 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 보송보송 파우더향, 490ml, 1개, 카테고리: 골드박스, 할인율: 44%
+2025-03-08 04:54:06,088 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 유성 매직, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:54:06,088 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:54:06,088 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 맛있는 오뚜기밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:54:06,088 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해태제과 오예스 30p, 900g, 1개, 카테고리: 일반, 할인율: 40%
+2025-03-08 04:54:06,088 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 12개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:54:06,088 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 1개, 카테고리: 일반, 할인율: 52%
+2025-03-08 04:54:06,089 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: CJ맛밤, 42g, 10개, 카테고리: 일반, 할인율: 26%
+2025-03-08 04:54:06,089 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 참깨라면 115g, 8개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:54:06,089 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 델몬트 필리핀 바나나, 1.4kg 내외, 1개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:54:06,089 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 사골곰탕, 500g, 6개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:54:06,089 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:54:06,089 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기3분 카레 약간매운맛, 200g, 6개, 카테고리: 일반, 할인율: 47%
+2025-03-08 04:54:06,090 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 하림 닭볶음탕용 (냉장), 1000g, 1개, 카테고리: 일반, 할인율: 45%
+2025-03-08 04:54:06,090 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 동원 JUST 노슈가 스위트콘, 340g, 1개, 카테고리: 일반, 할인율: 57%
+2025-03-08 04:54:06,090 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 한끼 연두부 + 오리엔탈 유자 소스 6개입, 708g, 1세트, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:54:06,090 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 멸균 흰우유, 200ml, 24개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:54:06,090 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스팸 클래식, 200g, 3개, 카테고리: 일반, 할인율: 53%
+2025-03-08 04:54:06,090 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 24개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:54:06,091 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 2L, 12개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:54:06,091 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 36개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:54:06,091 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진비빔면 156g, 8개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:54:06,091 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수 그린 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:54:06,091 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:54:06,091 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 켈로그 첵스초코 오곡으로 만든 시리얼, 570g, 1개, 카테고리: 일반, 할인율: 28%
+2025-03-08 04:54:06,091 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 틈새라면 빨계떡 120g, 5개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:54:06,092 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오리온 카스타드 딸기 생크림 12p, 1개, 276g, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:54:06,092 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 복음자리 딸기잼, 500g, 1개, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:54:06,092 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 연세두유 뼈를 생각한 고칼슘 검은콩, 190ml, 24개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:54:06,092 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스윗토 스테비아 대추방울토마토, 1.2kg, 1팩, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:54:06,092 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 이탈리아 정통 스파게티, 500g, 2개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:54:06,092 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 소중한 우리쌀 2024년(햅쌀), 10kg(상등급), 1개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:54:06,093 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 20개, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:54:06,093 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 6개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:54:06,093 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 60개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:54:06,093 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 한알 육수 3g 70입, 210g, 1개, 카테고리: 일반, 할인율: 46%
+2025-03-08 04:54:06,093 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 블루다이아몬드 아몬드 브리즈 오리지널, 190ml, 24개, 카테고리: 일반, 할인율: 41%
+2025-03-08 04:54:06,093 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 직화 참기름김, 4.5g, 24개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:54:06,093 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 반숙란 (냉장), 20구, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:54:06,094 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:54:06,094 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 40개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:54:06,094 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 양반 현미밥, 130g, 24개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:54:06,094 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 성주 당도선별 미니참외, 1.5kg(6입~9입), 1봉, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:54:06,094 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 이롬 황성주 박사의 국산콩 두유 검은콩 고칼슘, 190ml, 24개, 카테고리: 일반, 할인율: 49%
+2025-03-08 04:54:06,094 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 흑미밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 짜슐랭 145g, 15개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 36개, 카테고리: 일반, 할인율: 43%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해표 식용유, 1.8L, 1개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 나 100% 우유, 1L, 2개, 카테고리: 일반, 할인율: 50%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 즉석 백미밥, 210g, 36개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 멸치 쌀국수, 92g, 12개, 카테고리: 일반, 할인율: 54%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 별하수 보리차 진액, 270g, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:54:06,095 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 24개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:54:06,096 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:54:06,096 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 04:54:06,096 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.62초) =====
+2025-03-08 04:54:06,097 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:54:22,806 - HotdealPipeline - INFO - ===== tts_generator 단계 완료 (소요 시간: 16.71초) =====
+2025-03-08 04:54:22,806 - HotdealPipeline - INFO - ===== video_frame_generator 단계 시작 =====
+2025-03-08 04:54:24,513 - HotdealPipeline - INFO - ===== video_frame_generator 단계 완료 (소요 시간: 1.71초) =====
+2025-03-08 04:54:24,513 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 04:54:24,853 - HotdealPipeline - INFO - [video_renderer] MoviePy 경로: C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\venv39\lib\site-packages\moviepy\__init__.py
+2025-03-08 04:54:24,853 - HotdealPipeline - INFO - [video_renderer] MoviePy 버전: 1.0.3
+2025-03-08 04:54:24,853 - HotdealPipeline - INFO - [video_renderer] MoviePy 구조: ['Clip', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', 'audio', 'compat', 'config', 'config_defaults', 'decorators', 'tools', 'version', 'video']
+2025-03-08 04:54:24,854 - HotdealPipeline - INFO - ===== video_renderer 단계 완료 (소요 시간: 0.34초) =====
+2025-03-08 04:54:24,855 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 04:54:24,856 - HotdealPipeline - INFO - 파이프라인 실행 성공!
+2025-03-08 04:55:38,396 - HotdealPipeline - INFO - 파이프라인 즉시 실행
+2025-03-08 04:55:38,396 - HotdealPipeline - INFO - 파이프라인 실행 시작: script_generator, tts_generator, video_frame_generator, video_renderer
+2025-03-08 04:55:38,396 - HotdealPipeline - INFO - ===== script_generator 단계 시작 =====
+2025-03-08 04:55:38,993 - HotdealPipeline - INFO - [script_generator] 최신 핫딜 파일: data\coupang_deals_20250307.csv
+2025-03-08 04:55:38,993 - HotdealPipeline - INFO - [script_generator] CSV 파일에서 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:55:38,993 - HotdealPipeline - INFO - [script_generator] 총 239개의 상품 정보를 읽었습니다.
+2025-03-08 04:55:38,993 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 60g, 1개, 카테고리: 골드박스, 할인율: 42%
+2025-03-08 04:55:38,993 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 주방세제 리필, 1.2L, 1개, 카테고리: 골드박스, 할인율: 46%
+2025-03-08 04:55:38,993 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 맛술, 830ml, 1개, 카테고리: 골드박스, 할인율: 36%
+2025-03-08 04:55:38,994 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사 베이킹소다 주방세제 레몬, 780ml, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:55:38,994 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 흙당근, 1kg, 1개, 카테고리: 골드박스, 할인율: 32%
+2025-03-08 04:55:38,994 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:55:38,994 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 청양고추, 300g, 1개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:55:38,994 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 골드박스, 할인율: 31%
+2025-03-08 04:55:38,994 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 크고 단단한 두부, 1kg, 1개, 카테고리: 골드박스, 할인율: 25%
+2025-03-08 04:55:38,995 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 버넬 고농축 섬유유연제 와일드 로즈 본품, 900ml, 1개, 카테고리: 골드박스, 할인율: 59%
+2025-03-08 04:55:38,995 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 국내산 깐마늘, 1kg, 1개, 카테고리: 골드박스, 할인율: 45%
+2025-03-08 04:55:38,995 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스카트 유리 거울 세정 청소티슈, 1개, 카테고리: 골드박스, 할인율: 40%
+2025-03-08 04:55:38,995 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 도브 뷰티 너리싱 바디워시, 1kg, 1개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:55:38,995 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크린손 크린 위생장갑 알뜰형, 500개입, 1개, 카테고리: 골드박스, 할인율: 60%
+2025-03-08 04:55:38,995 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 깨끗한 천연펄프 키친타월, 150매, 8개, 카테고리: 골드박스, 할인율: 43%
+2025-03-08 04:55:38,995 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 온더바디 발을씻자 코튼 풋샴푸 프레쉬레몬민트향, 1개입, 1개, 385ml, 카테고리: 골드박스, 할인율: 58%
+2025-03-08 04:55:38,996 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 파우더향 리필, 600ml, 1개, 카테고리: 골드박스, 할인율: 62%
+2025-03-08 04:55:38,996 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 중간글씨용 네임펜 세트, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 50%
+2025-03-08 04:55:38,996 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 자연다움 우리쌀로 만든 끓여먹는 솥뚜껑 누룽지, 1kg, 1개, 카테고리: 골드박스, 할인율: 20%
+2025-03-08 04:55:38,996 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 코멧 니트릴장갑 화이트, 중(M), 100개입, 1개, 카테고리: 골드박스, 할인율: 72%
+2025-03-08 04:55:38,996 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 2개, 카테고리: 골드박스, 할인율: 54%
+2025-03-08 04:55:38,996 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아리얼 스트레스 릴리빙 퓨어풀 클렌징 티슈, 80개입, 1개, 카테고리: 골드박스, 할인율: 48%
+2025-03-08 04:55:38,997 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 크리오 덴티메이트 시즌2 초극세모 칫솔, 10개입, 1세트, 카테고리: 골드박스, 할인율: 57%
+2025-03-08 04:55:38,997 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 새미네부엌 겉절이 양념, 90g, 2개, 카테고리: 골드박스, 할인율: 26%
+2025-03-08 04:55:38,997 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 골드박스, 할인율: 33%
+2025-03-08 04:55:38,997 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 요플레 플레인 멀티, 85g, 8개, 카테고리: 골드박스, 할인율: 38%
+2025-03-08 04:55:38,997 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 아이깨끗해 항균 폼 핸드솝 순 보송보송 파우더향, 490ml, 1개, 카테고리: 골드박스, 할인율: 44%
+2025-03-08 04:55:38,997 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 모나미 유성 매직, 혼합색상, 12개, 카테고리: 골드박스, 할인율: 56%
+2025-03-08 04:55:38,997 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 12개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:55:38,998 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 맛있는 오뚜기밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:55:38,998 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해태제과 오예스 30p, 900g, 1개, 카테고리: 일반, 할인율: 40%
+2025-03-08 04:55:38,998 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 12개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:55:38,998 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원순창 양념듬뿍 쌈장, 500g, 1개, 카테고리: 일반, 할인율: 52%
+2025-03-08 04:55:38,998 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: CJ맛밤, 42g, 10개, 카테고리: 일반, 할인율: 26%
+2025-03-08 04:55:38,999 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 참깨라면 115g, 8개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:55:38,999 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 델몬트 필리핀 바나나, 1.4kg 내외, 1개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:55:38,999 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 사골곰탕, 500g, 6개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:55:38,999 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:55:38,999 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기3분 카레 약간매운맛, 200g, 6개, 카테고리: 일반, 할인율: 47%
+2025-03-08 04:55:38,999 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 하림 닭볶음탕용 (냉장), 1000g, 1개, 카테고리: 일반, 할인율: 45%
+2025-03-08 04:55:39,000 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 동원 JUST 노슈가 스위트콘, 340g, 1개, 카테고리: 일반, 할인율: 57%
+2025-03-08 04:55:39,000 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 풀무원 한끼 연두부 + 오리엔탈 유자 소스 6개입, 708g, 1세트, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:55:39,000 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 멸균 흰우유, 200ml, 24개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:55:39,000 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스팸 클래식, 200g, 3개, 카테고리: 일반, 할인율: 53%
+2025-03-08 04:55:39,000 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 24개, 카테고리: 일반, 할인율: 23%
+2025-03-08 04:55:39,000 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 2L, 12개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:55:39,001 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 36개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:55:39,001 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진비빔면 156g, 8개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:55:39,001 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수 그린 무라벨, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:55:39,001 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 제주삼다수, 500ml, 40개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:55:39,001 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 켈로그 첵스초코 오곡으로 만든 시리얼, 570g, 1개, 카테고리: 일반, 할인율: 28%
+2025-03-08 04:55:39,001 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 틈새라면 빨계떡 120g, 5개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:55:39,002 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오리온 카스타드 딸기 생크림 12p, 1개, 276g, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:55:39,002 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 복음자리 딸기잼, 500g, 1개, 카테고리: 일반, 할인율: 25%
+2025-03-08 04:55:39,002 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 연세두유 뼈를 생각한 고칼슘 검은콩, 190ml, 24개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:55:39,002 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 스윗토 스테비아 대추방울토마토, 1.2kg, 1팩, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:55:39,002 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 이탈리아 정통 스파게티, 500g, 2개, 카테고리: 일반, 할인율: 22%
+2025-03-08 04:55:39,002 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 소중한 우리쌀 2024년(햅쌀), 10kg(상등급), 1개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:55:39,003 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 20개, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:55:39,003 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 백미밥, 210g, 6개, 카테고리: 일반, 할인율: 20%
+2025-03-08 04:55:39,003 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 500ml, 60개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:55:39,003 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 한알 육수 3g 70입, 210g, 1개, 카테고리: 일반, 할인율: 46%
+2025-03-08 04:55:39,003 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 블루다이아몬드 아몬드 브리즈 오리지널, 190ml, 24개, 카테고리: 일반, 할인율: 41%
+2025-03-08 04:55:39,004 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 비비고 직화 참기름김, 4.5g, 24개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:55:39,004 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 곰곰 반숙란 (냉장), 20구, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:55:39,004 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 후레쉬 밀크, 900ml, 2개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:55:39,004 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 진라면 매운맛 120g, 40개, 카테고리: 일반, 할인율: 29%
+2025-03-08 04:55:39,004 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 양반 현미밥, 130g, 24개, 카테고리: 일반, 할인율: 30%
+2025-03-08 04:55:39,004 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 성주 당도선별 미니참외, 1.5kg(6입~9입), 1봉, 카테고리: 일반, 할인율: 27%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 이롬 황성주 박사의 국산콩 두유 검은콩 고칼슘, 190ml, 24개, 카테고리: 일반, 할인율: 49%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 흑미밥, 210g, 12개, 카테고리: 일반, 할인율: 35%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 짜슐랭 145g, 15개, 카테고리: 일반, 할인율: 33%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 탐사수 무라벨, 2L, 36개, 카테고리: 일반, 할인율: 43%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 해표 식용유, 1.8L, 1개, 카테고리: 일반, 할인율: 31%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 서울우유 나 100% 우유, 1L, 2개, 카테고리: 일반, 할인율: 50%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 햇반 즉석 백미밥, 210g, 36개, 카테고리: 일반, 할인율: 51%
+2025-03-08 04:55:39,005 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 청정원 멸치 쌀국수, 92g, 12개, 카테고리: 일반, 할인율: 54%
+2025-03-08 04:55:39,006 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 별하수 보리차 진액, 270g, 1개, 카테고리: 일반, 할인율: 32%
+2025-03-08 04:55:39,006 - HotdealPipeline - INFO - [script_generator] 상품 제목 확인: 오뚜기 흰밥, 210g, 24개, 카테고리: 일반, 할인율: 21%
+2025-03-08 04:55:39,006 - HotdealPipeline - INFO - [script_generator] 총 2개의 카테고리로 분류되었습니다.
+2025-03-08 04:55:39,006 - HotdealPipeline - INFO - [script_generator] 스크립트가 생성되었습니다: output\hotdeal_script_20250308.txt
+2025-03-08 04:55:39,006 - HotdealPipeline - INFO - ===== script_generator 단계 완료 (소요 시간: 0.61초) =====
+2025-03-08 04:55:39,006 - HotdealPipeline - INFO - ===== tts_generator 단계 시작 =====
+2025-03-08 04:55:55,704 - HotdealPipeline - INFO - ===== tts_generator 단계 완료 (소요 시간: 16.70초) =====
+2025-03-08 04:55:55,704 - HotdealPipeline - INFO - ===== video_frame_generator 단계 시작 =====
+2025-03-08 04:55:57,429 - HotdealPipeline - INFO - ===== video_frame_generator 단계 완료 (소요 시간: 1.72초) =====
+2025-03-08 04:55:57,429 - HotdealPipeline - INFO - ===== video_renderer 단계 시작 =====
+2025-03-08 04:55:57,763 - HotdealPipeline - INFO - [video_renderer] MoviePy 경로: C:\Users\momus\hotdeal\hotdeal-automation\hotdeal-automation\venv39\lib\site-packages\moviepy\__init__.py
+2025-03-08 04:55:57,763 - HotdealPipeline - INFO - [video_renderer] MoviePy 버전: 1.0.3
+2025-03-08 04:55:57,764 - HotdealPipeline - INFO - [video_renderer] MoviePy 구조: ['Clip', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', 'audio', 'compat', 'config', 'config_defaults', 'decorators', 'tools', 'version', 'video']
+2025-03-08 04:55:57,764 - HotdealPipeline - INFO - ===== video_renderer 단계 완료 (소요 시간: 0.34초) =====
+2025-03-08 04:55:57,766 - HotdealPipeline - INFO - 파이프라인 결과 저장 완료: pipeline_results.json
+2025-03-08 04:55:57,766 - HotdealPipeline - INFO - 파이프라인 실행 성공!

@@ -47,3 +47,87 @@
 2025-03-08 04:17:51,004 - TTS_Generator - INFO - 생성된 파일: audio\20250308_041730_01_category.mp3
 2025-03-08 04:17:51,004 - TTS_Generator - INFO - 생성된 파일: audio\20250308_041730_02_category.mp3
 2025-03-08 04:17:51,004 - TTS_Generator - INFO - 생성된 파일: audio\20250308_041730_03_outro.mp3
+2025-03-08 04:51:17,907 - TTS_Generator - INFO - 최신 스크립트 파일: output\hotdeal_script_20250308.txt
+2025-03-08 04:51:17,908 - TTS_Generator - INFO - 스크립트 내용 읽기 완료 (934 바이트)
+2025-03-08 04:51:17,909 - TTS_Generator - INFO - 스크립트 분리 완료: 인트로, 2개 카테고리, 아웃트로
+2025-03-08 04:51:17,956 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:17,956 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:19,994 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:19,994 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:22,038 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:22,038 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045117_00_intro.mp3
+2025-03-08 04:51:22,075 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:22,075 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:24,120 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:24,121 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:26,158 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:26,158 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045117_01_category.mp3
+2025-03-08 04:51:26,193 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:26,193 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:28,228 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:28,228 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:30,269 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:30,269 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045117_02_category.mp3
+2025-03-08 04:51:30,302 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:30,302 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:32,342 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:32,342 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:51:34,383 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:51:34,384 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045117_03_outro.mp3
+2025-03-08 04:51:34,385 - TTS_Generator - INFO - 총 0개의 음성 파일 생성 완료
+2025-03-08 04:54:06,307 - TTS_Generator - INFO - 최신 스크립트 파일: output\hotdeal_script_20250308.txt
+2025-03-08 04:54:06,308 - TTS_Generator - INFO - 스크립트 내용 읽기 완료 (934 바이트)
+2025-03-08 04:54:06,308 - TTS_Generator - INFO - 스크립트 분리 완료: 인트로, 2개 카테고리, 아웃트로
+2025-03-08 04:54:06,350 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:06,350 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:08,397 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:08,397 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:10,438 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:10,438 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045406_00_intro.mp3
+2025-03-08 04:54:10,469 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:10,469 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:12,506 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:12,506 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:14,556 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:14,556 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045406_01_category.mp3
+2025-03-08 04:54:14,590 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:14,591 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:16,642 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:16,642 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:18,680 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:18,680 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045406_02_category.mp3
+2025-03-08 04:54:18,714 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:18,714 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:20,749 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:20,749 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:54:22,789 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:54:22,789 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045406_03_outro.mp3
+2025-03-08 04:54:22,790 - TTS_Generator - INFO - 총 0개의 음성 파일 생성 완료
+2025-03-08 04:55:39,218 - TTS_Generator - INFO - 최신 스크립트 파일: output\hotdeal_script_20250308.txt
+2025-03-08 04:55:39,220 - TTS_Generator - INFO - 스크립트 내용 읽기 완료 (934 바이트)
+2025-03-08 04:55:39,220 - TTS_Generator - INFO - 스크립트 분리 완료: 인트로, 2개 카테고리, 아웃트로
+2025-03-08 04:55:39,268 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:39,268 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:41,309 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:41,310 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:43,347 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:43,348 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045539_00_intro.mp3
+2025-03-08 04:55:43,378 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:43,378 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:45,420 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:45,420 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:47,459 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:47,459 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045539_01_category.mp3
+2025-03-08 04:55:47,489 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:47,490 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:49,532 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:49,532 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:51,570 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:51,571 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045539_02_category.mp3
+2025-03-08 04:55:51,601 - TTS_Generator - WARNING - API 호출 실패 (시도 1/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:51,602 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:53,646 - TTS_Generator - WARNING - API 호출 실패 (시도 2/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:53,646 - TTS_Generator - INFO - 2초 후 재시도합니다...
+2025-03-08 04:55:55,686 - TTS_Generator - WARNING - API 호출 실패 (시도 3/3): 401, {"error":{"errorCode":"200","message":"Authentication Failed","details":"Authentication information are missing."}}
+2025-03-08 04:55:55,686 - TTS_Generator - ERROR - 최대 재시도 횟수 초과. 음성 변환 실패: audio\20250308_045539_03_outro.mp3
+2025-03-08 04:55:55,688 - TTS_Generator - INFO - 총 0개의 음성 파일 생성 완료
