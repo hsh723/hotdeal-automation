@@ -710,5 +710,53 @@
     "price": 20350,
     "discount": 21,
     "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/8411449173?itemId=22899750797&vendorItemId=3015637454&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "순창궁 태양초 골드 고추장, 500g, 1개",
+    "price": 3480,
+    "discount": 59,
+    "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/4792422817?itemId=6142332578&vendorItemId=73438575684&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 봄동, 500g, 1봉, 500g",
+    "price": 2780,
+    "discount": 44,
+    "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/7851339582?itemId=21401397126&vendorItemId=88458014364&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "서울우유 후레쉬 밀크, 900ml, 2개",
+    "price": 3780,
+    "discount": 31,
+    "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/6308597882?itemId=13081833466&vendorItemId=80343415197&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 와일드 루꼴라, 50g, 1개",
+    "price": 1990,
+    "discount": 28,
+    "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/6398359177?itemId=13671856774&vendorItemId=80923874947&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "돌 바나나, 1.2kg 내외, 1개",
+    "price": 3580,
+    "discount": 23,
+    "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/36545348?itemId=134894916&vendorItemId=3286293717&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "크라운 참쌀선과, 253g, 1개",
+    "price": 4180,
+    "discount": 22,
+    "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/6354913981?itemId=16734614225&vendorItemId=83916573827&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "델몬트 필리핀 바나나, 1.4kg 내외, 1개",
+    "price": 4390,
+    "discount": 21,
+    "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/6528172171?itemId=5911958170&vendorItemId=73210037048&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "흙대파, 1kg, 1개",
+    "price": 3490,
+    "discount": 21,
+    "sent_date": "2025-03-08"
   }
 }
