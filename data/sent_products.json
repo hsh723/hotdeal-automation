@@ -782,5 +782,29 @@
     "price": 9220,
     "discount": 33,
     "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/5569498704?itemId=8864453245&vendorItemId=76151156185&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "간편한 셀러리 스틱, 150g, 1개",
+    "price": 1650,
+    "discount": 24,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/6201953323?itemId=12311272580&vendorItemId=79581434642&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 가지, 1개, 1개입",
+    "price": 1450,
+    "discount": 24,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/218520566?itemId=490814306&vendorItemId=4242007843&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "돌 스위티오 바나나, 1kg 내외, 1개",
+    "price": 3980,
+    "discount": 20,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/218520566?itemId=490814306&vendorItemId=4242007843&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "돌 스위티오 바나나, 1kg 내외, 1개",
+    "price": 3980,
+    "discount": 20,
+    "sent_date": "2025-03-09"
   }
 }
