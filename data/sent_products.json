@@ -806,5 +806,47 @@
     "price": 3980,
     "discount": 20,
     "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/7447842898?itemId=16611478398&vendorItemId=86251988612&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "나랑드사이다 제로, 245ml, 24개",
+    "price": 10600,
+    "discount": 55,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/7506301128?itemId=311786962&vendorItemId=88446199107&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "홈스타 바르는 곰팡이 싹 세정제, 120ml, 1개",
+    "price": 3000,
+    "discount": 43,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/7708594893?itemId=20974391461&vendorItemId=88039347874&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "설향 딸기 대과, 500g, 2개",
+    "price": 14480,
+    "discount": 42,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/7621402287?itemId=932098580&vendorItemId=5310990221&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "곰곰 냉동 흰다리 새우살, 300g(24~33미), 1개",
+    "price": 6890,
+    "discount": 36,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/119465439?itemId=17708983309&vendorItemId=3000244424&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "상하목장 유기농 우유, 125ml, 24개",
+    "price": 19100,
+    "discount": 31,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/6659185462?itemId=19565484291&vendorItemId=86673364670&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오리온 초코파이, 468g, 3개",
+    "price": 10150,
+    "discount": 29,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/280608869?itemId=890782153&vendorItemId=5241766159&pickType=COU_PICK&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "풀무원 한끼 연두부 + 오리엔탈 유자 소스 6개입, 708g, 1세트",
+    "price": 7440,
+    "discount": 25,
+    "sent_date": "2025-03-09"
   }
 }
