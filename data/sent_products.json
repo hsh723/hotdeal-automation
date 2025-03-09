@@ -758,5 +758,29 @@
     "price": 3490,
     "discount": 21,
     "sent_date": "2025-03-08"
+  },
+  "https://www.coupang.com/vp/products/1885773320?itemId=12756834105&vendorItemId=80023081168&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "쌈용 맛배추, 200g, 1개",
+    "price": 2100,
+    "discount": 53,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/1628662667?itemId=2778352026&vendorItemId=70768128146&pickType=COU_PICK&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "하림 닭볶음탕용 (냉장), 1000g, 1개",
+    "price": 4900,
+    "discount": 45,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/5760586837?itemId=22422717142&vendorItemId=3037177116&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "청정원 맛술, 830ml, 1개",
+    "price": 3470,
+    "discount": 36,
+    "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/6590520242?itemId=12798512546&vendorItemId=3255714453&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "콘푸로스트 시리얼, 1320g, 1개",
+    "price": 9220,
+    "discount": 33,
+    "sent_date": "2025-03-09"
   }
 }
