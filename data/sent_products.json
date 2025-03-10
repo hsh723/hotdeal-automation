@@ -848,5 +848,17 @@
     "price": 7440,
     "discount": 25,
     "sent_date": "2025-03-09"
+  },
+  "https://www.coupang.com/vp/products/7603541783?itemId=23170306835&vendorItemId=90203070971&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비카 구카 누가 필링 크래커, 100g, 1개",
+    "price": 2500,
+    "discount": 21,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/3833856?itemId=648569380&vendorItemId=84993756565&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 진라면 컵 매운맛 65g, 12개",
+    "price": 8060,
+    "discount": 20,
+    "sent_date": "2025-03-10"
   }
 }
