@@ -860,5 +860,77 @@
     "price": 8060,
     "discount": 20,
     "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/8505512562?itemId=22849390126&vendorItemId=85225551461&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "퍼실 딥클린 9중효소 라벤더젤 드럼용 액상세제 리필, 1.5L, 1개",
+    "price": 6900,
+    "discount": 55,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/6239222116?itemId=20974391383&vendorItemId=88039347774&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "설향 딸기 중과, 500g, 2팩",
+    "price": 11440,
+    "discount": 50,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/6610618007?itemId=3845019360&vendorItemId=71829825174&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "국내산 깐마늘, 1kg, 1개",
+    "price": 5950,
+    "discount": 45,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/1628662667?itemId=2778352026&vendorItemId=70768128146&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "하림 닭볶음탕용 (냉장), 1000g, 1개",
+    "price": 4900,
+    "discount": 45,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/218520566?itemId=12538585521&vendorItemId=79807000363&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "스위티오 Dole 바나나, 1.2kg 내외, 1개",
+    "price": 3580,
+    "discount": 40,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/329389373?itemId=15581584012&vendorItemId=3006697064&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "블루다이아몬드 아몬드 브리즈 언스위트, 190ml, 24개",
+    "price": 15900,
+    "discount": 39,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/7679943903?itemId=24752724094&vendorItemId=91761207113&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "[델포유] 오븐에 구운 십센치 파운드 케이크, 50g, 25개",
+    "price": 15900,
+    "discount": 36,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/4866946618?itemId=6318956874&vendorItemId=3025163213&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "소화가잘되는우유 오리지널, 190ml, 24개",
+    "price": 18480,
+    "discount": 35,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/8337543706?itemId=24075744157&vendorItemId=3004855245&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "팔도 밥알없는 비락식혜, 175ml, 30개",
+    "price": 9870,
+    "discount": 34,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/8157281245?itemId=20734755355&vendorItemId=87805278432&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "후버 착즙 오렌지주스, 1L, 1개",
+    "price": 3850,
+    "discount": 30,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/7757579141?itemId=16589274666&vendorItemId=71197288096&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "햇반 작은공기, 130g, 6개",
+    "price": 5630,
+    "discount": 24,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/222491219?itemId=697494678&vendorItemId=4781550652&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "스타벅스 카페 라떼, 270ml, 10개",
+    "price": 19730,
+    "discount": 21,
+    "sent_date": "2025-03-10"
   }
 }
