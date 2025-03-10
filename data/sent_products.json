@@ -932,5 +932,17 @@
     "price": 19730,
     "discount": 21,
     "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/200355420?itemId=581820303&vendorItemId=4524437078&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "퓨어스펙 고당도 오렌지 중대과, 3kg(12~20입), 1봉",
+    "price": 15000,
+    "discount": 46,
+    "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/218520566?itemId=12538585521&vendorItemId=79807000363&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "스위티오 Dole 바나나, 1.2kg 내외, 1개",
+    "price": 3980,
+    "discount": 33,
+    "sent_date": "2025-03-10"
   }
 }
