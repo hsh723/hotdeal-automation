@@ -980,5 +980,23 @@
     "price": 6280,
     "discount": 21,
     "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/205065505?itemId=603543788&vendorItemId=4581919176&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "마이비 얼룩제거제, 330ml, 1개",
+    "price": 5530,
+    "discount": 38,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/1547900023?itemId=2649709157&vendorItemId=70640576460&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 청상추, 200g, 1개",
+    "price": 1430,
+    "discount": 36,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/8059685237?itemId=22798216959&vendorItemId=89676780383&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "짜파게티 더 블랙 116g, 4개",
+    "price": 4510,
+    "discount": 27,
+    "sent_date": "2025-03-11"
   }
 }
