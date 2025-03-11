@@ -944,5 +944,41 @@
     "price": 3980,
     "discount": 33,
     "sent_date": "2025-03-10"
+  },
+  "https://www.coupang.com/vp/products/7922949204?itemId=21772573521&vendorItemId=88821435326&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "서울우유 저지방 우유, 1L, 2개",
+    "price": 4980,
+    "discount": 53,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/200355420?itemId=606966636&vendorItemId=4592011759&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "퓨어스펙 고당도 오렌지, 1.3kg(6-9입), 1봉",
+    "price": 6840,
+    "discount": 43,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/6211497394?itemId=12383318007&vendorItemId=79653009440&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "제주 세척 무, 1개입, 1개",
+    "price": 2860,
+    "discount": 37,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/6215203782?itemId=12409030784&vendorItemId=79678493796&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 손질 쌈배추, 200g, 1개, 200g",
+    "price": 2100,
+    "discount": 29,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/130180913?itemId=17471737158&vendorItemId=84639394953&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "서울우유 1급A우유, 2.3L, 2개",
+    "price": 10960,
+    "discount": 27,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/5932459264?itemId=171854354&vendorItemId=3038313748&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 컵누들 매콤한맛 37.8g, 6개",
+    "price": 6280,
+    "discount": 21,
+    "sent_date": "2025-03-11"
   }
 }
