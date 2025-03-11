@@ -998,5 +998,89 @@
     "price": 4510,
     "discount": 27,
     "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/6858666780?itemId=11143487860&vendorItemId=89216822908&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "사조참치 살코기 안심따개, 85g, 16개",
+    "price": 16670,
+    "discount": 52,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/5240209658?itemId=24521212905&vendorItemId=91533935263&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "곰곰 미국산 네이블 오렌지, 1.2kg(중과), 1개",
+    "price": 5940,
+    "discount": 52,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/4792356798?itemId=6142183477&vendorItemId=73438425706&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 상추&깻잎 간편쌈, 150g, 1개",
+    "price": 1180,
+    "discount": 50,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/305732568?itemId=1083149189&vendorItemId=72804910926&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "탐사 파워워시 액체세제, 2.5L, 1개",
+    "price": 3990,
+    "discount": 50,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/6610618007?itemId=19223671466&vendorItemId=86340357383&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "국내산 깐마늘, 500g, 3개",
+    "price": 8920,
+    "discount": 44,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/7778899675?itemId=21019193189&vendorItemId=90043575627&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "립톤 아이스티 분말 복숭아맛, 1.5kg, 1개입, 1개",
+    "price": 13100,
+    "discount": 42,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/7757148162?itemId=20909725750&vendorItemId=74756166074&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "매일두유 99.9, 190ml, 48개",
+    "price": 29000,
+    "discount": 39,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/5625704601?itemId=11696984031&vendorItemId=79548063314&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "탐사수 무라벨, 2L, 24개",
+    "price": 12690,
+    "discount": 36,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/4744789493?itemId=6032995407&vendorItemId=73330579108&pickType=COU_PICK&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "스윗토 스테비아 대추방울토마토, 1.2kg, 1팩",
+    "price": 14000,
+    "discount": 33,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/6930792814?itemId=42897124&vendorItemId=3066896620&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 열라면 120g, 40개",
+    "price": 21400,
+    "discount": 32,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/8246217714?itemId=18803201450&vendorItemId=91514042193&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "삼립 미니약과, 1kg, 1개",
+    "price": 6050,
+    "discount": 27,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/8131259838?itemId=23091855765&vendorItemId=90125277250&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "콘푸로스트 다크초코 시리얼, 550g, 1개",
+    "price": 5280,
+    "discount": 24,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/4708084849?itemId=4358863&vendorItemId=91899109084&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "매일우유 오리지널, 200ml, 24개",
+    "price": 15500,
+    "discount": 22,
+    "sent_date": "2025-03-11"
+  },
+  "https://www.coupang.com/vp/products/2233944989?itemId=3812413037&vendorItemId=71797311591&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 알배기, 1개입, 1개",
+    "price": 3000,
+    "discount": 20,
+    "sent_date": "2025-03-11"
   }
 }
