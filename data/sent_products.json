@@ -1196,5 +1196,29 @@
     "price": 10800,
     "discount": 21,
     "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/7757148162?itemId=20909886774&vendorItemId=3038558667&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "매일두유 99.9, 190ml, 24개",
+    "price": 15400,
+    "discount": 50,
+    "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/225949728?itemId=2877588761&vendorItemId=85191188464&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "프릴 시크릿오브 베이킹소다 주방세제 퓨어레몬향 리필, 1L, 2개",
+    "price": 7900,
+    "discount": 41,
+    "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/5205138931?itemId=18044793093&vendorItemId=85199041808&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "노세범 미네랄 파우더, 1개",
+    "price": 5670,
+    "discount": 37,
+    "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/5625704601?itemId=11650491074&vendorItemId=78924935203&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "탐사수 무라벨, 330ml, 40개",
+    "price": 8890,
+    "discount": 33,
+    "sent_date": "2025-03-12"
   }
 }
