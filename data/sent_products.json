@@ -1220,5 +1220,35 @@
     "price": 8890,
     "discount": 33,
     "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/8107798642?itemId=23374319052&vendorItemId=90882133321&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "햇반 발아현미밥 작은공기, 130g, 36개",
+    "price": 29900,
+    "discount": 63,
+    "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/8289722456?itemId=23465162779&vendorItemId=90920979612&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "햇반 큰공기, 300g, 30개",
+    "price": 39900,
+    "discount": 50,
+    "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/6357295108?itemId=19711363756&vendorItemId=86815717245&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "맛있는우유GT 소화 잘되는 배 안아픈 락토프리우유 저지방 & 프리바이오틱스, 900ml, 1개",
+    "price": 3190,
+    "discount": 44,
+    "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/1379469112?itemId=16417485473&vendorItemId=84993760347&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "꿀꽈배기, 90g, 5개",
+    "price": 5000,
+    "discount": 26,
+    "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/1868663190?itemId=2428034616&vendorItemId=70422023629&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "풀무원 실의 힘 매일아침 순생나또 8개입, 396g, 1개",
+    "price": 7800,
+    "discount": 20,
+    "sent_date": "2025-03-12"
   }
 }
