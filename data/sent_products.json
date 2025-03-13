@@ -1250,5 +1250,77 @@
     "price": 7800,
     "discount": 20,
     "sent_date": "2025-03-12"
+  },
+  "https://www.coupang.com/vp/products/8341519573?itemId=24090952762&vendorItemId=91053198949&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "백설 고소함 가득 참기름, 450ml, 1개",
+    "price": 6500,
+    "discount": 54,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/7757580187?itemId=21693146957&vendorItemId=3475718842&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "연세두유 뼈를 생각한 고칼슘 검은콩, 190ml, 24개",
+    "price": 10700,
+    "discount": 51,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/106265?itemId=205447&vendorItemId=3000138986&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "폰즈 클리어 훼이스 스파립앤아이 메이크업 리무버, 120ml, 1개",
+    "price": 4990,
+    "discount": 49,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/3256273?itemId=18894035554&vendorItemId=3017563989&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "햇반 현미밥, 130g, 6개",
+    "price": 6540,
+    "discount": 48,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/8415084911?itemId=23344184523&vendorItemId=3000068373&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "올리타리아 엑스트라버진 올리브유, 1L, 1개",
+    "price": 26790,
+    "discount": 45,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/4618265931?itemId=5719523036&vendorItemId=73018275460&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 적상추, 150g, 1개",
+    "price": 1070,
+    "discount": 42,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/8275202974?itemId=23852847298&vendorItemId=90876211574&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 한입 떡갈비 (냉동), 320g, 1개",
+    "price": 5990,
+    "discount": 39,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/487322?itemId=41045&vendorItemId=3000014845&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "해표 콩기름 식용유, 1.5L, 1개",
+    "price": 5350,
+    "discount": 28,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/487322?itemId=41045&vendorItemId=3000014845&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "해표 콩기름 식용유, 1.5L, 1개",
+    "price": 5350,
+    "discount": 28,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/6271583553?itemId=12828361190&vendorItemId=80094091092&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 새송이 버섯, 170g, 1개",
+    "price": 990,
+    "discount": 22,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/8334532701?itemId=24065035328&vendorItemId=91374670909&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "제이넛터 무가당 100% 땅콩버터 크런치, 1개, 500g",
+    "price": 9580,
+    "discount": 20,
+    "sent_date": "2025-03-13"
+  },
+  "https://www.coupang.com/vp/products/4778232493?itemId=6106533654&vendorItemId=73402883858&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 양배추, 1.2kg, 1개입, 1개",
+    "price": 3980,
+    "discount": 20,
+    "sent_date": "2025-03-13"
   }
 }
