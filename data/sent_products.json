@@ -1694,5 +1694,29 @@
     "price": 11800,
     "discount": 20,
     "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/6654766761?itemId=15613010702&vendorItemId=3006697063&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "블루다이아몬드 아몬드 브리즈 오리지널, 190ml, 24개",
+    "price": 15480,
+    "discount": 41,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/6714273287?itemId=20697517490&vendorItemId=3000091966&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "켈로그 첵스초코 오곡으로 만든 시리얼, 570g, 1개",
+    "price": 5720,
+    "discount": 28,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/327206043?itemId=1046983315&vendorItemId=5510129601&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "세도농협 GAP 인증 대추방울토마토, 1kg, 1박스",
+    "price": 9870,
+    "discount": 21,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/7777553121?itemId=3196535478&vendorItemId=71183937356&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "아카페라 심플리 디카페인 아메리카노 무라벨, 400ml, 20개",
+    "price": 18270,
+    "discount": 20,
+    "sent_date": "2025-03-14"
   }
 }
