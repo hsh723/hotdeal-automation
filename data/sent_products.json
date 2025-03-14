@@ -1718,5 +1718,41 @@
     "price": 18270,
     "discount": 20,
     "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/7235436619?itemId=14151260320&vendorItemId=3001106979&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "청정원순창 100% 현미 태양초 찰고추장, 2kg, 1개",
+    "price": 10610,
+    "discount": 67,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/988704?itemId=18877618217&vendorItemId=3000080376&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "해표 카놀라유, 900ml, 1개",
+    "price": 4570,
+    "discount": 53,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/7199000913?itemId=1082392039&vendorItemId=5585499503&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "울샴푸 오리지널 본품, 3L, 1개",
+    "price": 8500,
+    "discount": 48,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/4778232644?itemId=6106533893&vendorItemId=73402884198&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 깐쪽파, 200g, 1개",
+    "price": 3480,
+    "discount": 41,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/6480678918?itemId=14185843786&vendorItemId=81431639980&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "흰다리 새우살 (냉동), 200g(31/50), 1개",
+    "price": 5890,
+    "discount": 29,
+    "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/5711855327?itemId=19852830424&vendorItemId=86953983082&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 표고버섯, 100g, 1개",
+    "price": 1790,
+    "discount": 21,
+    "sent_date": "2025-03-14"
   }
 }
