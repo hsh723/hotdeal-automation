@@ -1772,5 +1772,11 @@
     "price": 2030,
     "discount": 32,
     "sent_date": "2025-03-15"
+  },
+  "https://www.coupang.com/vp/products/8289316403?itemId=23097750172&vendorItemId=3861532097&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "콘푸로스트 시리얼, 660g, 1개",
+    "price": 3000,
+    "discount": 41,
+    "sent_date": "2025-03-15"
   }
 }
