@@ -1754,5 +1754,23 @@
     "price": 1790,
     "discount": 21,
     "sent_date": "2025-03-14"
+  },
+  "https://www.coupang.com/vp/products/1708123012?itemId=5485820394&vendorItemId=72785501448&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "샐러드용 양배추와 적채, 500g, 1개, 1개",
+    "price": 2470,
+    "discount": 47,
+    "sent_date": "2025-03-15"
+  },
+  "https://www.coupang.com/vp/products/6988712167?itemId=19356838873&vendorItemId=71264859094&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "청정원 두번달여 더 진한 진간장, 1.7L, 1개",
+    "price": 6280,
+    "discount": 36,
+    "sent_date": "2025-03-15"
+  },
+  "https://www.coupang.com/vp/products/6202345562?itemId=12314074324&vendorItemId=79584195630&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 흙당근, 100g, 1개입, 1개",
+    "price": 2030,
+    "discount": 32,
+    "sent_date": "2025-03-15"
   }
 }
