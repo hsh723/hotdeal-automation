@@ -1820,5 +1820,35 @@
     "price": 980,
     "discount": 37,
     "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/2233944989?itemId=19223680738&vendorItemId=86340365939&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "국내산 알배기, 1개입, 2개",
+    "price": 5780,
+    "discount": 33,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/8157269016?itemId=7505540780&vendorItemId=86495568251&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "강원평창수 무라벨 생수, 2L, 12개",
+    "price": 8000,
+    "discount": 24,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/2453926?itemId=20343930073&vendorItemId=3000014814&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "복음자리 딸기잼, 640g, 1개",
+    "price": 8290,
+    "discount": 23,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/7975402228?itemId=22106474518&vendorItemId=3000091850&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "후루트링 시리얼, 530g, 1개",
+    "price": 6780,
+    "discount": 21,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/4618503633?itemId=5720086446&vendorItemId=73018834165&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 무, 1개입, 1개",
+    "price": 2990,
+    "discount": 20,
+    "sent_date": "2025-03-16"
   }
 }
