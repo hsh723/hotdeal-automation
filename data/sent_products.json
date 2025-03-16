@@ -1778,5 +1778,35 @@
     "price": 3000,
     "discount": 41,
     "sent_date": "2025-03-15"
+  },
+  "https://www.coupang.com/vp/products/8244032757?itemId=10407588&vendorItemId=3105890035&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "스팸 클래식, 200g, 3개",
+    "price": 7520,
+    "discount": 54,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/7216495213?itemId=13743166161&vendorItemId=80993989084&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "매일 바이오 그릭요거트 무가당 플레인, 80g, 8개",
+    "price": 6480,
+    "discount": 41,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/1463018080?itemId=18344159528&vendorItemId=85159087387&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "사조 참치액, 500g, 1개",
+    "price": 4490,
+    "discount": 34,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/7488621084?itemId=14690260764&vendorItemId=3012446974&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "햇반 백미밥, 210g, 6개",
+    "price": 6030,
+    "discount": 28,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/1881067803?itemId=3196535492&vendorItemId=71183937349&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "아카페라 심플리 아메리카노 무라벨, 400ml, 20개",
+    "price": 18270,
+    "discount": 20,
+    "sent_date": "2025-03-16"
   }
 }
