@@ -1808,5 +1808,17 @@
     "price": 18270,
     "discount": 20,
     "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/2140167813?itemId=3634663228&vendorItemId=71620215807&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "스카치브라이트 베이직 제로 스크래치 스펀지 수세미, 8개입, 1개",
+    "price": 8990,
+    "discount": 46,
+    "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/4792356808?itemId=6142183495&vendorItemId=73438425726&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 청상추, 150g, 1개",
+    "price": 980,
+    "discount": 37,
+    "sent_date": "2025-03-16"
   }
 }
