@@ -1892,5 +1892,35 @@
     "price": 9990,
     "discount": 24,
     "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/6978270723?itemId=17038636697&vendorItemId=84213534574&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "요이치 USB 3.0 A타입 to C타입 플로우 C2 OTG 변환 젠더, 실버, 1개",
+    "price": 1879,
+    "discount": 58,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/6011993579?itemId=19225414470&vendorItemId=86342063022&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 순살 고등어구이, 60g, 3개",
+    "price": 11350,
+    "discount": 36,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/6496339013?itemId=14282717682&vendorItemId=3000014848&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "해표 압착 올리브유, 500ml, 1개",
+    "price": 11400,
+    "discount": 30,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/7854293082?itemId=21416587082&vendorItemId=88449180229&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "크라운 참쌀 누룽지, 216g, 1개",
+    "price": 3890,
+    "discount": 27,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/111307949?itemId=335288348&vendorItemId=3822602789&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "더건강한 그릴후랑크, 300g, 2개입",
+    "price": 7990,
+    "discount": 27,
+    "sent_date": "2025-03-17"
   }
 }
