@@ -1850,5 +1850,47 @@
     "price": 2990,
     "discount": 20,
     "sent_date": "2025-03-16"
+  },
+  "https://www.coupang.com/vp/products/6640662550?itemId=18170756673&vendorItemId=85320140302&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기3분 카레 약간매운맛, 200g, 6개",
+    "price": 6280,
+    "discount": 47,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/332471584?itemId=1062234467&vendorItemId=5541640992&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "곰곰 단백질바, 600g, 1개",
+    "price": 10990,
+    "discount": 44,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/6442038712?itemId=13948546688&vendorItemId=81197762319&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "푸드랩플러스 미국산 돌돌말이 대패 우삼겹 (냉동), 800g, 1개",
+    "price": 13590,
+    "discount": 43,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/7837874919?itemId=17504616514&vendorItemId=84671922288&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "스너글 포근한 섬유탈취제 허거블 코튼 본품, 470ml, 1개",
+    "price": 5210,
+    "discount": 38,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/3630576?itemId=2427090925&vendorItemId=85477351932&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "불닭볶음면 큰컵 105g, 6개",
+    "price": 7140,
+    "discount": 27,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/1357034912?itemId=24341584512&vendorItemId=91357072725&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 썰은 배추김치, 1.2kg, 1개",
+    "price": 13900,
+    "discount": 26,
+    "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/4567751809?itemId=5575412259&vendorItemId=72874737915&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "하림 치킨너겟 (냉동), 1.2kg, 1개",
+    "price": 9990,
+    "discount": 24,
+    "sent_date": "2025-03-17"
   }
 }
