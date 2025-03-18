@@ -1922,5 +1922,35 @@
     "price": 7990,
     "discount": 27,
     "sent_date": "2025-03-17"
+  },
+  "https://www.coupang.com/vp/products/6974484284?itemId=17019959259&vendorItemId=3000138402&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "청정원순창 초고추장, 500g, 1개",
+    "price": 3130,
+    "discount": 46,
+    "sent_date": "2025-03-18"
+  },
+  "https://www.coupang.com/vp/products/840193?itemId=13162871&vendorItemId=3000043324&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기 양조 화이트식초, 1.8L, 1개",
+    "price": 1860,
+    "discount": 35,
+    "sent_date": "2025-03-18"
+  },
+  "https://www.coupang.com/vp/products/6279461585?itemId=21363271322&vendorItemId=3000043039&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "애경바세린 데일리 모이스처 바디로션, 450ml, 1개",
+    "price": 3900,
+    "discount": 35,
+    "sent_date": "2025-03-18"
+  },
+  "https://www.coupang.com/vp/products/7527803282?itemId=264019244&vendorItemId=91164580282&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "비비고 사골곰탕, 500g, 6개",
+    "price": 6720,
+    "discount": 33,
+    "sent_date": "2025-03-18"
+  },
+  "https://www.coupang.com/vp/products/6202348727?itemId=14419909823&vendorItemId=81663775739&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 깐마늘, 200g, 1개",
+    "price": 2490,
+    "discount": 24,
+    "sent_date": "2025-03-18"
   }
 }
