@@ -1964,5 +1964,29 @@
     "price": 7800,
     "discount": 31,
     "sent_date": "2025-03-18"
+  },
+  "https://www.coupang.com/vp/products/7992079901?itemId=11652049882&vendorItemId=78926482958&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "데니그리스 유기농 사과 식초, 1L, 1개",
+    "price": 11800,
+    "discount": 46,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/35267?itemId=95696&vendorItemId=3000044027&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기 토마토 케챂, 300g, 1개",
+    "price": 1300,
+    "discount": 34,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/35267?itemId=95696&vendorItemId=3000044027&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 토마토 케챂, 300g, 1개",
+    "price": 1300,
+    "discount": 34,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/63852501?itemId=100357900&vendorItemId=86203382341&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "조청유과, 96g, 5개",
+    "price": 5000,
+    "discount": 26,
+    "sent_date": "2025-03-19"
   }
 }
