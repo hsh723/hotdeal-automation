@@ -2024,5 +2024,41 @@
     "price": 4520,
     "discount": 22,
     "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/1477952039?itemId=23391912362&vendorItemId=90419546700&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "매일바이오 무가당 플레인, 85g, 8개",
+    "price": 3980,
+    "discount": 50,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/6813176799?itemId=105078&vendorItemId=3000056992&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "롯데웰푸드 칙촉, 168g, 2개",
+    "price": 5170,
+    "discount": 46,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/6674048523?itemId=151009959&vendorItemId=3347461240&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 김밥김, 22g, 2개",
+    "price": 5240,
+    "discount": 34,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/947648?itemId=168217&vendorItemId=3000092710&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "콘푸로스트 라이트슈거 시리얼, 530g, 1개",
+    "price": 4700,
+    "discount": 32,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/840193?itemId=5532150&vendorItemId=84993756488&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기 양조 화이트식초, 1.8L, 2개",
+    "price": 3720,
+    "discount": 28,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/7665795963?itemId=20435225557&vendorItemId=87516110646&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "곰곰 완숙 토마토, 1kg, 1개",
+    "price": 6370,
+    "discount": 24,
+    "sent_date": "2025-03-19"
   }
 }
