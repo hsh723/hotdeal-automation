@@ -1988,5 +1988,41 @@
     "price": 5000,
     "discount": 26,
     "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/84025689?itemId=657259769&vendorItemId=4703935466&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "2080 핑크마일드민트향 퓨어 치약, 150g, 6개",
+    "price": 8600,
+    "discount": 52,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/7414746733?itemId=19375093900&vendorItemId=85318863581&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "프릴 시크릿오브 베이킹소다 퓨어레몬향 주방세제, 700ml, 1개",
+    "price": 4700,
+    "discount": 50,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/4881075757?itemId=6354834622&vendorItemId=73650115399&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "뉴질랜드산 단호박, 1개입, 1개",
+    "price": 2490,
+    "discount": 37,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/1298620713?itemId=2311599581&vendorItemId=70308370600&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "고산지 재배 당도선별 사과, 1.5kg(중과), 1봉",
+    "price": 15430,
+    "discount": 35,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/1198717200?itemId=18736669097&vendorItemId=71626503609&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "마이노멀 알룰로스, 485g, 1개",
+    "price": 8900,
+    "discount": 30,
+    "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/8366352406?itemId=24167554922&vendorItemId=91185836812&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "신라면 툼바 137g, 4개",
+    "price": 4520,
+    "discount": 22,
+    "sent_date": "2025-03-19"
   }
 }
