@@ -2084,5 +2084,17 @@
     "price": 5040,
     "discount": 32,
     "sent_date": "2025-03-20"
+  },
+  "https://www.coupang.com/vp/products/5842439886?itemId=10143607855&vendorItemId=77426329061&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "풀무원 특등급 국산콩 무농약 콩나물, 340g, 1개",
+    "price": 1990,
+    "discount": 26,
+    "sent_date": "2025-03-20"
+  },
+  "https://www.coupang.com/vp/products/6101896267?itemId=17397278390&vendorItemId=84566737697&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "곰곰 스테비아 대추방울토마토, 500g, 1팩",
+    "price": 5350,
+    "discount": 26,
+    "sent_date": "2025-03-20"
   }
 }
