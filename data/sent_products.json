@@ -2060,5 +2060,29 @@
     "price": 6370,
     "discount": 24,
     "sent_date": "2025-03-19"
+  },
+  "https://www.coupang.com/vp/products/8087904288?itemId=23798778776&vendorItemId=90822727624&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "WHOLELIFE 유기농 레몬즙 14p, 280g, 1개",
+    "price": 5780,
+    "discount": 70,
+    "sent_date": "2025-03-20"
+  },
+  "https://www.coupang.com/vp/products/7909769114?itemId=21700859499&vendorItemId=88750399196&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "코멧 프리미엄 대나무 젓가락, 100개, 1개",
+    "price": 2180,
+    "discount": 56,
+    "sent_date": "2025-03-20"
+  },
+  "https://www.coupang.com/vp/products/1379426555?itemId=15326732823&vendorItemId=4022301766&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "해태제과 오예스 30p, 900g, 1개",
+    "price": 8900,
+    "discount": 40,
+    "sent_date": "2025-03-20"
+  },
+  "https://www.coupang.com/vp/products/189259849?itemId=291227867&vendorItemId=3716023112&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "샤워메이트 클린코튼 바디워시, 1.2kg, 1개",
+    "price": 5040,
+    "discount": 32,
+    "sent_date": "2025-03-20"
   }
 }
