@@ -2174,5 +2174,47 @@
     "price": 8980,
     "discount": 21,
     "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/7235432441?itemId=19713312903&vendorItemId=3003489196&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기옛날 참기름, 450ml, 1개",
+    "price": 6540,
+    "discount": 43,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/6480900046?itemId=19154733785&vendorItemId=86273585555&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 짜슐랭 145g x 5p, 10개",
+    "price": 5990,
+    "discount": 38,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/6991003444?itemId=17110275565&vendorItemId=84283960027&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "곰곰 미국산 레몬, 1kg, 1봉",
+    "price": 5120,
+    "discount": 33,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/2042132?itemId=19999612264&vendorItemId=75512895888&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "동원 라이트 스탠다드 참치, 85g, 8개",
+    "price": 11860,
+    "discount": 29,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/6354913981?itemId=20078803887&vendorItemId=87174428779&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "델몬트 클래식 바나나, 1.2kg 내외, 1팩",
+    "price": 3490,
+    "discount": 26,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/6201953316?itemId=6106220628&vendorItemId=73402571318&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 청양고추, 150g, 1개",
+    "price": 1780,
+    "discount": 21,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/6714158527?itemId=15923826007&vendorItemId=4086032287&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "하인즈 토마토 케찹, 650g, 1개",
+    "price": 4050,
+    "discount": 20,
+    "sent_date": "2025-03-21"
   }
 }
