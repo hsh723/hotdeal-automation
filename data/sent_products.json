@@ -2216,5 +2216,35 @@
     "price": 4050,
     "discount": 20,
     "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/8145935371?itemId=23154672743&vendorItemId=90479528041&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "동원 JUST 노슈가 스위트콘, 340g, 1개",
+    "price": 1190,
+    "discount": 65,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/7689270513?itemId=20972233691&vendorItemId=88037469667&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "탐사 샘물, 500ml, 40개",
+    "price": 8190,
+    "discount": 36,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/5077126547?itemId=6882155226&vendorItemId=74174758824&pickType=COU_PICK&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "목우촌 다리두배 닭볶음탕 (냉장), 1.2kg, 1개",
+    "price": 7990,
+    "discount": 33,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/3955632?itemId=19336360&vendorItemId=90083625528&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "연세우유 멸균 흰우유, 190ml, 24개",
+    "price": 15890,
+    "discount": 33,
+    "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/1912026433?itemId=3461482826&vendorItemId=86273585306&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 오동통면 120g, 10개",
+    "price": 5990,
+    "discount": 25,
+    "sent_date": "2025-03-21"
   }
 }
