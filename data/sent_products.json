@@ -2276,5 +2276,23 @@
     "price": 5980,
     "discount": 24,
     "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/346953047?itemId=1079141706&vendorItemId=5578611091&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "칠레 체리, 400g, 1개",
+    "price": 7420,
+    "discount": 40,
+    "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/6823349264?itemId=16178878198&vendorItemId=83374283292&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 양상추, 1통, 1개",
+    "price": 2090,
+    "discount": 30,
+    "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/2233944921?itemId=5617626770&vendorItemId=72916817045&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 백오이, 5개입, 1개",
+    "price": 5500,
+    "discount": 21,
+    "sent_date": "2025-03-22"
   }
 }
