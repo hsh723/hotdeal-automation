@@ -2246,5 +2246,35 @@
     "price": 5990,
     "discount": 25,
     "sent_date": "2025-03-21"
+  },
+  "https://www.coupang.com/vp/products/7354584016?itemId=19239043144&vendorItemId=85191202411&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "도브 뷰티 너리싱 바디워시, 1kg, 2개",
+    "price": 10500,
+    "discount": 62,
+    "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/6715674951?itemId=16551880968&vendorItemId=83738282967&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "프로그 라텍스 고무장갑 컴포트, 베이비 핑크, 중(M), 3세트",
+    "price": 5900,
+    "discount": 55,
+    "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/5077126547?itemId=6882155226&vendorItemId=74174758824&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "목우촌 다리두배 닭볶음탕 (냉장), 1.2kg, 1개",
+    "price": 7990,
+    "discount": 33,
+    "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/6823349264?itemId=16178878198&vendorItemId=83374283292&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "국내산 양상추, 1통, 1개",
+    "price": 2090,
+    "discount": 30,
+    "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/8564369958?itemId=24805014335&vendorItemId=91812656584&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "농협 신선 대란 1560g, 1개, 30구",
+    "price": 5980,
+    "discount": 24,
+    "sent_date": "2025-03-22"
   }
 }
