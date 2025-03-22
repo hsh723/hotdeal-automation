@@ -2294,5 +2294,17 @@
     "price": 5500,
     "discount": 21,
     "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/1547900023?itemId=19223674367&vendorItemId=86340359737&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 청상추, 200g, 3개",
+    "price": 3780,
+    "discount": 41,
+    "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/1547900023?itemId=20623713478&vendorItemId=87697840250&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 청상추, 400g, 1봉",
+    "price": 2600,
+    "discount": 41,
+    "sent_date": "2025-03-22"
   }
 }
