@@ -2306,5 +2306,23 @@
     "price": 2600,
     "discount": 41,
     "sent_date": "2025-03-22"
+  },
+  "https://www.coupang.com/vp/products/309382251?itemId=2912809243&vendorItemId=85762461772&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "삼양 불닭소스, 200g, 2개",
+    "price": 5530,
+    "discount": 34,
+    "sent_date": "2025-03-23"
+  },
+  "https://www.coupang.com/vp/products/7769994860?itemId=17319879727&vendorItemId=84490613956&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "종가 아삭아삭 맛있게 썰어담은 맛김치, 1.2kg, 1개",
+    "price": 12510,
+    "discount": 25,
+    "sent_date": "2025-03-23"
+  },
+  "https://www.coupang.com/vp/products/8011554303?itemId=19945007368&vendorItemId=3000239794&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "하리보 골드베렌 젤리 93개입, 1kg, 1개",
+    "price": 12300,
+    "discount": 22,
+    "sent_date": "2025-03-23"
   }
 }
