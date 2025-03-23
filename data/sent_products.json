@@ -2342,5 +2342,17 @@
     "price": 25750,
     "discount": 21,
     "sent_date": "2025-03-23"
+  },
+  "https://www.coupang.com/vp/products/2263119968?itemId=3878864322&vendorItemId=71863525283&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "CJ 행복한콩 친환경 유기농 콩나물, 270g, 1개",
+    "price": 890,
+    "discount": 61,
+    "sent_date": "2025-03-23"
+  },
+  "https://www.coupang.com/vp/products/7881160880?itemId=21553852803&vendorItemId=88606470248&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "못난이 한입 삼겹살 (냉동), 800g, 1팩",
+    "price": 10450,
+    "discount": 25,
+    "sent_date": "2025-03-23"
   }
 }
