@@ -2366,5 +2366,23 @@
     "price": 8860,
     "discount": 30,
     "sent_date": "2025-03-24"
+  },
+  "https://www.coupang.com/vp/products/8243966974?itemId=17921643275&vendorItemId=90935044570&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 소고기 미역국, 500g, 4개",
+    "price": 11650,
+    "discount": 51,
+    "sent_date": "2025-03-24"
+  },
+  "https://www.coupang.com/vp/products/3630576?itemId=2427090925&vendorItemId=91515352459&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "불닭볶음면 큰컵 105g, 6개",
+    "price": 8390,
+    "discount": 29,
+    "sent_date": "2025-03-24"
+  },
+  "https://www.coupang.com/vp/products/840193?itemId=5532150&vendorItemId=84993756488&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 양조식초, 1.8L, 2개",
+    "price": 3720,
+    "discount": 28,
+    "sent_date": "2025-03-24"
   }
 }
