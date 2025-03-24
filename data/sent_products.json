@@ -2354,5 +2354,17 @@
     "price": 10450,
     "discount": 25,
     "sent_date": "2025-03-23"
+  },
+  "https://www.coupang.com/vp/products/6813176799?itemId=105078&vendorItemId=3000056992&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "롯데웰푸드 칙촉, 168g, 2개",
+    "price": 4990,
+    "discount": 48,
+    "sent_date": "2025-03-24"
+  },
+  "https://www.coupang.com/vp/products/1198717200?itemId=18736669097&vendorItemId=71626503609&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "마이노멀 알룰로스, 485g, 1개",
+    "price": 8860,
+    "discount": 30,
+    "sent_date": "2025-03-24"
   }
 }
