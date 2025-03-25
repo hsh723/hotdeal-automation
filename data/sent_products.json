@@ -2384,5 +2384,17 @@
     "price": 3720,
     "discount": 28,
     "sent_date": "2025-03-24"
+  },
+  "https://www.coupang.com/vp/products/4778232644?itemId=19224007679&vendorItemId=86340687928&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 깐쪽파, 200g, 2개",
+    "price": 4810,
+    "discount": 58,
+    "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/7992079901?itemId=21231478569&vendorItemId=3034901717&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "데니그리스 유기농 사과식초, 500ml, 1개",
+    "price": 7000,
+    "discount": 41,
+    "sent_date": "2025-03-25"
   }
 }
