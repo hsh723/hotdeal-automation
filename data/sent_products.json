@@ -2396,5 +2396,47 @@
     "price": 7000,
     "discount": 41,
     "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/7757148162?itemId=20909886774&vendorItemId=3038558667&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "매일두유 99.9, 190ml, 24개",
+    "price": 15610,
+    "discount": 49,
+    "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/172859262?itemId=494008871&vendorItemId=4253642744&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "남양유업 이오 요구르트, 80ml, 10개입",
+    "price": 3190,
+    "discount": 34,
+    "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/5625704601?itemId=11650491074&vendorItemId=78924935203&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "탐사수 무라벨, 330ml, 40개",
+    "price": 8890,
+    "discount": 33,
+    "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/7400212905?itemId=216035320&vendorItemId=3520586077&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "미주라 통밀 크래커, 385g, 1개",
+    "price": 4500,
+    "discount": 29,
+    "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/2233944921?itemId=3812412916&vendorItemId=71797311480&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 백오이, 3개입, 1개",
+    "price": 3990,
+    "discount": 26,
+    "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/182909?itemId=28038507&vendorItemId=3010630976&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "바나나킥, 75g, 6개",
+    "price": 6000,
+    "discount": 23,
+    "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/1343364854?itemId=100357926&vendorItemId=86421754845&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "농심 양파링, 80g, 5개",
+    "price": 5000,
+    "discount": 21,
+    "sent_date": "2025-03-25"
   }
 }
