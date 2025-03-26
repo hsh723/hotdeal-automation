@@ -2450,5 +2450,23 @@
     "price": 2520,
     "discount": 37,
     "sent_date": "2025-03-26"
+  },
+  "https://www.coupang.com/vp/products/7527803282?itemId=19485755847&vendorItemId=91020675607&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 사골곰탕, 500g, 18개",
+    "price": 17770,
+    "discount": 41,
+    "sent_date": "2025-03-26"
+  },
+  "https://www.coupang.com/vp/products/8538186683?itemId=24718036579&vendorItemId=91727336120&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "미국산 삼겹살 구이용 (냉장), 1개, 1kg",
+    "price": 14500,
+    "discount": 26,
+    "sent_date": "2025-03-26"
+  },
+  "https://www.coupang.com/vp/products/7790901348?itemId=21078134204&vendorItemId=88140301396&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "크래미, 90g, 1개",
+    "price": 1050,
+    "discount": 24,
+    "sent_date": "2025-03-26"
   }
 }
