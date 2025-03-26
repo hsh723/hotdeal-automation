@@ -2438,5 +2438,17 @@
     "price": 5000,
     "discount": 21,
     "sent_date": "2025-03-25"
+  },
+  "https://www.coupang.com/vp/products/4989764?itemId=18517640913&vendorItemId=85656367250&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기 스위트칠리소스, 350g, 1개",
+    "price": 2980,
+    "discount": 45,
+    "sent_date": "2025-03-26"
+  },
+  "https://www.coupang.com/vp/products/1277627398?itemId=9987067404&vendorItemId=77270131869&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "더 페이스샵 디자이닝 아이브로우, 05 다크 브라운, 1개",
+    "price": 2520,
+    "discount": 37,
+    "sent_date": "2025-03-26"
   }
 }
