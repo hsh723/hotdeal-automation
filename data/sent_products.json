@@ -2498,5 +2498,35 @@
     "price": 2220,
     "discount": 32,
     "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/6586372374?itemId=14842723746&vendorItemId=82081965637&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "종근당건강 프로메가 오메가3 트리플 장용성, 60정, 1개",
+    "price": 10630,
+    "discount": 49,
+    "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/7992079901?itemId=21231478569&vendorItemId=3034901717&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "데니그리스 유기농 사과식초, 500ml, 1개",
+    "price": 7000,
+    "discount": 41,
+    "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/4697181411?itemId=5911958981&vendorItemId=73210037770&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "국내산 애호박, 1개입, 1개",
+    "price": 1780,
+    "discount": 25,
+    "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/4697181411?itemId=5911958981&vendorItemId=73210037770&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 애호박, 1개입, 1개",
+    "price": 1780,
+    "discount": 25,
+    "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/7778963710?itemId=21381169385&vendorItemId=84937016288&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "청정원 프리미엄 굴소스, 260g, 1개",
+    "price": 3510,
+    "discount": 23,
+    "sent_date": "2025-03-27"
   }
 }
