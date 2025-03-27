@@ -2468,5 +2468,29 @@
     "price": 1050,
     "discount": 24,
     "sent_date": "2025-03-26"
+  },
+  "https://www.coupang.com/vp/products/346953047?itemId=19225054643&vendorItemId=86341712580&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "칠레 체리, 400g, 2개",
+    "price": 14390,
+    "discount": 33,
+    "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/2146209127?itemId=3644223962&vendorItemId=71629734258&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "곰곰 곤약젤리 후르츠 패키지 28팩 복숭아 150g x 7p + 와일드 망고 150g x 7p + 청포도 150g x 7p + 리치 150g x 7p, 1세트",
+    "price": 15440,
+    "discount": 32,
+    "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/6468225331?itemId=14722136514&vendorItemId=81962812422&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "더국민 돌자반 볶음, 300g, 1개",
+    "price": 7900,
+    "discount": 28,
+    "sent_date": "2025-03-27"
+  },
+  "https://www.coupang.com/vp/products/7608795302?itemId=68758612&vendorItemId=3110989324&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오리온 초코송이, 648g, 1개",
+    "price": 8950,
+    "discount": 28,
+    "sent_date": "2025-03-27"
   }
 }
