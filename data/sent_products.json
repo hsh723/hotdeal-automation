@@ -2570,5 +2570,17 @@
     "price": 3980,
     "discount": 23,
     "sent_date": "2025-03-28"
+  },
+  "https://www.coupang.com/vp/products/5842439886?itemId=19871634974&vendorItemId=86972343432&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "풀무원 무농약 특등급 국산콩 콩나물, 200g, 1개",
+    "price": 990,
+    "discount": 50,
+    "sent_date": "2025-03-28"
+  },
+  "https://www.coupang.com/vp/products/188775851?itemId=539099250&vendorItemId=4409002942&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "청정원 1등급 국산콩 두부 부침찌개 겸용, 300g, 2개",
+    "price": 3600,
+    "discount": 32,
+    "sent_date": "2025-03-28"
   }
 }
