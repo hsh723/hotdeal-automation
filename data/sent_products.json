@@ -2582,5 +2582,17 @@
     "price": 3600,
     "discount": 32,
     "sent_date": "2025-03-28"
+  },
+  "https://www.coupang.com/vp/products/6528172171?itemId=14488832967&vendorItemId=81732019866&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "흙대파, 750g, 1개",
+    "price": 2130,
+    "discount": 45,
+    "sent_date": "2025-03-28"
+  },
+  "https://www.coupang.com/vp/products/1298620713?itemId=2311599581&vendorItemId=70308370600&pickType=COU_PICK&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "고산지 재배 당도선별 사과, 1.5kg(중과), 1봉",
+    "price": 14880,
+    "discount": 37,
+    "sent_date": "2025-03-28"
   }
 }
