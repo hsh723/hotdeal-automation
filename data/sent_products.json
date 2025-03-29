@@ -2594,5 +2594,23 @@
     "price": 14880,
     "discount": 37,
     "sent_date": "2025-03-28"
+  },
+  "https://www.coupang.com/vp/products/7006668091?itemId=22226087444&vendorItemId=84375217170&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "청정원 우리쌀 요리주 맛술, 410ml, 1개",
+    "price": 1380,
+    "discount": 42,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/6101896267?itemId=17397278390&vendorItemId=84566737697&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "곰곰 스테비아 대추방울토마토, 500g, 1팩",
+    "price": 5070,
+    "discount": 27,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/2042132?itemId=20047758166&vendorItemId=3028202918&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "동원참치 살코기 라이트 스탠다드, 150g, 10개",
+    "price": 21300,
+    "discount": 23,
+    "sent_date": "2025-03-29"
   }
 }
