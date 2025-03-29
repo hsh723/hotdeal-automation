@@ -2648,5 +2648,59 @@
     "price": 4300,
     "discount": 38,
     "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/6723471460?itemId=18170765075&vendorItemId=85320148994&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 맛있는 피자소스, 175g, 2개",
+    "price": 1350,
+    "discount": 51,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/7236570229?itemId=18370695517&vendorItemId=86469818528&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "더미식 소고기미역국, 350g, 2개",
+    "price": 4980,
+    "discount": 50,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/5158167232?itemId=13254303971&vendorItemId=80512108371&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "성주 당도선별 참외, 1.2kg(4~5입), 1봉",
+    "price": 10000,
+    "discount": 49,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/4876518010?itemId=6344321435&vendorItemId=73639651773&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 GAP 애호박, 1개입, 1개",
+    "price": 1480,
+    "discount": 42,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/6386799209?itemId=23789435154&vendorItemId=80848192552&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "냉장고쏙 롤드 오트, 600g, 1개",
+    "price": 3980,
+    "discount": 42,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/8202491385?itemId=17905521455&vendorItemId=85068267374&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "청정원 참깨 흑임자 드레싱, 300g, 2개",
+    "price": 4480,
+    "discount": 40,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/8245782294?itemId=381179306&vendorItemId=82062743839&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "햇반 흑미밥, 210g, 24개",
+    "price": 24140,
+    "discount": 39,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/487322?itemId=21364582514&vendorItemId=3000014844&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "해표 콩기름 식용유, 900ml, 1개",
+    "price": 3980,
+    "discount": 23,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/6145198364?itemId=11820185399&vendorItemId=79093668953&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "그란본따 버터 10개입, 125g, 2개",
+    "price": 11040,
+    "discount": 20,
+    "sent_date": "2025-03-29"
   }
 }
