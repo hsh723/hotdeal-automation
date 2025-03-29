@@ -2612,5 +2612,41 @@
     "price": 21300,
     "discount": 23,
     "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/8582731394?itemId=21269520258&vendorItemId=88329785933&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "크린랲 크린백 25 x 35 cm, 중(M), 50개입, 2개",
+    "price": 3250,
+    "discount": 52,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/1913915?itemId=2247294931&vendorItemId=3112209329&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "오뚜기 오뚜기밥 발아흑미 즉석잡곡밥, 210g, 12개",
+    "price": 12960,
+    "discount": 50,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/6673701892?itemId=20074392953&vendorItemId=82583871247&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "맛선생 멸치디포리 국물내기 한알, 160g, 1개",
+    "price": 8100,
+    "discount": 48,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/6974484284?itemId=17020005267&vendorItemId=3033342445&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "청정원순창 초고추장, 1kg, 1개",
+    "price": 4400,
+    "discount": 47,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/7006668091?itemId=22226087444&vendorItemId=84375217170&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "청정원 우리쌀 요리주 맛술, 410ml, 1개",
+    "price": 1380,
+    "discount": 42,
+    "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/4697181411?itemId=19223682360&vendorItemId=86340367428&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 애호박, 1개입, 3개",
+    "price": 4300,
+    "discount": 38,
+    "sent_date": "2025-03-29"
   }
 }
