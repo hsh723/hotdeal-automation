@@ -2702,5 +2702,29 @@
     "price": 11040,
     "discount": 20,
     "sent_date": "2025-03-29"
+  },
+  "https://www.coupang.com/vp/products/7956687035?itemId=21984406039&vendorItemId=89031997894&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "태국산 남독마이 망고 L, 1.3kg(4입), 1개",
+    "price": 12200,
+    "discount": 45,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/2086543?itemId=185961&vendorItemId=3000168605&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "동원 양반 구운김밥김, 22g, 1개",
+    "price": 2600,
+    "discount": 34,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/4744789493?itemId=14382069079&vendorItemId=81626377805&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "스윗토 스테비아 대추방울토마토, 450g, 1팩",
+    "price": 4780,
+    "discount": 27,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/4760601434?itemId=6065144240&vendorItemId=73361957289&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 부추, 300g, 1개",
+    "price": 2970,
+    "discount": 25,
+    "sent_date": "2025-03-30"
   }
 }
