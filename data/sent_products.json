@@ -2744,5 +2744,29 @@
     "price": 4780,
     "discount": 27,
     "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/96602?itemId=231353679&vendorItemId=85320834512&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "청정원순창 쇠고기 볶음고추장, 60g, 6개",
+    "price": 5980,
+    "discount": 68,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/8243966974?itemId=20101854320&vendorItemId=90935044536&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 소고기 미역국, 500g, 2개",
+    "price": 6160,
+    "discount": 48,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/5848725821?itemId=10171738719&vendorItemId=77454340822&pickType=COU_PICK&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "미트엔조이 미국산 갈비살 구이 (냉장), 400g, 1개",
+    "price": 15100,
+    "discount": 30,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/6525861606?itemId=6106535172&vendorItemId=73402885383&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 시금치, 200g, 1개",
+    "price": 2100,
+    "discount": 22,
+    "sent_date": "2025-03-30"
   }
 }
