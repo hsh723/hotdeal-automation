@@ -2726,5 +2726,23 @@
     "price": 2970,
     "discount": 25,
     "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/2750384?itemId=930506489&vendorItemId=84993761234&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "카레여왕 구운마늘 앤 양파, 108g, 3개",
+    "price": 7050,
+    "discount": 57,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/5586421628?itemId=1018709625&vendorItemId=84613366998&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "프링글스 사워크림 앤 어니언, 110g, 6개",
+    "price": 11200,
+    "discount": 43,
+    "sent_date": "2025-03-30"
+  },
+  "https://www.coupang.com/vp/products/4744789493?itemId=14382069079&vendorItemId=81626377805&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "스윗토 스테비아 대추방울토마토, 450g, 1팩",
+    "price": 4780,
+    "discount": 27,
+    "sent_date": "2025-03-30"
   }
 }
