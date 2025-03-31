@@ -2774,5 +2774,47 @@
     "price": 2940,
     "discount": 23,
     "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/7155858521?itemId=24241431&vendorItemId=3035694950&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "청정원순창 태양초 고추장, 2kg, 1개",
+    "price": 8660,
+    "discount": 72,
+    "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/6174597636?itemId=19225474170&vendorItemId=86342121746&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "하동녹차 명란김, 6g, 32개",
+    "price": 15480,
+    "discount": 56,
+    "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/4550031580?itemId=5521431697&vendorItemId=72820976983&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "곰곰 담백한 베이컨, 130g, 2개",
+    "price": 2980,
+    "discount": 40,
+    "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/8288876533?itemId=148504260&vendorItemId=3335651407&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "데체코 스파게티, 500g, 1개",
+    "price": 3490,
+    "discount": 36,
+    "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/5848725821?itemId=10171738719&vendorItemId=77454340822&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "미트엔조이 미국산 갈비살 구이 (냉장), 400g, 1개",
+    "price": 15100,
+    "discount": 30,
+    "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/7322234608?itemId=18450496395&vendorItemId=3000150337&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "다시다 쇠고기, 500g, 1개",
+    "price": 10490,
+    "discount": 24,
+    "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/439971?itemId=23838245607&vendorItemId=3037379884&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기 사과식초, 900ml, 1개",
+    "price": 2540,
+    "discount": 20,
+    "sent_date": "2025-03-31"
   }
 }
