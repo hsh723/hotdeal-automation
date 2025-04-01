@@ -2858,5 +2858,29 @@
     "price": 17800,
     "discount": 28,
     "sent_date": "2025-04-01"
+  },
+  "https://www.coupang.com/vp/products/6468225331?itemId=14107694256&vendorItemId=82212950620&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "더국민 돌자반볶음, 500g, 1개",
+    "price": 12500,
+    "discount": 33,
+    "sent_date": "2025-04-01"
+  },
+  "https://www.coupang.com/vp/products/8234848913?itemId=23703826642&vendorItemId=90728854843&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "하림 무항생제 인증 신선한 영양란 1300g, 25구, 1개",
+    "price": 7990,
+    "discount": 27,
+    "sent_date": "2025-04-01"
+  },
+  "https://www.coupang.com/vp/products/6858666780?itemId=27469392&vendorItemId=77066380663&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "사조 살코기 참치, 100g, 12개",
+    "price": 11980,
+    "discount": 21,
+    "sent_date": "2025-04-01"
+  },
+  "https://www.coupang.com/vp/products/6201953369?itemId=12311272628&vendorItemId=79581434699&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 백오이, 2개입, 1개",
+    "price": 2880,
+    "discount": 20,
+    "sent_date": "2025-04-01"
   }
 }
