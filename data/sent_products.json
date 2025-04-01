@@ -2816,5 +2816,23 @@
     "price": 2540,
     "discount": 20,
     "sent_date": "2025-03-31"
+  },
+  "https://www.coupang.com/vp/products/8254864471?itemId=19139549062&vendorItemId=3001156030&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "청정원순창 재래식 생된장, 2.8kg, 1개",
+    "price": 10350,
+    "discount": 52,
+    "sent_date": "2025-04-01"
+  },
+  "https://www.coupang.com/vp/products/7748801303?itemId=20866534844&vendorItemId=87933883092&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "프로그 프리미엄 대나무 젓가락, 100개입, 1개",
+    "price": 2590,
+    "discount": 47,
+    "sent_date": "2025-04-01"
+  },
+  "https://www.coupang.com/vp/products/6121918362?itemId=11610043264&vendorItemId=78884735483&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "[팩] 밀양 깻잎, 100g, 1팩",
+    "price": 2850,
+    "discount": 28,
+    "sent_date": "2025-04-01"
   }
 }
