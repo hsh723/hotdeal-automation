@@ -2948,5 +2948,23 @@
     "price": 4970,
     "discount": 25,
     "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/7235436619?itemId=24021717570&vendorItemId=3000145295&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "청정원순창 100% 현미 태양초 찰고추장, 500g, 1개",
+    "price": 5900,
+    "discount": 50,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/8107798642?itemId=17450688874&vendorItemId=82062742475&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "햇반 발아현미밥, 210g, 24개",
+    "price": 26110,
+    "discount": 47,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/2233944989?itemId=19223680738&vendorItemId=86340365939&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 알배기, 1개입, 2개",
+    "price": 5780,
+    "discount": 33,
+    "sent_date": "2025-04-02"
   }
 }
