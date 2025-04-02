@@ -2882,5 +2882,53 @@
     "price": 2880,
     "discount": 20,
     "sent_date": "2025-04-01"
+  },
+  "https://www.coupang.com/vp/products/6480542873?itemId=18171049280&vendorItemId=85320420489&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "스팸 25% 라이트, 9개, 200g",
+    "price": 21570,
+    "discount": 57,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/8275202974?itemId=23883947319&vendorItemId=90906790616&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "비비고 한입 떡갈비 (냉동), 320g, 2개",
+    "price": 9980,
+    "discount": 50,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/201242344?itemId=18172816045&vendorItemId=85322107552&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "팔도 비빔장 시그니처, 380g, 2개",
+    "price": 5580,
+    "discount": 43,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/7093215205?itemId=17909995553&vendorItemId=85072684615&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "오뚜기 진비빔면 156g, 8개",
+    "price": 5600,
+    "discount": 34,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/8010806804?itemId=22349113631&vendorItemId=86494112156&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "풀무원샘물 퓨어 생수, 2L, 12개",
+    "price": 6900,
+    "discount": 34,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/4738497301?itemId=14305919745&vendorItemId=81550710697&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "곰곰 무농약인증 국산 콩나물, 300g, 1개",
+    "price": 1300,
+    "discount": 28,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/8643803399?itemId=25087351240&vendorItemId=92091122340&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "배홍동 칼빔면 128g, 4개",
+    "price": 4580,
+    "discount": 26,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/7324746853?itemId=18793701943&vendorItemId=85924712411&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "하루견과 넛츠 시그니처, 23g, 35개",
+    "price": 29900,
+    "discount": 22,
+    "sent_date": "2025-04-02"
   }
 }
