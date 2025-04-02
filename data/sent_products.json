@@ -2930,5 +2930,23 @@
     "price": 29900,
     "discount": 22,
     "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/8534726504?itemId=24710756520&vendorItemId=91720132791&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "농심 라면 124g, 8개",
+    "price": 7700,
+    "discount": 29,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/2234215098?itemId=9055518660&vendorItemId=76341857433&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "국내산 무농약 느타리버섯, 200g, 1개",
+    "price": 1280,
+    "discount": 26,
+    "sent_date": "2025-04-02"
+  },
+  "https://www.coupang.com/vp/products/1395522260?itemId=348450471&vendorItemId=3850609374&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "덴마크 짜지않은 치즈 고칼슘&비타민, 14개입, 1개",
+    "price": 4970,
+    "discount": 25,
+    "sent_date": "2025-04-02"
   }
 }
