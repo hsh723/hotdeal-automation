@@ -2984,5 +2984,47 @@
     "price": 9710,
     "discount": 25,
     "sent_date": "2025-04-03"
+  },
+  "https://www.coupang.com/vp/products/1349921951?itemId=15295907409&vendorItemId=70373613223&sourceType=CAMPAIGN&campaignId=82&categoryId=0": {
+    "title": "로랜텍 초고속 충전케이블 C to C PD 60W, 1.2m, 실버블랙",
+    "price": 3830,
+    "discount": 60,
+    "sent_date": "2025-04-03"
+  },
+  "https://www.coupang.com/vp/products/7858546638?itemId=22350737406&vendorItemId=89395861033&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "호주산 메가 소고기 부채살 구이용 (냉장), 600g, 1개",
+    "price": 17510,
+    "discount": 40,
+    "sent_date": "2025-04-03"
+  },
+  "https://www.coupang.com/vp/products/7836219133?itemId=23267017894&vendorItemId=3003766600&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "파스퇴르 바른목장 우유, 190ml, 24개",
+    "price": 17310,
+    "discount": 37,
+    "sent_date": "2025-04-03"
+  },
+  "https://www.coupang.com/vp/products/7319954910?itemId=19224584540&vendorItemId=86341247037&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "필라델피아 크림치즈, 190g, 1개입, 2개",
+    "price": 6140,
+    "discount": 35,
+    "sent_date": "2025-04-03"
+  },
+  "https://www.coupang.com/vp/products/7411095382?itemId=13466502453&vendorItemId=76137436686&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "더단백 드링크 초코, 250ml, 18개",
+    "price": 24010,
+    "discount": 31,
+    "sent_date": "2025-04-03"
+  },
+  "https://www.coupang.com/vp/products/13937502?itemId=21112860762&vendorItemId=3090529410&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "양반 들기름 도시락김, 108g, 1개",
+    "price": 8950,
+    "discount": 25,
+    "sent_date": "2025-04-03"
+  },
+  "https://www.coupang.com/vp/products/7460637047?itemId=2076143&vendorItemId=70669626524&sourceType=CAMPAIGN&campaignId=82&categoryId=194176": {
+    "title": "삼양라면 120g, 40개",
+    "price": 19430,
+    "discount": 21,
+    "sent_date": "2025-04-03"
   }
 }
